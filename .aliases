@@ -1,0 +1,21 @@
+alias la="ls -A"
+alias ll="ls -l"
+alias lla="ls -lA"
+alias lc="ls -G"
+alias cl="clear"
+alias ..="cd .."
+alias md="mkdir"
+
+# REMOTE SERVERS
+
+alias anomaly="ssh root@198.61.229.192"
+alias nt="ssh root@67.207.140.210"
+
+# GIT STUFF
+
+# Undo a `git push`
+alias undopush="git push -f origin HEAD^:master"
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
