@@ -9,20 +9,20 @@
 
 
 " Automatic reloading of .vimrc
-"" autocmd! bufwritepost .vimrc source %
+autocmd! bufwritepost .vimrc source %
 
 
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
 " paste. At the bottom you should see ``-- INSERT (paste) --``.
 
-"" set pastetoggle=<F2>
-"" set clipboard=unnamed
+set pastetoggle=<F2>
+set clipboard=unnamed
 
 
 " Mouse and backspace
-"" set mouse=a  " on OSX press ALT and click
-"" set bs=2     " make backspace behave like normal again
+set mouse=a  " on OSX press ALT and click
+set bs=2     " make backspace behave like normal again
 
 
 " Rebind <Leader> key
@@ -46,7 +46,7 @@
 
 
 " Quick quit command
-"" noremap <Leader>e :quit<CR>  " Quit current window
+noremap <Leader>e :quit<CR>  " Quit current window
 "" noremap <Leader>E :qa!<CR>   " Quit all windows
 
 
@@ -83,24 +83,27 @@
 " Color scheme
 " mkdir -p ~/.vim/colors && cd ~/.vim/colors
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
-"" set t_Co=256
-"" color wombat256mod
+set t_Co=256
+color wombat256mod
+""set background=dark
+""color solarized
+
 
 
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
-"" filetype off
-"" filetype plugin indent on
-"" syntax on
+filetype off
+filetype plugin indent on
+syntax on
 
 
 " Showing line numbers and length
-"" set number  " show line numbers
-"" set tw=79   " width of document (used by gd)
-"" set nowrap  " don't automatically wrap on load
-"" set fo-=t   " don't automatically wrap text when typing
-"" set colorcolumn=80
-"" highlight ColorColumn ctermbg=233
+set number  " show line numbers
+set tw=79   " width of document (used by gd)
+set nowrap  " don't automatically wrap on load
+set fo-=t   " don't automatically wrap text when typing
+set colorcolumn=80
+highlight ColorColumn ctermbg=233
 
 
 " easier formatting of paragraphs
@@ -114,11 +117,11 @@
 
 
 " Real programmers don't use TABs but spaces
-"" set tabstop=4
-"" set softtabstop=4
-"" set shiftwidth=4
-"" set shiftround
-"" set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set shiftround
+set expandtab
 
 
 " Make search case insensitive
@@ -196,4 +199,4 @@
 " Python folding
 " mkdir -p ~/.vim/ftplugin
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
-"" set nofoldenable
+set nofoldenable
