@@ -6,15 +6,28 @@ alias cl="clear"
 alias ..="cd .."
 alias md="mkdir"
 
-# REMOTE SERVERS
+# make dir and cd into it
+function mkcd(){
+  mkdir $1;
+  cd $1;
+}
 
+# remove directory
+function rd(){
+  rm -rf $1;
+}
+
+# REMOTE SERVERS
 alias anomaly="ssh root@198.61.229.192"
 alias nt="ssh root@67.207.140.210"
+alias swould="ssh root@192.237.250.199"
 
 # GIT STUFF
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
+alias gs="git status -sb"
+alias gac="git add -A . && git commit"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
