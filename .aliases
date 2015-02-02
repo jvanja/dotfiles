@@ -6,6 +6,7 @@ alias cl="clear"
 alias ..="cd .."
 alias md="mkdir"
 
+
 # make dir and cd into it
 function mkcd(){
   mkdir $1;
@@ -21,6 +22,7 @@ function rd(){
 alias anomaly="ssh root@198.61.229.192"
 alias nt="ssh root@67.207.140.210"
 alias swould="ssh root@192.237.250.199"
+alias dhost="ssh vanjel@timberwolf.dreamhost.com"
 
 # GIT STUFF
 

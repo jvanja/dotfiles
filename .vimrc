@@ -6,6 +6,7 @@ autocmd! bufwritepost .vimrc source %
 " curl -so ~/.vim/autoload/pathogen.vim https://raw.github.com/tpope/vim-pathogen/HEAD/autoload/pathogen.vim
 " Now you can install any plugin into a .vim/bundle/plugin-name/ folder
 call pathogen#infect()
+call pathogen#helptags()
 
 " remove arrows navigation! learn 'hjkl' already!
 no <down> <NOP>
@@ -22,6 +23,12 @@ ino <right> <NOP>
 nnoremap <silent> n   n:call HLNext(0.4)<cr>
 nnoremap <silent> N   N:call HLNext(0.4)<cr>
 
+"map /nt to :NERDTree
+nnoremap /nt :NERDTree<CR> 
+
+"map /o to :CommantT
+nnoremap /o :CommandT<CR>
+
 "highlight the search match in red...
 highlight WhiteOnRed ctermbg=red guibg=red
 
@@ -37,9 +44,9 @@ function! HLNext (blinktime)
 endfunction
 
 " Powerline
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+"python from powerline.vim import setup as powerline_setup
+"python powerline_setup()
+"python del powerline_setup
 
 " Color scheme
 " mkdir -p ~/.vim/colors && cd ~/.vim/colors
@@ -62,6 +69,10 @@ set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
+
+" Tab size
+set shiftwidth=2
+set tabstop=2
 
 " Pathogen plugins configs
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")

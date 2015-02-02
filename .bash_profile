@@ -24,4 +24,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 export PATH=$PATH:/usr/local/drush
 export PATH="/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5.4/bin:$PATH"
 
+# mongoDB
+export PATH=/usr/local/mongodb/bin:$PATH
 
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
