@@ -29,6 +29,13 @@ nnoremap /nt :NERDTree<CR>
 "map /o to :CommantT
 nnoremap /o :CommandT<CR>
 
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+
+"enable system clipboard
+set clipboard=unnamed
+
 "highlight the search match in red...
 highlight WhiteOnRed ctermbg=red guibg=red
 
@@ -77,3 +84,6 @@ set tabstop=2
 " Pathogen plugins configs
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 set laststatus=2
+
+let mapleader = ","
+
