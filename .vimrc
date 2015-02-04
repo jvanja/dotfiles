@@ -27,12 +27,12 @@ nnoremap <silent> N   N:call HLNext(0.4)<cr>
 nnoremap /nt :NERDTree<CR> 
 
 "map /o to :CommantT
-nnoremap /o :CommandT<CR>
+nnoremap <C-P> :CommandT<CR>
 
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
-
+"test
 "enable system clipboard
 set clipboard=unnamed
 
@@ -63,6 +63,12 @@ color wombat256mod
 " set background=dark
 " color solarized
 
+" highlight the status bar when in insert mode
+if version >= 700
+  au InsertEnter * hi StatusLine ctermfg=235 ctermbg=2
+    au InsertLeave * hi StatusLine ctermbg=240 ctermfg=12
+    endif
+
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
 filetype off
@@ -87,3 +93,7 @@ set laststatus=2
 
 let mapleader = ","
 
+
+" javascript syntax
+"let g:used_javascript_libs = 'underscore,backbone'
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
