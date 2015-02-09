@@ -27,12 +27,18 @@ nnoremap <silent> N   N:call HLNext(0.4)<cr>
 nnoremap /nt :NERDTree<CR> 
 
 "map /o to :CommantT
-nnoremap <C-P> :CommandT<CR>
+" nnoremap <C-P> :CommandT<CR>
 
-noremap <silent> <C-S>          :update<CR>
-vnoremap <silent> <C-S>         <C-C>:update<CR>
-inoremap <silent> <C-S>         <C-O>:update<CR>
-"test
+" move lines with ALT j and ALT k
+nnoremap ˚ :m .-2<CR>==
+nnoremap ∆ :m .+1<CR>==
+
+inoremap ˚ <Esc>:m .-2<CR>==gi
+inoremap ∆ <Esc>:m .+1<CR>==gi
+
+vnoremap ˚ :m '<-2<CR>gv=gv
+vnoremap ∆ :m '>+1<CR>gv=gv
+
 "enable system clipboard
 set clipboard=unnamed
 
@@ -63,11 +69,15 @@ color wombat256mod
 " set background=dark
 " color solarized
 
-" highlight the status bar when in insert mode
-if version >= 700
-  au InsertEnter * hi StatusLine ctermfg=235 ctermbg=2
-    au InsertLeave * hi StatusLine ctermbg=240 ctermfg=12
-    endif
+function! AirlineInit()
+    let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])
+    let g:airline_section_b = airline#section#create_left(['ffenc', 'hunks', '%f'])
+    let g:airline_section_c = airline#section#create(['filetype'])
+    let g:airline_section_x = airline#section#create(['%P'])
+    let g:airline_section_y = airline#section#create(['%B'])
+    let g:airline_section_z = airline#section#create_right(['%l', '%c'])
+endfunction
+autocmd VimEnter * call AirlineInit()
 
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
@@ -80,8 +90,8 @@ set number  " show line numbers
 set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
-set colorcolumn=80
-highlight ColorColumn ctermbg=233
+" set colorcolumn=80
+" highlight ColorColumn ctermbg=233
 
 " Tab size
 set shiftwidth=2
@@ -91,9 +101,18 @@ set tabstop=2
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 set laststatus=2
 
-let mapleader = ","
-
-
 " javascript syntax
 "let g:used_javascript_libs = 'underscore,backbone'
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+
+let mapleader = ","
+
+noremap <leader>s :w<cr> " save file with leader s
+noremap <leader>x :wq<cr> " save and quit 
+noremap <leader>q :q<cr> " quit file with leader q
+inoremap <leader>s <C-c>:w<cr> " save file with leader s when in insert mode 
+
+" copy in visual mode with ctrc c to system clipboard
+vnoremap <C-c> :w !pbcopy<CR><CR> 
+noremap <C-v> :r !pbpaste<CR><CR>
+
