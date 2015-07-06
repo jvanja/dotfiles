@@ -8,6 +8,8 @@ autocmd! bufwritepost .vimrc source %
 call pathogen#infect()
 call pathogen#helptags()
 
+set wildchar=<Tab> wildmenu wildmode=full
+
 " remove arrows navigation! learn 'hjkl' already!
 no <down> <NOP>
 no <up> <NOP>
@@ -19,12 +21,21 @@ ino <up> <NOP>
 ino <left> <NOP>
 ino <right> <NOP>
 
+" navtigate file up and down with CTRL j and CTRL k...
+nnoremap <silent> <C-j> :<C-u>
+nnoremap <silent> <C-k> :<C-d>
+
 " This rewires n and N to do the highlighing...
 nnoremap <silent> n   n:call HLNext(0.4)<cr>
 nnoremap <silent> N   N:call HLNext(0.4)<cr>
 
+" activate snipMate with **
+imap ** <esc>a<Plug>snipMateNextOrTrigger
+
 "map /nt to :NERDTree
-nnoremap /nt :NERDTree<CR> 
+nnoremap /nt :NERDTree<CR>
+"auto open NERDTree
+" autocmd vimenter * NERDTree
 
 "map /o to :CommantT
 " nnoremap <C-P> :CommandT<CR>
@@ -111,6 +122,7 @@ noremap <leader>s :w<cr> " save file with leader s
 noremap <leader>x :wq<cr> " save and quit 
 noremap <leader>q :q<cr> " quit file with leader q
 inoremap <leader>s <C-c>:w<cr> " save file with leader s when in insert mode 
+inoremap <leader>x <C-c>:wq<cr> " save and quit file with leader x when in insert mode 
 
 " copy in visual mode with ctrc c to system clipboard
 vnoremap <C-c> :w !pbcopy<CR><CR> 
