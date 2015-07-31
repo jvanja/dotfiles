@@ -8,7 +8,11 @@ autocmd! bufwritepost .vimrc source %
 call pathogen#infect()
 call pathogen#helptags()
 
+" autocomletion for command menu on TAB
 set wildchar=<Tab> wildmenu wildmode=full
+
+" turn on search highlight
+set hlsearch
 
 " remove arrows navigation! learn 'hjkl' already!
 no <down> <NOP>
@@ -21,23 +25,20 @@ ino <up> <NOP>
 ino <left> <NOP>
 ino <right> <NOP>
 
-" navtigate file up and down with CTRL j and CTRL k...
+" navigate file up and down with CTRL j and CTRL k...
 nnoremap <silent> <C-j> :<C-u>
 nnoremap <silent> <C-k> :<C-d>
-
-" This rewires n and N to do the highlighing...
-nnoremap <silent> n   n:call HLNext(0.4)<cr>
-nnoremap <silent> N   N:call HLNext(0.4)<cr>
 
 " activate snipMate with **
 imap ** <esc>a<Plug>snipMateNextOrTrigger
 
 "map /nt to :NERDTree
 nnoremap /nt :NERDTree<CR>
+
 "auto open NERDTree
 " autocmd vimenter * NERDTree
 
-"map /o to :CommantT
+"map /o to :CommandT
 " nnoremap <C-P> :CommandT<CR>
 
 " move lines with ALT j and ALT k
@@ -53,32 +54,15 @@ vnoremap ∆ :m '>+1<CR>gv=gv
 "enable system clipboard
 set clipboard=unnamed
 
-"highlight the search match in red...
-highlight WhiteOnRed ctermbg=red guibg=red
-
-function! HLNext (blinktime)
-    let [bufnum, lnum, col, off] = getpos('.')
-    let matchlen = strlen(matchstr(strpart(getline('.'),col-1),@/))
-    let target_pat = '\c\%#'.@/
-    let ring = matchadd('WhiteOnRed', target_pat, 101)
-    redraw
-    exec 'sleep ' . float2nr(a:blinktime * 1000) . 'm'
-    call matchdelete(ring)
-    redraw
-endfunction
-
-" Powerline
-"python from powerline.vim import setup as powerline_setup
-"python powerline_setup()
-"python del powerline_setup
-
 " Color scheme
-" mkdir -p ~/.vim/colors && cd ~/.vim/colors
+" mkdir -p ~/.vim/cgit clone https://github.com/trusktr/seti.vim ~/.vim/bundle/seti.vimolors && cd ~/.vim/colors
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 set t_Co=256
-color wombat256mod
+color seti
+" color wombat256mod
 " set background=dark
 " color solarized
+
 
 function! AirlineInit()
     let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])
@@ -112,6 +96,10 @@ set tabstop=2
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 set laststatus=2
 
+" setting relative numbers and toggling with ,n
+set relativenumber
+" nnoremap <leader>n :set relativenumber!<cr>
+
 " javascript syntax
 "let g:used_javascript_libs = 'underscore,backbone'
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -128,3 +116,9 @@ inoremap <leader>x <C-c>:wq<cr> " save and quit file with leader x when in inser
 vnoremap <C-c> :w !pbcopy<CR><CR> 
 noremap <C-v> :r !pbpaste<CR><CR>
 
+" search and replace in file with ctrl R
+map <C-r> :%s///g<left><left><left>
+map <C-g> :vimgrep //g ./*<left><left><left><left><left><left>
+
+" set search highlight color
+hi Search cterm=NONE ctermfg=white ctermbg=blue

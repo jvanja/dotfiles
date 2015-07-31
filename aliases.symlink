@@ -7,6 +7,10 @@ alias ..="cd .."
 alias md="mkdir"
 alias tailphp="tail /Applications/MAMP/logs/php_error.log"
 
+function vim(){
+	mvim -v "$1"
+}
+
 # make dir and cd into it
 function mkcd(){
   mkdir $1;
@@ -46,3 +50,7 @@ function gitupf(){
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+
+# ctags to homebrew ctags
+alias ctags="`brew --prefix`/bin/ctags"
+
