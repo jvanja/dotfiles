@@ -6,9 +6,7 @@ alias cl="clear"
 alias ..="cd .."
 alias md="mkdir"
 alias tailphp="tail /Applications/MAMP/logs/php_error.log"
-alias aliases="mvim -v /Applications/MAMP/htdocs/dotfiles/aliases.symlink"
 alias vimrc="mvim -v /Applications/MAMP/htdocs/dotfiles/vimrc.symlink"
-alias symlink="/Applications/MAMP/htdocs/dotfiles/install.sh"
 
 function vim(){
 	mvim -v "$1"
