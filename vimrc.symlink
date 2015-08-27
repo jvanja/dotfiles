@@ -38,6 +38,9 @@ nnoremap /nt :NERDTree<CR>
 "auto open NERDTree
 " autocmd vimenter * NERDTree
 
+" show hidden files in nerd tree
+let NERDTreeShowHidden=1
+
 "map /o to :CommandT
 " nnoremap <C-P> :CommandT<CR>
 
