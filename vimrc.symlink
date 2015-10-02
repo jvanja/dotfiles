@@ -88,6 +88,8 @@ set number  " show line numbers
 set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
+set wrap linebreak nolist " wrap text pls
+
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=233
 
@@ -124,4 +126,4 @@ map <C-r> :%s///g<left><left><left>
 map <C-g> :vimgrep //g ./*<left><left><left><left><left><left>
 
 " set search highlight color
-hi Search cterm=NONE ctermfg=white ctermbg=blue
+" hi Search cterm=NONE ctermfg=white ctermbg=blue
