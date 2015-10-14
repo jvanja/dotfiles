@@ -121,9 +121,12 @@ inoremap <leader>x <C-c>:wq<cr> " save and quit file with leader x when in inser
 vnoremap <C-c> :w !pbcopy<CR><CR> 
 noremap <C-v> :r !pbpaste<CR><CR>
 
-" search and replace in file with ctrl R
+" search and replace in file with ctrl r
 map <C-r> :%s///g<left><left><left>
 map <C-g> :vimgrep //g ./*<left><left><left><left><left><left>
+
+" jk is escape
+inoremap jk <esc>
 
 " set search highlight color
 " hi Search cterm=NONE ctermfg=white ctermbg=blue
