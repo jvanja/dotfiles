@@ -122,7 +122,7 @@ vnoremap <C-c> :w !pbcopy<CR><CR>
 noremap <C-v> :r !pbpaste<CR><CR>
 
 " search and replace in file with ctrl r
-map <C-r> :%s///g<left><left><left>
+map <C-f> :%s///g<left><left><left>
 map <C-g> :vimgrep //g ./*<left><left><left><left><left><left>
 
 " jk is escape
