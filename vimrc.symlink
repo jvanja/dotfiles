@@ -24,6 +24,9 @@ ino <down> <NOP>
 ino <up> <NOP>
 ino <left> <NOP>
 ino <right> <NOP>
+" move rows up and down and not lines.. for wrapped text
+:nmap j gj
+:nmap k gk
 
 " navigate file up and down with CTRL j and CTRL k...
 nnoremap <silent> <C-j> :<C-u>
