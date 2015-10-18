@@ -69,6 +69,10 @@ color seti
 " set background=dark
 " color solarized
 
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+" " Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 function! AirlineInit()
     let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])
@@ -133,3 +137,4 @@ inoremap jk <esc>
 
 " set search highlight color
 " hi Search cterm=NONE ctermfg=white ctermbg=blue
+
