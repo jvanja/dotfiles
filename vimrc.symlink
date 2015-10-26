@@ -64,7 +64,7 @@ set clipboard=unnamed
 " mkdir -p ~/.vim/cgit clone https://github.com/trusktr/seti.vim ~/.vim/bundle/seti.vimolors && cd ~/.vim/colors
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 set t_Co=256
-color seti
+color Monokai
 " color wombat256mod
 " set background=dark
 " color solarized
