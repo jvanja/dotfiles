@@ -30,10 +30,6 @@ no <right> <NOP>
 :nmap j gj
 :nmap k gk
 
-" navigate file up and down with CTRL j and CTRL k...
-" nnoremap <silent> <C-j> :<C-u>
-" nnoremap <silent> <C-k> :<C-d>
-
 " activate snipMate with **
 imap ** <esc>a<Plug>snipMateNextOrTrigger
 
@@ -45,9 +41,6 @@ nnoremap /nt :NERDTree<CR>
 
 " show hidden files in nerd tree
 let NERDTreeShowHidden=1
-
-"map /o to :CommandT
-" nnoremap <C-P> :CommandT<CR>
 
 " move lines with ALT j and ALT k
 nnoremap ˚ :m .-2<CR>==
