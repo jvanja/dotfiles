@@ -15,6 +15,10 @@ function vim(){
 }
 
 # TMUX
+alias tat="new-tmux-from-dir-name"
+alias td="tmux detach"
+alias tnew="echo use tat!!"
+
 function ta(){
 	tmux attach-session -t "$1"
 }
@@ -37,6 +41,10 @@ function rd(){
 # drush sql-dump
 function ddmp(){
 	drush sql-dump --result-file=$1;
+}
+
+function new-tmux-from-dir-name {
+  tmux new-session -As `basename $PWD`
 }
 
 
