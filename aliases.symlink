@@ -39,13 +39,6 @@ function ddmp(){
 	drush sql-dump --result-file=$1;
 }
 
-# REMOTE SERVERS
-alias anomaly="ssh root@198.61.229.192"
-alias nt="ssh root@67.207.140.210"
-alias swould="ssh root@192.237.250.199"
-alias dhost="ssh vanjel@timberwolf.dreamhost.com"
-alias chiaco="ssh webadmin@thechiaco.com.au"
-alias evinyl="ssh root@104.236.57.79"
 
 # GIT STUFF
 
