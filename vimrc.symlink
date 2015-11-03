@@ -133,3 +133,7 @@ inoremap jk <esc>
 " set search highlight color
 " hi Search cterm=NONE ctermfg=white ctermbg=blue
 
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
