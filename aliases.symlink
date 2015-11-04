@@ -18,6 +18,7 @@ function vim(){
 alias tat="new-tmux-from-dir-name"
 alias td="tmux detach"
 alias tnew="echo use tat!!"
+alias tls="tmux ls"
 
 function ta(){
 	tmux attach-session -t "$1"
