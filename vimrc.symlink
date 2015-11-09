@@ -31,7 +31,7 @@ no <right> <NOP>
 :nmap k gk
 
 " activate snipMate with **
-imap ** <esc>a<Plug>snipMateNextOrTrigger
+" imap ** <esc>a<Plug>snipMateNextOrTrigger
 
 "map /nt to :NERDTree
 nnoremap /nt :NERDTree<CR>
@@ -59,10 +59,10 @@ set clipboard=unnamed
 " mkdir -p ~/.vim/cgit clone https://github.com/trusktr/seti.vim ~/.vim/bundle/seti.vimolors && cd ~/.vim/colors
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 set t_Co=256
-color Monokai
+" color Monokai
 " color wombat256mod
 " set background=dark
-" color solarized
+color solarized
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -125,7 +125,7 @@ noremap <C-v> :r !pbpaste<CR><CR>
 
 " search and replace in file with ctrl r
 map <C-f> :%s///g<left><left><left>
-map <C-g> :vimgrep //g ./*<left><left><left><left><left><left>
+map <C-g> :Ag  **/*<left><left><left><left><left>
 
 " jk is escape
 inoremap jk <esc>
@@ -137,3 +137,17 @@ inoremap jk <esc>
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
+" Don't display these kinds of files
+let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
+      \ '\.ropeproject', '\.o', '\.bzr', '\.ipynb_checkpoints$',
+      \ '__pycache__',
+      \ '\.egg$', '\.egg-info$', '\.tox$', '\.idea$', '\.sass-cache',
+      \ '\.env$', '\.env[0-9]$', '\.coverage$', '\.tmp$', '\.gitkeep$',
+      \ '\.coverage$', '\.webassets-cache$', '\.vagrant$', '\.DS_Store',
+      \ '\.env-pypy$']
+
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<C-k>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
