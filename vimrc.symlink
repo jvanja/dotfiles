@@ -61,7 +61,7 @@ set clipboard=unnamed
 set t_Co=256
 " color Monokai
 " color wombat256mod
-" set background=dark
+set background=dark
 color solarized
 
 " Enable the list of buffers
@@ -90,7 +90,7 @@ set number  " show line numbers
 set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
-set wrap linebreak nolist " wrap text pls
+" set wrap linebreak nolist " wrap text pls
 
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=233
@@ -105,7 +105,15 @@ set laststatus=2
 
 " setting relative numbers and toggling with ,n
 set relativenumber
-" nnoremap <leader>n :set relativenumber!<cr>
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set	relativenumber!
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
 
 " javascript syntax
 "let g:used_javascript_libs = 'underscore,backbone'
@@ -151,3 +159,8 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
 let g:UltiSnipsExpandTrigger="<C-k>"
 let g:UltiSnipsJumpForwardTrigger="<C-b>"
 let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+
+" until i figure out why this is buggy as shit
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
+let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
