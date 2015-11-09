@@ -100,7 +100,11 @@ set shiftwidth=2
 set tabstop=2
 
 " Pathogen plugins configs
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")	"conflicts with
+" ultisnips
+let g:user_emmet_leader_key=','	" Emmet triggered with ,,
+
+"show status bar always
 set laststatus=2
 
 " setting relative numbers and toggling with ,n
