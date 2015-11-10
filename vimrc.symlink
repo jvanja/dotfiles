@@ -161,7 +161,5 @@ let g:UltiSnipsExpandTrigger="<C-k>"
 let g:UltiSnipsJumpForwardTrigger="<C-b>"
 let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
-" until i figure out why this is buggy as shit
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
+" YouCompleteMe
 let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
