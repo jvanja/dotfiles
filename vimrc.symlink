@@ -53,10 +53,12 @@ set clipboard=unnamed
 " mkdir -p ~/.vim/cgit clone https://github.com/trusktr/seti.vim ~/.vim/bundle/seti.vimolors && cd ~/.vim/colors
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 set t_Co=256
+set background=dark
 " color Monokai
 " color wombat256mod
-set background=dark
-color solarized
+" color solarized
+color skittles_berry
+
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -124,8 +126,8 @@ inoremap <leader>s <C-c>:w<cr> " save file with leader s when in insert mode
 inoremap <leader>x <C-c>:wq<cr> " save and quit file with leader x when in insert mode 
 
 " copy in visual mode with ctrc c to system clipboard
-vnoremap <C-c> :w !pbcopy<CR><CR> 
-noremap <C-v> :r !pbpaste<CR><CR>
+" vnoremap <C-c> :w !pbcopy<CR><CR> 
+" noremap <C-v> :r !pbpaste<CR><CR>
 
 " search and replace in file with ctrl r
 map <C-f> :%s///g<left><left><left>
