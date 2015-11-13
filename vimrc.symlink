@@ -90,16 +90,9 @@ set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
 " set wrap linebreak nolist " wrap text pls
 
-" toggle text wrap with ctrl w
-noremap <C-w> :set wrap!<cr>
-
-" set colorcolumn=80
-" highlight ColorColumn ctermbg=233
-
 " Tab size
 set shiftwidth=2
 set tabstop=2
-
 
 " emmet conflicts with ultisnips
 let g:user_emmet_leader_key=','	" Emmet triggered with ,,
@@ -129,7 +122,7 @@ inoremap <leader>x <C-c>:wq<cr> " save and quit file with leader x when in inser
 " vnoremap <C-c> :w !pbcopy<CR><CR> 
 " noremap <C-v> :r !pbpaste<CR><CR>
 
-" search and replace in file with ctrl r
+" search and replace in file with ctrl f
 map <C-f> :%s///g<left><left><left>
 map <C-g> :Ag  **/*<left><left><left><left><left>
 
@@ -160,3 +153,13 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 " YouCompleteMe
 let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+
+"syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
