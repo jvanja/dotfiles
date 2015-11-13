@@ -90,6 +90,9 @@ set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
 " set wrap linebreak nolist " wrap text pls
 
+" toggle text wrap with ctrl w
+noremap <C-w> :set wrap!<cr>
+
 " set colorcolumn=80
 " highlight ColorColumn ctermbg=233
 
