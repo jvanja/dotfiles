@@ -107,20 +107,14 @@ let g:user_emmet_leader_key=','	" Emmet triggered with ,,
 "show status bar always
 set laststatus=2
 
-" setting relative numbers and toggling with ,n
+" setting relative numbers 
 set relativenumber
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set	relativenumber!
-  else
-    set relativenumber
-  endif
-endfunc
 
-nnoremap <C-n> :call NumberToggle()<cr>
+" toggle relativenumber 
+nnoremap <C-n> :set relativenumber!<cr>
 
 " javascript syntax
-"let g:used_javascript_libs = 'underscore,backbone'
+" let g:used_javascript_libs = 'underscore,backbone'
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
 let mapleader = ","
