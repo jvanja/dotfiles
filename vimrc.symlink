@@ -10,6 +10,9 @@ set wildchar=<Tab> wildmenu wildmode=full
 
 " turn on search highlight
 set hlsearch
+set ignorecase
+set smartcase
+set incsearch
 
 " remove arrows navigation! learn 'hjkl' already!
 no <down> <NOP>
