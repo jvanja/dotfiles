@@ -11,7 +11,8 @@ alias vimrc="mvim -v /Applications/MAMP/htdocs/dotfiles/vimrc.symlink"
 alias symlink="/Applications/MAMP/htdocs/dotfiles/install.sh"
 
 function vim(){
-	mvim "$1"
+	nvim "$1"
+	# mvim -v "$1"
 }
 
 # TMUX

@@ -14,6 +14,9 @@ set ignorecase
 set smartcase
 set incsearch
 
+" enable scroll
+:set mouse=a
+
 " remove arrows navigation! learn 'hjkl' already!
 no <down> <NOP>
 no <up> <NOP>
