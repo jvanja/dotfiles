@@ -1,21 +1,12 @@
-alias la="ls -A"
-alias ll="ls -lGh"
-alias lla="ls -lAGh"
-alias lc="ls -G"
 alias cl="clear"
-alias ..="cd .."
-alias md="mkdir"
-alias tailphp="tail /Applications/MAMP/logs/php_error.log"
-alias aliases="mvim -v /Applications/MAMP/htdocs/dotfiles/aliases.symlink"
-alias vimrc="mvim -v /Applications/MAMP/htdocs/dotfiles/vimrc.symlink"
-alias symlink="/Applications/MAMP/htdocs/dotfiles/install.sh"
 
 function vim(){
 	nvim "$1"
 	# mvim -v "$1"
 }
 
-# TMUX
+### TMUX
+
 alias tat="new-tmux-from-dir-name"
 alias td="tmux detach"
 alias tnew="echo use tat!!"
@@ -29,6 +20,12 @@ function tn(){
 	tmux new -s "$1"
 }
 
+function new-tmux-from-dir-name {
+  tmux new-session -As `basename $PWD`
+}
+
+### DIRECTORY
+
 # make dir and cd into it
 function mkcd(){
   mkdir $1;
@@ -40,17 +37,17 @@ function rd(){
   rm -rf $1;
 }
 
+
+### PHP
+
+alias tailphp="tail /Applications/MAMP/logs/php_error.log"
 # drush sql-dump
 function ddmp(){
 	drush sql-dump --result-file=$1;
 }
 
-function new-tmux-from-dir-name {
-  tmux new-session -As `basename $PWD`
-}
 
-
-# GIT STUFF
+### GIT STUFF
 
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
@@ -59,10 +56,11 @@ alias gs="git status -sb"
 alias gac="git add -A . && git commit"
 
 function gitupf(){
-	git diff-tree --no-commit-id --name-only -r $1;	
+	git diff-tree --no-commit-id --name-only -r $1;
 }
 
-# IP addresses
+### IP addresses
+
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
