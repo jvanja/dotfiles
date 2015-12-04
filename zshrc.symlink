@@ -61,9 +61,9 @@ zle -N zle-line-init
 
 # User configuration
 
-export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/vanjajelic/.nvm/versions/v4.0.0/bin:/usr/local/mongodb/bin:/opt/local/bin:/opt/local/sbin:/Users/vanjajelic/.rvm/gems/ruby-2.2.1/bin:/Users/vanjajelic/.rvm/gems/ruby-2.2.1@global/bin:/Users/vanjajelic/.rvm/rubies/ruby-2.2.1/bin:/SDK/android-sdk-macosx/platform-tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/vanjajelic/.rvm/bin:/usr/local/drush:/Users/vanjajelic/.rvm/bin:/usr/local/sbin"
-# /Applications/MAMP/Library/bin:/Applications/MAMP/bin/php5.4/bin:
+#export PATH="$PATH:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Users/vanjajelic/.nvm/versions/v4.0.0/bin:/usr/local/mongodb/bin:/opt/local/bin:/opt/local/sbin:/Users/vanjajelic/.rvm/gems/ruby-2.2.1/bin:/Users/vanjajelic/.rvm/gems/ruby-2.2.1@global/bin:/Users/vanjajelic/.rvm/rubies/ruby-2.2.1/bin:/SDK/android-sdk-macosx/platform-tools:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/vanjajelic/.rvm/bin:/usr/local/drush:/Users/vanjajelic/.rvm/bin:/usr/local/sbin:/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php5.6.10/bin"
 
+source ~/.bash_profile
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
