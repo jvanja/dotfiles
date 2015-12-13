@@ -46,6 +46,8 @@ function ddmp(){
 	drush sql-dump --result-file=$1;
 }
 
+# vagrant virtual mashine
+alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
 ### GIT STUFF
 
