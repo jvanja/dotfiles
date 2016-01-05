@@ -2,8 +2,11 @@
 autocmd! bufwritepost .vimrc source %
 
 " Setup Pathogen to manage your plugins
-call pathogen#infect()
-call pathogen#helptags()
+" call pathogen#infect()
+" call pathogen#helptags()
+
+" Vundle plugins
+source ~/.vim_plugins
 
 " autocomletion for command menu on TAB
 set wildchar=<Tab> wildmenu wildmode=full
