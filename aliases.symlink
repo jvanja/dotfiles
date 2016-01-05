@@ -43,7 +43,7 @@ function rd(){
 alias tailphp="tail /Applications/MAMP/logs/php_error.log"
 # drush sql-dump
 function ddmp(){
-	drush sql-dump --result-file=$1;
+	drush sql-dump --result-file=$(date +"%m-%d-%Y").sql
 }
 
 # vagrant virtual mashine
