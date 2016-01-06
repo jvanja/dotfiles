@@ -17,7 +17,7 @@ bind k select-pane -U
 bind l select-pane -R
 
 # use mouse to move between panes
-set -g mouse-select-pane on
+set -g mouse on
 
 #change default shell to zsh
 set-option -g default-shell /bin/zsh
