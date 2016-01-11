@@ -135,6 +135,7 @@ noremap <leader>x :wq<cr> " save and quit
 noremap <leader>q :q<cr> " quit file with leader q
 inoremap <leader>s <C-c>:w<cr> " save file with leader s when in insert mode 
 inoremap <leader>x <C-c>:wq<cr> " save and quit file with leader x when in insert mode 
+command! Q q " Bind :Q to :q
 
 " copy in visual mode with ctrc c to system clipboard
 " vnoremap <C-c> :w !pbcopy<CR><CR> 
