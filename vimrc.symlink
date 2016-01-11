@@ -43,7 +43,7 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
       \ '\.env$', '\.env[0-9]$', '\.coverage$', '\.tmp$', '\.gitkeep$',
       \ '\.coverage$', '\.webassets-cache$', '\.vagrant$', '\.DS_Store',
       \ '\.env-pypy$',
-      \ '\node_modules$']
+      \ 'node_modules']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " CTRLP
