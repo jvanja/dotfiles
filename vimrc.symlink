@@ -1,15 +1,11 @@
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
-" Setup Pathogen to manage your plugins
-" call pathogen#infect()
-" call pathogen#helptags()
-
 " Vundle plugins
 source ~/.vim_plugins
 
-" autocomletion for command menu on TAB
-set wildchar=<Tab> wildmenu wildmode=full
+" autocompletion for command menu on TAB
+set wildmenu wildmode=full
 
 " turn on search highlight
 set hlsearch
@@ -26,24 +22,35 @@ no <up> <NOP>
 no <left> <NOP>
 no <right> <NOP>
 
-" remove arrow keys in insert mode
-" ino <down> <NOP>
-" ino <up> <NOP>
-" ino <left> <NOP>
-" ino <right> <NOP>
-
 " move rows up and down and not lines.. for wrapped text
 :nmap j gj
 :nmap k gk
 
-" activate snipMate with **
-" imap ** <esc>a<Plug>snipMateNextOrTrigger
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+" NERDTREE
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 "map /nt to :NERDTree
 nnoremap /nt :NERDTree<CR>
 
 " show hidden files in nerd tree
 let NERDTreeShowHidden=1
+
+" Don't display these kinds of files
+let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
+      \ '\.ropeproject', '\.o', '\.bzr', '\.ipynb_checkpoints$',
+      \ '__pycache__',
+      \ '\.egg$', '\.egg-info$', '\.tox$', '\.idea$', '\.sass-cache',
+      \ '\.env$', '\.env[0-9]$', '\.coverage$', '\.tmp$', '\.gitkeep$',
+      \ '\.coverage$', '\.webassets-cache$', '\.vagrant$', '\.DS_Store',
+      \ '\.env-pypy$',
+      \ '\node_modules$']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+" CTRLP
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+" ctrlp ignore files and folders
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
 
 " move lines with ALT j and ALT k
 nnoremap ˚ :m .-2<CR>==
@@ -58,17 +65,19 @@ vnoremap ∆ :m '>+1<CR>gv=gv
 "enable system clipboard
 set clipboard=unnamed
 
-" Color scheme
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+" THEME
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " mkdir -p ~/.vim/cgit clone https://github.com/trusktr/seti.vim ~/.vim/bundle/seti.vimolors && cd ~/.vim/colors
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 set t_Co=256
 set background=dark
-" color Monokai
-" color wombat256mod
-" color solarized
 color skittles_berry
 
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+" AIRLINE
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 " " Show just the filename
@@ -100,6 +109,9 @@ set fo-=t   " don't automatically wrap text when typing
 set shiftwidth=2
 set tabstop=2
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+" EMMET
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " emmet conflicts with ultisnips
 let g:user_emmet_leader_key=','	" Emmet triggered with ,,
 
@@ -142,25 +154,23 @@ inoremap jk <esc>
 nnoremap n nzzzv
 nnoremap N Nzzzv
 
-" Don't display these kinds of files
-let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
-      \ '\.ropeproject', '\.o', '\.bzr', '\.ipynb_checkpoints$',
-      \ '__pycache__',
-      \ '\.egg$', '\.egg-info$', '\.tox$', '\.idea$', '\.sass-cache',
-      \ '\.env$', '\.env[0-9]$', '\.coverage$', '\.tmp$', '\.gitkeep$',
-      \ '\.coverage$', '\.webassets-cache$', '\.vagrant$', '\.DS_Store',
-      \ '\.env-pypy$']
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ULTISNIPS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<C-k>"
 let g:UltiSnipsJumpForwardTrigger="<C-b>"
 let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
-" YouCompleteMe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" YOUCOMPLETEME
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
 
-"syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SYNTASTIC
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
