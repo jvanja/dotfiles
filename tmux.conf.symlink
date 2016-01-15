@@ -1,6 +1,9 @@
 set -g default-terminal "screen-256color"
 set -g status-utf8 on
 
+# set automatic config reloading
+bind r source-file ~/.tmux.conf\; display "Reloaded conf."
+
 # unbind default prefix and set it to Ctrl+a
 unbind C-b
 set -g prefix C-a
@@ -18,6 +21,8 @@ bind l select-pane -R
 
 # use mouse to move between panes
 set -g mouse on
+set -g pane-border-fg colour58
+set -g pane-active-border-fg colour22
 
 #change default shell to zsh
 set-option -g default-shell /bin/zsh
