@@ -31,6 +31,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-repeat'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
+Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

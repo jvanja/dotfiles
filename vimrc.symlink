@@ -1,4 +1,8 @@
+" for vim-devicons to show
 set encoding=utf8
+" set guifont=<FONT_NAME>:h<FONT_SIZE>
+" set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
+set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h11
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
