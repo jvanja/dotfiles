@@ -32,6 +32,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-surround'
 Plugin 'ryanoasis/vim-devicons'
+Plugin 'jvanja/vim-bootstrap4-snippets'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
