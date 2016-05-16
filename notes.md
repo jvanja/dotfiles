@@ -45,12 +45,6 @@
 | ---     | :---                          |
 | :b#     | open previously opened buffer |
 
-####ctrl p
-
-| Command           | Description        |
-| ---               | :---               |
-| ctrl v (ctrl s)   | open in split move |
-
 ####macros
 
 | Command            | Description                  |
@@ -66,6 +60,18 @@
 | ctrl w+[v,h]  | split window hor of vert with the current buffer |
 | ctrl w+c      | close current split window                       |
 | ctrl w+r      | swap (replace) panes                             |
+
+####ctrl p
+
+| Command           | Description        |
+| ---               | :---               |
+| ctrl v (ctrl s)   | open in split move |
+
+####NerdTree
+
+| Command | Description                                               |
+| ---     | :---                                                      |
+| go      | while in NerdTree go will open file without focusin on it |
 
 ####other
 
