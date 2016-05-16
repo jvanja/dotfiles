@@ -69,10 +69,11 @@
 
 ####other
 
-| Command | Description                                                                              |
-| ---     | :---                                                                                     |
-| :r !ls  | to print external “ls” below cursor.. you can print file contents also e.g. ":r foo.txt” |
-| ctrl a  | increment a number under cursor                                                          |
+| Command  | Description                                                                              |
+| ---      | :---                                                                                     |
+| :r !ls   | to print external “ls” below cursor.. you can print file contents also e.g. ":r foo.txt” |
+| ctrl a   | increment a number under cursor                                                          |
+| :lcd %:h | set the local directory to the folder containing the current open file                   |
 
 ###INSERT MODE
 
