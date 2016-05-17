@@ -19,6 +19,12 @@ bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
 
+# resize pane with prefix + arrows
+bind-key Down resize-pane -D 5
+bind-key Up resize-pane -U 5
+bind-key Left resize-pane -L 5
+bind-key Right resize-pane -R 5
+
 # use mouse to move between panes
 set -g mouse on
 set -g pane-border-fg colour58
