@@ -73,6 +73,14 @@
 | ---     | :---                                                      |
 | go      | while in NerdTree go will open file without focusin on it |
 
+####jumps
+
+| Command | Description                                  |
+| ---     | :---                                         |
+| ctrl O  | jump back to the previous (older) location   |
+| ctrl I  | jump forward to the next (newer) location    |
+| :jumps  | display the jump list for the current window |
+
 ####other
 
 | Command  | Description                                                                              |
