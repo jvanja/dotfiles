@@ -10,5 +10,5 @@
 
 ### Custom aliases in [aliases.symlink](https://github.com/jvanja/dotfiles/blob/master/aliases.symlink)
 
-### vim/tmux cheatsheet in [nodes.md](https://github.com/jvanja/dotfiles/blob/master/notes.md)
+### vim/tmux cheatsheet in [notes.md](https://github.com/jvanja/dotfiles/blob/master/notes.md)
 
