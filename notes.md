@@ -1,4 +1,4 @@
-##Vim [Cheat Sheet](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
+##Useful Vim [Cheat Sheet](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
 
 ###NORMAL MODE
 
@@ -28,6 +28,14 @@
 | Command | Description                                 |
 | ---     | :---                                        |
 | :reg-   | access all currently defined registers type |
+
+####folds
+
+| Command | Description      |
+| ---     | :---             |
+| za      | toggle fold      |
+| zA      | toggle all folds |
+| zR      | open all folds   |
 
 ####markers
 
@@ -115,7 +123,7 @@
 | shift i     | prepend text to block   |
 
 
-##TMUX [Cheat Sheet](https://gist.github.com/MohamedAlaa/2961058)
+##Useful TMUX [Cheat Sheet](https://gist.github.com/MohamedAlaa/2961058)
 
 **ctrl+a** and then:
 
