@@ -102,6 +102,7 @@
 
 | Command              | Description                                                                                                   |
 | ---                  | :---                                                                                                          |
+| ctrl p               | completion based on previous ‘p’                                                                              |
 | ctrl x ctrl f        | completion for file names in an open project! **MIND EXPLODED  (ctrl x - completion mode; ctrl f for files)** |
 | ctrl x ctrl n (or p) | context aware completion. goes ahead (or before) and completes from the context                               |
 | ctrl x ctrl l        | context aware LINE completion.                                                                                |
