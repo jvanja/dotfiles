@@ -4,15 +4,16 @@
 
 ####searching
 
-| Command                   | Description                                                                 |
-| ---                       | :---                                                                        |
-| :Ag /SEARCH/g *\*/\*      | -search for SEARCH term from current folder recursively                     |
-| :copen                    | Open the quick fix window for search results                                |
-| :ccl                      | close it                                                                    |
-| :cw                       | Open it if there are "errors", close it otherwise (some people prefer this) |
-| :cn                       | Go to the next error in the window                                          |
-| :cnf                      | Go to the first error in the next file                                      |
-| :cdo /foo/bar/c \| update | search and replace on all files from quick fix list                         |
+| Command                    | Description                                                                                           |
+| ---                        | :---                                                                                                  |
+| :Ag /SEARCH/g *\*/\*       | -search for SEARCH term from current folder recursively                                               |
+| :copen                     | Open the quickfix window for search results                                                           |                         
+| :ccl                       | close it                                                                                              |
+| :cw                        | Open it if there are "errors", close it otherwise (some people prefer this)                           |
+| :cn                        | Go to the next error in the window                                                                    |
+| :cnf                       | Go to the first error in the next file                                                                |
+| :cdo /foo/bar/c \| update  | search and replace over each element from quickfix list                                               |
+| :cfdo /foo/bar/c \| update | search and replace over each file from quickfix list (will not run replace mutiple times over 1 file) |
 
 ####pasting
 
