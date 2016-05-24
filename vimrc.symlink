@@ -32,6 +32,10 @@ no <right> <NOP>
 :nmap j gj
 :nmap k gk
 
+" go to line number with 12<enter> instead of 12G 
+nnoremap <CR> G 
+" go begining of file with backspace
+nnoremap <BS> gg
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NERDTREE
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
@@ -56,7 +60,7 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " ctrlp ignore files and folders
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = 'c'
 let g:ctrlp_mruf_relative = 1
 let g:ctrlp_regexp = 1
 
@@ -149,6 +153,7 @@ noremap <leader>q :q<cr> " quit file with leader q
 inoremap <leader>s <C-c>:w<cr> " save file with leader s when in insert mode 
 inoremap <leader>x <C-c>:wq<cr> " save and quit file with leader x when in insert mode 
 command! Q q " Bind :Q to :q
+nnoremap <Leader>o :CtrlP<CR> " open file with leader o
 
 " copy in visual mode with ctrc c to system clipboard
 " vnoremap <C-c> :w !pbcopy<CR><CR> 
