@@ -34,6 +34,8 @@ no <right> <NOP>
 
 " go to line number with 12<enter> instead of 12G 
 nnoremap <CR> G 
+" except in quickfix
+autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR> 
 " go begining of file with backspace
 nnoremap <BS> gg
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
