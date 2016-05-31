@@ -23,6 +23,16 @@ set incsearch
 :set mouse=a
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
+" AUTOCLOSING
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+inoremap (<CR> (<CR>)<Esc>O
+inoremap {<CR> {<CR>}<Esc>O
+inoremap {; {<CR>};<Esc>O
+inoremap {, {<CR>},<Esc>O
+inoremap [<CR> [<CR>]<Esc>O
+inoremap [; [<CR>];<Esc>O
+inoremap [, [<CR>],<Esc>O
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NAVIGATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " remove arrows navigation! learn 'hjkl' already!
