@@ -22,6 +22,9 @@ set incsearch
 " enable scroll
 :set mouse=a
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+" NAVIGATION
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " remove arrows navigation! learn 'hjkl' already!
 no <down> <NOP>
 no <up> <NOP>
@@ -38,6 +41,16 @@ nnoremap <CR> G
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR> 
 " go begining of file with backspace
 nnoremap <BS> gg
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+" BUFFERS
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+nnoremap gb :ls<CR>:buffer<Space>
+" nnoremap gB :ls<CR>:sbuffer<Space>
+nnoremap gB :ls<CR>:vert belowright sb<Space>
+nnoremap ,b :buffer *
+nnoremap ,B :sbuffer *
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NERDTREE
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
