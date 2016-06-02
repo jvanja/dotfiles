@@ -32,6 +32,7 @@ inoremap {, {<CR>},<Esc>O
 inoremap [<CR> [<CR>]<Esc>O
 inoremap [; [<CR>];<Esc>O
 inoremap [, [<CR>],<Esc>O
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NAVIGATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
@@ -112,7 +113,6 @@ set t_Co=256
 set background=dark
 color skittles_berry
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " AIRLINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
@@ -152,6 +152,25 @@ set shiftwidth=2
 set tabstop=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
+" FUGITIVE
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit -v -q<CR>
+" nnoremap <leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>ge :Gedit<CR>
+" nnoremap <leader>gr :Gread<CR>
+nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>glo :silent! Glog<CR>:bot copen<CR>
+" nnoremap <leader>grp :Ggrep<Space>
+" nnoremap <leader>gm :Gmove<Space>
+nnoremap <leader>gb :Git branch<Space>
+nnoremap <leader>go :Git checkout<Space>
+nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gl :Gpull<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " EMMET
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " emmet conflicts with ultisnips
@@ -178,7 +197,7 @@ noremap <leader>q :q<cr> " quit file with leader q
 inoremap <leader>s <C-c>:w<cr> " save file with leader s when in insert mode 
 inoremap <leader>x <C-c>:wq<cr> " save and quit file with leader x when in insert mode 
 command! Q q " Bind :Q to :q
-nnoremap <Leader>o :CtrlP<CR> " open file with leader o
+nnoremap <leader>o :CtrlP<CR> " open file with leader o
 
 " copy in visual mode with ctrc c to system clipboard
 " vnoremap <C-c> :w !pbcopy<CR><CR> 
