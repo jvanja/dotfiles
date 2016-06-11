@@ -65,6 +65,7 @@ nnoremap ,b :buffer *
 nnoremap ,B :sbuffer *
 nmap <leader>m :bnext<CR>
 nmap <leader>. :bprevious<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NERDTREE
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
@@ -192,14 +193,19 @@ nnoremap <C-n> :set relativenumber!<cr>
 " let g:used_javascript_libs = 'underscore,backbone'
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
-
-noremap <leader>s :w<cr> " save file with leader s
-noremap <leader>x :wq<cr> " save and quit 
-noremap <leader>q :q<cr> " quit file with leader q
-inoremap <leader>s <C-c>:w<cr> " save file with leader s when in insert mode 
-inoremap <leader>x <C-c>:wq<cr> " save and quit file with leader x when in insert mode 
+" save file with leader s
+noremap <leader>s :w<cr>
+" save and quit 
+noremap <leader>x :wq<cr>
+" quit file with leader q
+noremap <leader>q :q<cr>
+" save file with leader s when in insert mode
+inoremap <leader>s <C-c>:w<cr>
+" save and quit file with leader x when in insert mode
+inoremap <leader>x <C-c>:wq<cr>
 command! Q q " Bind :Q to :q
-nnoremap <leader>o :CtrlP<CR> " open file with leader o
+" open file with leader o using fzf
+nnoremap <leader>o :Files<CR>
 
 " copy in visual mode with ctrc c to system clipboard
 " vnoremap <C-c> :w !pbcopy<CR><CR> 
@@ -210,7 +216,8 @@ nnoremap <leader>o :CtrlP<CR> " open file with leader o
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " search and replace in file with ctrl f
 map <C-f> :%s///g<left><left><left>
-map <C-g> :Ag  **/*<left><left><left><left><left>
+" map <C-g> :Ag  **/*<left><left><left><left><left>
+map <C-g> :Ag<CR>
 
 " The Silver Searcher
 if executable('ag')
