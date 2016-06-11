@@ -4,6 +4,8 @@ set encoding=utf8
 " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h11
 
+let mapleader = ","
+
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
@@ -61,7 +63,7 @@ nnoremap gb :ls<CR>:buffer<Space>
 nnoremap gB :ls<CR>:vert belowright sb<Space>
 nnoremap ,b :buffer *
 nnoremap ,B :sbuffer *
-nmap <leader>, :bnext<CR>
+nmap <leader>m :bnext<CR>
 nmap <leader>. :bprevious<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NERDTREE
@@ -190,7 +192,6 @@ nnoremap <C-n> :set relativenumber!<cr>
 " let g:used_javascript_libs = 'underscore,backbone'
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
-let mapleader = ","
 
 noremap <leader>s :w<cr> " save file with leader s
 noremap <leader>x :wq<cr> " save and quit 
