@@ -61,7 +61,8 @@ nnoremap gb :ls<CR>:buffer<Space>
 nnoremap gB :ls<CR>:vert belowright sb<Space>
 nnoremap ,b :buffer *
 nnoremap ,B :sbuffer *
-
+nmap <leader>, :bnext<CR>
+nmap <leader>. :bprevious<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NERDTREE
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
@@ -257,7 +258,12 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['standard']
+" auto format js on save using https://github.com/feross/standard
+autocmd bufwritepost *.js silent !standard-format -w %
+set autoread
+
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:javascript_enable_domhtmlcss = 1
 
