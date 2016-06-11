@@ -247,6 +247,11 @@ highlight search ctermfg=white ctermbg=3423513
 inoremap jk <esc>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" FZF
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+imap <C-l> <plug>(fzf-complete-line)
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ULTISNIPS
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
