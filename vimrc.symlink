@@ -70,7 +70,7 @@ nmap <leader>. :bprevious<CR>
 " NERDTREE
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 "map /nt to :NERDTree
-nnoremap /nt :NERDTree<CR>
+nnoremap /nt :NERDTreeToggle<CR>
 
 " show hidden files in nerd tree
 let NERDTreeShowHidden=1
