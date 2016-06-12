@@ -126,14 +126,14 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 vnoremap ∆ :m '>+1<CR>gv=gv
 
 "enable system clipboard
-set clipboard=unnamed
+set clipboard+=unnamedplus
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " THEME
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " mkdir -p ~/.vim/cgit clone https://github.com/trusktr/seti.vim ~/.vim/bundle/seti.vimolors && cd ~/.vim/colors
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
-set t_Co=256
+" set t_Co=256 " using  let $NVIM_TUI_ENABLE_TRUE_COLOR=1 on NeoVim
 set background=dark
 colorscheme OceanicNext
 
