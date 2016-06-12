@@ -17,6 +17,9 @@ set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h11
 " set leader key to ,
 let mapleader = ","
 
+" map ; to enter command mode
+nnoremap ; :
+
 " Enable syntax highlighting
 filetype off
 filetype plugin indent on
@@ -138,6 +141,8 @@ set clipboard+=unnamedplus
 " set t_Co=256 " using  let $NVIM_TUI_ENABLE_TRUE_COLOR=1 on NeoVim
 set background=dark
 colorscheme OceanicNext
+" highlight  the current  line number
+hi CursorLineNr cterm=bold ctermfg=NONE gui=bold guifg=white 
 
 let g:airline_theme='oceanicnext'
 
