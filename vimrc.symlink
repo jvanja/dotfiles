@@ -13,6 +13,21 @@ autocmd! bufwritepost .vimrc source %
 " Vundle plugins
 source ~/.vim_plugins
 
+" Enable syntax highlighting
+filetype off
+filetype plugin indent on
+syntax on
+
+" Showing line numbers and length
+set number  " show line numbers
+set tw=79   " width of document (used by gd)
+" set nowrap  " don't automatically wrap on load
+" set fo-=t   " don't automatically wrap text when typing
+set wrap linebreak nolist " wrap text pls
+
+" Tab size
+set shiftwidth=2
+set tabstop=2
 " autocompletion for command menu on TAB
 set wildmenu wildmode=full
 
@@ -116,7 +131,9 @@ set clipboard=unnamed
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 set t_Co=256
 set background=dark
-color skittles_berry
+colorscheme OceanicNext
+
+let g:airline_theme='oceanicnext'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " AIRLINE
@@ -140,21 +157,6 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 
-" Enable syntax highlighting
-filetype off
-filetype plugin indent on
-syntax on
-
-" Showing line numbers and length
-set number  " show line numbers
-set tw=79   " width of document (used by gd)
-" set nowrap  " don't automatically wrap on load
-" set fo-=t   " don't automatically wrap text when typing
-set wrap linebreak nolist " wrap text pls
-
-" Tab size
-set shiftwidth=2
-set tabstop=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " FUGITIVE
