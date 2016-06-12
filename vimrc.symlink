@@ -1,5 +1,6 @@
 " for vim-devicons to show
 set encoding=utf8
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " set guifont=<FONT_NAME>:h<FONT_SIZE>
 " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h11
@@ -190,7 +191,7 @@ set relativenumber
 nnoremap <C-n> :set relativenumber!<cr>
 
 " javascript syntax
-" let g:used_javascript_libs = 'underscore,backbone'
+let g:used_javascript_libs = 'jquery, react, angularjs'
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
 " save file with leader s
