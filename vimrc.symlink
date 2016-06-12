@@ -147,9 +147,9 @@ syntax on
 " Showing line numbers and length
 set number  " show line numbers
 set tw=79   " width of document (used by gd)
-set nowrap  " don't automatically wrap on load
-set fo-=t   " don't automatically wrap text when typing
-" set wrap linebreak nolist " wrap text pls
+" set nowrap  " don't automatically wrap on load
+" set fo-=t   " don't automatically wrap text when typing
+set wrap linebreak nolist " wrap text pls
 
 " Tab size
 set shiftwidth=2
@@ -263,6 +263,8 @@ let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 " YOUCOMPLETEME
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ycm_path_to_python_interpreter = '/usr/local/bin/python'
+let g:python_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " SYNTASTIC
@@ -286,3 +288,15 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 noremap <leader>st :SyntasticToggleMode<cr> " Toggle SyntasticToggleMode 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NEOMAKE couldn't get it to work
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+" let g:neomake_javascript_standard_maker = {
+"     \ 'args': ['--verbose'],
+"     \ 'errorformat': '%A%f: line %l\, col %v\, %m \(%t%*\d\)',
+"     \ }
+" let g:neomake_javascript_enabled_makers = ['eslint']
+" let g:neomake_open_list = 1
+" autocmd! BufWritePost * Neomake
+
