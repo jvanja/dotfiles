@@ -296,6 +296,7 @@ let g:neomake_php_enabled_makers = ['phpcs']
 
 let g:neomake_javascript_enabled_makers = ['standard']
 let g:neomake_javascript_standard_maker = { 'errorformat': '%E %f:%l:%c: %m' }
+
 autocmd! BufWritePost * Neomake
 
 function StandardJSFormat()
