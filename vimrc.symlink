@@ -17,9 +17,6 @@ set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h11
 " set leader key to ,
 let mapleader = ","
 
-" map ; to enter command mode
-nnoremap ; :
-
 " Enable syntax highlighting
 filetype off
 filetype plugin indent on
@@ -292,9 +289,13 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " NEOMAKE couldn't get it to work
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:neomake_open_list = 2
+let g:neomake_place_signs = 1
+
+let g:neomake_php_enabled_makers = ['phpcs']
+
 let g:neomake_javascript_enabled_makers = ['standard']
 let g:neomake_javascript_standard_maker = { 'errorformat': '%E %f:%l:%c: %m' }
-let g:neomake_open_list = 2
 autocmd! BufWritePost * Neomake
 
 function StandardJSFormat()
