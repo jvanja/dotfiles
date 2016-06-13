@@ -1,7 +1,7 @@
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
-" Vundle plugins
+" plugins
 source ~/.vim_plugins
 
 " for vim-devicons to show
