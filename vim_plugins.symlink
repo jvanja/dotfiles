@@ -9,7 +9,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mattn/emmet-vim'
 Plug 'othree/yajs.vim'
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 " Plug 'scrooloose/syntastic'
 Plug 'neomake/neomake'
 Plug 'mxw/vim-jsx'
