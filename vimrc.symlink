@@ -301,8 +301,14 @@ let g:neomake_place_signs = 1
 
 let g:neomake_php_enabled_makers = ['phpcs']
 
-let g:neomake_javascript_enabled_makers = ['standard']
-let g:neomake_javascript_standard_maker = { 'errorformat': '%E %f:%l:%c: %m' }
+let g:neomake_javascript_enabled_makers = ['eslint']
+
+let g:neomake_javascript_eslint_maker = {
+	\ 'args': ['eslint', '-f', 'compact'],
+	\ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+	\ '%W%f: line %l\, col %c\, Warning - %m'
+	\ }
+" let g:neomake_javascript_standard_maker = { 'errorformat': '%E %f:%l:%c: %m' }
 
 autocmd! BufWritePost * Neomake
 
