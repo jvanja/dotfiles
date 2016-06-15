@@ -15,7 +15,7 @@ Plug 'neomake/neomake'
 Plug 'mxw/vim-jsx'
 Plug 'godlygeek/tabular'
 Plug 'tomtom/tcomment_vim'
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'tomtom/tlib_vim'
 Plug 'SirVer/ultisnips'
 Plug 'bling/vim-airline'
