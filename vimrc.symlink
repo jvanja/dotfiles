@@ -223,6 +223,7 @@ nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>ge :Gedit<CR>
 " nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gw :Gwrite<CR><CR>
+nnoremap <leader>gac :Git add -A . && git commit<CR><CR>
 nnoremap <leader>glo :silent! Glog<CR>:bot copen<CR>
 " nnoremap <leader>grp :Ggrep<Space>
 " nnoremap <leader>gm :Gmove<Space>
