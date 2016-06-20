@@ -306,8 +306,8 @@ let g:neomake_open_list = 0
 let g:neomake_php_enabled_makers = ['phpcs']
 
 let g:neomake_php_eslint_maker = {
-	\ 'args': ['--config-set', 'show_warnings', '0']
-}
+	\ 'args': ['phpcs', '--config-set', 'show_warnings', '0']
+	\ }
 
 let g:neomake_javascript_enabled_makers = ['eslint']
 
@@ -316,7 +316,6 @@ let g:neomake_javascript_eslint_maker = {
 	\ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
 	\ '%W%f: line %l\, col %c\, Warning - %m'
 	\ }
-" let g:neomake_javascript_standard_maker = { 'errorformat': '%E %f:%l:%c: %m' }
 
 autocmd! BufWritePost * Neomake
 
