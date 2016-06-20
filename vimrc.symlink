@@ -305,6 +305,10 @@ let g:neomake_open_list = 0
 
 let g:neomake_php_enabled_makers = ['phpcs']
 
+let g:neomake_php_eslint_maker = {
+	\ 'args': ['--config-set', 'show_warnings', '0']
+}
+
 let g:neomake_javascript_enabled_makers = ['eslint']
 
 let g:neomake_javascript_eslint_maker = {
