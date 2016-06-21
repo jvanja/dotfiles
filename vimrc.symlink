@@ -299,15 +299,12 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" NEOMAKE couldn't get it to work
+" NEOMAKE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:neomake_open_list = 0
 
-let g:neomake_php_enabled_makers = ['phpcs']
-
-let g:neomake_php_eslint_maker = {
-	\ 'args': ['phpcs', '--tab-width=2', '--config-set', 'show_warnings', '0']
-	\ }
+" let g:neomake_php_enabled_makers = ['phpcs']
+" let g:neomake_php_phpcs_args_standard = 'PSR2'
 
 let g:neomake_javascript_enabled_makers = ['eslint']
 
