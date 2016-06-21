@@ -77,6 +77,8 @@ noremap <leader>s :w<cr>
 noremap <leader>x :wq<cr>
 " quit file with leader q
 noremap <leader>q :q<cr>
+" delete buffer with leader w
+noremap <leader>w :bdelete<cr>
 " save file with leader s when in insert mode
 inoremap <leader>s <C-c>:w<cr>
 " save and quit file with leader x when in insert mode
