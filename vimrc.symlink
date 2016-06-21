@@ -316,7 +316,7 @@ let g:neomake_javascript_eslint_maker = {
 	\ '%W%f: line %l\, col %c\, Warning - %m'
 	\ }
 
-autocmd! BufWritePost * Neomake
+autocmd! BufWritePost *.js Neomake
 
 function StandardJSFormat()
 	silent !standard-format -w %
