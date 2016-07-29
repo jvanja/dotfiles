@@ -59,7 +59,7 @@ module.exports = {
   //   `@company/project`
   //   `project#1.0.1`
 	plugins: [
-		'hyperblue'
+		'hyperblue','hyperterm-blink'
 	],
 
   // in development, you can create a directory under
