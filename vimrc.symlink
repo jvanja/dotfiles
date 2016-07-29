@@ -248,7 +248,7 @@ let g:user_emmet_leader_key=','	" Emmet triggered with ,,
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " search and replace in file with ctrl f
 map <C-f> :%s///g<left><left><left>
-" map <C-g> :Ag  **/*<left><left><left><left><left>
+map <C-g> :Ag  **/*<left><left><left><left><left>
 map <C-g> :Ag<CR>
 
 " The Silver Searcher
