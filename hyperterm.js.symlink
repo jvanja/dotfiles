@@ -28,7 +28,7 @@ module.exports = {
     // custom padding (css format, i.e.: `top right bottom left`)
     padding: '5px 5px',
 
-		windowSize : [1400, 700],
+		windowSize : [1400, 900],
 
     // some color overrides. see http://bit.ly/29k1iU2 for
     // the full list
