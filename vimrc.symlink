@@ -275,13 +275,13 @@ highlight search ctermfg=white ctermbg=3423513
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-imap <C-l> <plug>(fzf-complete-line)
 " open file with leader o using fzf
 nnoremap <leader>o :Files<CR>
 imap <C-x><C-f> <plug>(fzf-complete-file-ag)
 imap <C-x><C-l> <plug>(fzf-complete-line)
 nnoremap <silent> K :call SearchWordWithAg()<CR>
 function! SearchWordWithAg()
+  if len(expand('<cword>')) < 2 | return | endif
   execute 'Ag' expand('<cword>')
 endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""
