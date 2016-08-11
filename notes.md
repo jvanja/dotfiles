@@ -128,7 +128,7 @@
 
 **ctrl+a** and then:
 
-**Windows **
+**Windows**
 
 c  create window
 
@@ -143,6 +143,11 @@ f  find window
 ,  name window
 
 &  kill window
+
+**TMUX RESURECT**
+
+ctrl s  save sessions
+ctrl r  restore sessions
 
 **Panes (splits)**
 
