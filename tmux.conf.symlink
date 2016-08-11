@@ -1,6 +1,4 @@
 set -g default-terminal "screen-256color"
-set -g utf8 on
-set -g status-utf8 on
 
 # set automatic config reloading
 bind r source-file ~/.tmux.conf\; display "Reloaded conf."
