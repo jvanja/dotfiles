@@ -147,6 +147,7 @@ f  find window
 **TMUX RESURECT**
 
 ctrl s  save sessions
+
 ctrl r  restore sessions
 
 **Panes (splits)**
