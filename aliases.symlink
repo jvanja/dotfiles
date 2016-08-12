@@ -62,9 +62,29 @@ alias gor="git push origin master"
 alias gs="git status -sb"
 alias gac="git add -A . && git commit"
 alias glo="glol"
+alias gpp="git push prod master"
+alias gpd="git push dev master"
+
+function gpp(){
+  # git push prod master
+  confirm "Would you really like to do a push?" && echo "pushing..."
+}
 
 function gitupf(){
 	git diff-tree --no-commit-id --name-only -r $1;
+}
+
+confirm () {
+    # call with a prompt string or use a default
+    read -r -p "${1:-Are you sure? [y/N]} " response
+    case $response in
+        [yY][eE][sS]|[yY]) 
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
 }
 
 ### IP addresses
