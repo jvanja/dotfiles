@@ -62,7 +62,6 @@ alias gor="git push origin master"
 alias gs="git status -sb"
 alias gac="git add -A . && git commit"
 alias glo="glol"
-alias gpp="git push prod master"
 alias gpd="git push dev master"
 
 function gpp(){
