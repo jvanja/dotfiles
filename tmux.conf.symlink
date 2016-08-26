@@ -30,7 +30,7 @@ set -g pane-border-fg colour58
 set -g pane-active-border-fg colour22
 
 #change default shell to zsh
-set-option -g default-shell /bin/zsh
+set-option -g default-shell $SHELL
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
