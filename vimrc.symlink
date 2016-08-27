@@ -248,8 +248,6 @@ let g:user_emmet_leader_key=','	" Emmet triggered with ,,
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " search and replace in file with ctrl f
 map <C-f> :%s///g<left><left><left>
-map <C-g> :Ag  **/*<left><left><left><left><left>
-" map <C-g> :FZF<CR>
 
 " The Silver Searcher
 if executable('ag')
@@ -280,10 +278,14 @@ nnoremap <leader>o :Files<CR>
 imap <C-x><C-f> <plug>(fzf-complete-file-ag)
 imap <C-x><C-l> <plug>(fzf-complete-line)
 nnoremap <silent> K :call SearchWordWithAg()<CR>
+
 function! SearchWordWithAg()
   if len(expand('<cword>')) < 2 | return | endif
   execute 'Ag' expand('<cword>')
 endfunction
+
+nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " ULTISNIPS
 """""""""""""""""""""""""""""""""""""""""""""""""""""
