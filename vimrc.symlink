@@ -286,6 +286,11 @@ endfunction
 
 nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
 
+" search with :Agu including ignored files in gitignore..
+command! -bang -nargs=* Agu call fzf#vim#ag(<q-args>, '--skip-vcs-ignores', {'down': '~40%'})
+" map ,g to :Agu
+nnoremap <silent> <leader>g :Agu<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " ULTISNIPS
 """""""""""""""""""""""""""""""""""""""""""""""""""""
