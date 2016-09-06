@@ -64,6 +64,7 @@ module.exports = {
     'hyperterm-cursor',
     'hyperlinks',
     'hyperterm-title',
+    'hyperterm-working-directory'
 	],
 
   // in development, you can create a directory under
