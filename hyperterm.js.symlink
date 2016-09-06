@@ -1,5 +1,8 @@
 module.exports = {
   config: {
+    // sets default dir
+    workingDirectory: '/Applications/MAMP/htdocs',
+
     // default font size in pixels for all tabs
     fontSize: 11,
 
