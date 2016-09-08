@@ -10,6 +10,11 @@ function vi(){
 	# mvim -v "$1"
 }
 
+function v(){
+	nvim "$1"
+	# mvim -v "$1"
+}
+
 ### TMUX
 
 alias tat="new-tmux-from-dir-name"
