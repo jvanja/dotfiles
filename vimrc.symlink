@@ -100,7 +100,7 @@ vnoremap ˚ :m '<-2<CR>gv=gv
 vnoremap ∆ :m '>+1<CR>gv=gv
 
 "enable system clipboard
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " AUTOCLOSING BLOCKS
