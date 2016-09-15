@@ -56,6 +56,10 @@ function ddmp(){
 	drush sql-dump --result-file=$(date +"%m-%d-%Y").sql
 }
 
+function wdmp(){
+	wp db export $(date +"%m-%d-%Y").sql
+}
+
 # vagrant virtual mashine
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
