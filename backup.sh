@@ -1,6 +1,5 @@
 #!/bin/sh
-
-# PATH=/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin
+PATH=/Applications/MAMP/Library/bin/:/usr/local/bin:/usr/local/sbin:~/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 #----------------------------------------------------
 # a simple mysql database backup script.
@@ -40,4 +39,4 @@ gzip $FILE
 echo "${FILE}.gz was created:"
 ls -l ${FILE}.gz
 
-rsync -avz --exclude=".*/" --exclude node_modules/ /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/htdocs
+# rsync -avz --exclude=".*/" --exclude node_modules/ /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/htdocs
