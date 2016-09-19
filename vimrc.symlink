@@ -1,6 +1,9 @@
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
+" temp file for crontab
+autocmd filetype crontab setlocal nobackup nowritebackup
+
 " plugins
 source ~/.vim_plugins
 
