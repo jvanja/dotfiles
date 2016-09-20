@@ -39,4 +39,4 @@ gzip $FILE
 echo "${FILE}.gz was created:"
 ls -l ${FILE}.gz
 
-rsync -avz --exclude=".*/" --exclude node_modules/ /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
+rsync -e"ssh -i ~/.ssh/id_rsa" -avz --exclude=".*/" --exclude node_modules/ /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
