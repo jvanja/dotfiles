@@ -4,7 +4,7 @@ module.exports = {
     workingDirectory: '/Applications/MAMP/htdocs',
 
     // default font size in pixels for all tabs
-    fontSize: 11,
+    fontSize: 12,
 
     // font family with optional fallbacks
     fontFamily: '"SauceCodePro Nerd Font", Menlo, "DejaVu Sans Mono", "Lucida Console", monospace',

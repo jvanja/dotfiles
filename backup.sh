@@ -30,13 +30,13 @@ rm ${FILE}.gz  2> /dev/null
 # mysqldump --opt --protocol=TCP --user=${USER} --password=${PASS} --host=${DBSERVER} ${DATABASE} > ${FILE}
 
 # use this command for a database server on localhost. add other options if need be.
-mysqldump --opt --user=${USER} --password=${PASS} ${DATABASE} > ${FILE}
+# mysqldump --opt --user=${USER} --password=${PASS} ${DATABASE} > ${FILE}
 
 # (4) gzip the mysql database dump file
-gzip $FILE
+# gzip $FILE
 
 # (5) show the user the result
 echo "${FILE}.gz was created:"
 ls -l ${FILE}.gz
 
-rsync -e"ssh -i /Users/vanjajelic/.ssh/id_rsa" -avz --exclude=".*/" --exclude node_modules/ /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
+/usr/bin/rsync -avvvz -e "/usr/bin/ssh -i /Users/vanjajelic/.ssh/id_rsa" --exclude=".DS_Store" --exclude=".*/" --exclude "node_modules/" /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
