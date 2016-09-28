@@ -2,6 +2,7 @@ call plug#begin('~/.vim/bundle')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
+Plug 'cohama/lexima'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'godlygeek/tabular'
