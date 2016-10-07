@@ -29,6 +29,9 @@ set -g mouse on
 set -g pane-border-fg colour58
 set -g pane-active-border-fg colour22
 
+# repeast last shell command in pane 1
+bind > select-pane -t 1 \; send-keys 'Up' 'C-m' \; select-pane -t 0
+
 #change default shell to zsh
 set-option -g default-shell $SHELL
 
