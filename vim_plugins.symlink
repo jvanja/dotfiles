@@ -10,6 +10,7 @@ Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jvanja/vim-bootstrap4-snippets'
+Plug 'vim-scripts/matchit.zip'
 Plug 'mattn/emmet-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'mxw/vim-jsx'

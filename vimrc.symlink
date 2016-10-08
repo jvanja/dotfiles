@@ -39,9 +39,6 @@ set tw=79
 " setting relative numbers 
 set relativenumber
 
-set ttimeout
-set ttimeoutlen=100
-
 " toggle relativenumber 
 nnoremap <C-n> :set relativenumber!<cr>
 
