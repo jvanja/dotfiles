@@ -105,6 +105,8 @@ vnoremap ∆ :m '>+1<CR>gv=gv
 "enable system clipboard
 " set clipboard+=unnamedplus
 
+noremap <leader>i gg=G``
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " AUTOCLOSING BLOCKS
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
