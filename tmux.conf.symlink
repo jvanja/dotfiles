@@ -31,7 +31,12 @@ set -g pane-active-border-fg colour22
 
 # repeast last shell command in pane 1
 bind > select-pane -t 1 \; send-keys 'Up' 'C-m' \; select-pane -t 0
+# kill process and repeast last shell command in pane 1
 bind . select-pane -t 1 \; send-keys 'C-c' 'Up' 'C-m' \; select-pane -t 0
+# git add . and checkout with generic comment. 
+bind a select-pane -t 1 \; send-keys 'gac' 'C-m' 'I' 'no comment' 'Escape' ',x' \; select-pane -t 0
+# git push
+bind / select-pane -t 1 \; send-keys 'gp' 'C-m' \; select-pane -t 0
 
 #change default shell to zsh
 set-option -g default-shell $SHELL
