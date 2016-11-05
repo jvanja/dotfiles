@@ -8,6 +8,9 @@ export PATH=/SDK/android-sdk-macosx/platform-tools:$PATH
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
+# add yarn to path
+export PATH="$PATH:$HOME/.yarn/bin"
+
 # MacPorts Installer addition on 2013-06-05_at_10:30:37: adding an appropriate PATH variable for use with MacPorts.
 # export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # Finished adapting your PATH environment variable for use with MacPorts.
