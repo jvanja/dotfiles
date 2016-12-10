@@ -31,5 +31,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
+Plug 'brooth/far.vim'
 
 call plug#end()
