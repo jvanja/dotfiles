@@ -91,13 +91,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-for file in ~/.{aliases,functions,secret}; do
-	[ -r "$file" ] && source "$file"
-done
-unset file
-
-# init z   https://github.com/rupa/z
-. ~/Applications/z/z.sh
-
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh  # This loads NVM
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
