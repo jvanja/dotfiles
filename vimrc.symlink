@@ -92,6 +92,9 @@ command! Q q " Bind :Q to :q
 " vnoremap <C-c> :w !pbcopy<CR><CR> 
 " noremap <C-v> :r !pbpaste<CR><CR>
 
+" paste mode toggle
+map <leader>p :set paste!<CR>
+
 " move lines with ALT j and ALT k
 nnoremap ˚ :m .-2<CR>==
 nnoremap ∆ :m .+1<CR>==
