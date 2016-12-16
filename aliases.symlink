@@ -1,11 +1,11 @@
 alias cl="clear"
 
 function vi(){
-	vim "$1"
+	nvim "$1"
 }
 
 function v(){
-	vim "$1"
+	nvim "$1"
 }
 
 ### TMUX
