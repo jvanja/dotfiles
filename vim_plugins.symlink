@@ -1,7 +1,10 @@
 call plug#begin('~/.vim/bundle')
 
+" Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
+Plug 'brooth/far.vim'
+Plug 'Chiel92/vim-autoformat'
 Plug 'cohama/lexima.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'flazz/vim-colorschemes'
@@ -10,7 +13,6 @@ Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jvanja/vim-bootstrap4-snippets'
-Plug 'vim-scripts/matchit.zip'
 Plug 'mattn/emmet-vim'
 Plug 'mhartington/oceanic-next'
 Plug 'mxw/vim-jsx'
@@ -21,7 +23,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
-" Plug 'scrooloose/syntastic'
 Plug 'SirVer/ultisnips'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'tomtom/tcomment_vim'
@@ -31,6 +32,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
-Plug 'brooth/far.vim'
+Plug 'vim-scripts/matchit.zip'
 
 call plug#end()
