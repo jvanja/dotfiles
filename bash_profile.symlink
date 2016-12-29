@@ -21,6 +21,9 @@ for file in ~/.{aliases,functions,secret}; do
 done
 unset file
 
+# enable vi mode for shell
+set -o vi
+
 # CLEANUP
 # PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
 # export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH

@@ -21,7 +21,7 @@ set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h11
 let mapleader = ","
 
 " jk is escape
-inoremap jk <esc>
+" inoremap jk <esc>
 
 " Enable syntax highlighting
 filetype off
