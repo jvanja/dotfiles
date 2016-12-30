@@ -33,5 +33,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 Plug 'vim-scripts/matchit.zip'
+Plug 'yuttie/comfortable-motion.vim'
 
 call plug#end()
