@@ -282,6 +282,9 @@ highlight search ctermfg=white ctermbg=3423513
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ignore files in .gitignore
+let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+
 " open file with leader o using fzf
 nnoremap <leader>o :Files<CR>
 imap <C-x><C-f> <plug>(fzf-complete-file-ag)
