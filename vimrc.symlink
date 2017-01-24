@@ -283,7 +283,8 @@ highlight search ctermfg=white ctermbg=3423513
 " FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ignore files in .gitignore
-let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+" let $FZF_DEFAULT_COMMAND = 'ag --ignore node_modules -l -g ""'
+" let $FZF_DEFAULT_COMMAND = 'ag --ignore-dir node_modules -g ""'
 
 " open file with leader o using fzf
 nnoremap <leader>o :Files<CR>
