@@ -285,6 +285,7 @@ highlight search ctermfg=white ctermbg=3423513
 " Ignore files in .gitignore
 " let $FZF_DEFAULT_COMMAND = 'ag --ignore node_modules -l -g ""'
 " let $FZF_DEFAULT_COMMAND = 'ag --ignore-dir node_modules -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag -U -g ""'
 
 " open file with leader o using fzf
 nnoremap <leader>o :Files<CR>
