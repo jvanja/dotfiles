@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/bundle')
 
-" Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'brooth/far.vim'
