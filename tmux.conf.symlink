@@ -42,6 +42,10 @@ bind-key Up resize-pane -U 5
 bind-key Left resize-pane -L 5
 bind-key Right resize-pane -R 5
 
+# set inactive/active window styles
+set -g window-style 'fg=colour247,bg=colour236'
+set -g window-active-style 'fg=colour250,bg=black'
+
 # use mouse to move between panes
 set -g mouse on
 set -g pane-border-fg colour58
