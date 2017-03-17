@@ -1,11 +1,11 @@
 alias cl="clear"
 
 function vi(){
-	nvim "$1"
+	reattach-to-user-namespace -l nvim "$1"
 }
 
 function v(){
-	nvim "$1"
+  reattach-to-user-namespace -l nvim "$1"
 }
 
 ### TMUX
