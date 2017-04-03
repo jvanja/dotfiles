@@ -31,6 +31,9 @@ syntax on
 " for SquareSpace temaplates
 au BufReadPost *.item set syntax=html
 
+" Vue.js syntax
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+
 " Showing line numbers and length
 set number
 " width of document (used by gd)
