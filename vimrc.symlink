@@ -13,6 +13,8 @@ set encoding=utf8
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
+set undodir=~/.vim/undodir
+
 " set guifont=<FONT_NAME>:h<FONT_SIZE>
 " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h11
