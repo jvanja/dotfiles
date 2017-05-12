@@ -330,26 +330,34 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " NEOMAKE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:neomake_open_list = 0
+" let g:neomake_open_list = 0
+"
+" " let g:neomake_php_enabled_makers = ['phpcs']
+" " let g:neomake_php_phpcs_args_standard = 'PSR2'
+"
+" let g:neomake_javascript_enabled_makers = ['eslint']
+"
+" let g:neomake_javascript_eslint_maker = {
+" 	\ 'args': ['eslint', '-f', 'compact'],
+" 	\ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
+" 	\ '%W%f: line %l\, col %c\, Warning - %m'
+" 	\ }
+"
+" autocmd! BufWritePost *.js Neomake
 
-" let g:neomake_php_enabled_makers = ['phpcs']
-" let g:neomake_php_phpcs_args_standard = 'PSR2'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"  ALE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:airline_section_error = '%{ale#statusline#Status()}'
+" Disable ALE warnings about trailing whitespace.
+" let g:ale_warn_about_trailing_whitespace = 0
 
-let g:neomake_javascript_enabled_makers = ['eslint']
+let g:ale_linters = {
+\   'html': [],
+\   'javascript': ['eslint'],
+\   'python': ['flake8'],
+\   'php': ['phpcs'],
+\}
 
-let g:neomake_javascript_eslint_maker = {
-	\ 'args': ['eslint', '-f', 'compact'],
-	\ 'errorformat': '%E%f: line %l\, col %c\, Error - %m,' .
-	\ '%W%f: line %l\, col %c\, Warning - %m'
-	\ }
-
-autocmd! BufWritePost *.js Neomake
-
-function StandardJSFormat()
-	silent !standard-format -w %
-	set autoread
-	Neomake
-endfunction
-
-nnoremap <leader>f :call StandardJSFormat()<CR>
+nnoremap <leader>f :Autoformat<CR>
 
