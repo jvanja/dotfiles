@@ -133,14 +133,16 @@ inoremap [, [<CR>],<Esc>O
 :nmap j gj
 :nmap k gk
 
+" move to begining and end of line with H and L
 nnoremap H ^
 nnoremap L $
+vnoremap H ^
+vnoremap L $
+
 " go to line number with 12<enter> instead of 12G 
 nnoremap <CR> G 
 " except in quickfix
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR> 
-" go begining of file with backspace
-nnoremap <BS> gg
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " BUFFERS
@@ -170,15 +172,6 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
       \ '\.coverage$', '\.webassets-cache$', '\.vagrant$', '\.DS_Store',
       \ '\.env-pypy$',
       \ 'node_modules']
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-" CTRLP
-""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-" ctrlp ignore files and folders
-let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_mruf_relative = 1
-let g:ctrlp_regexp = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " THEME
