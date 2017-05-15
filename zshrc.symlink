@@ -8,6 +8,8 @@ export ZSH=/Users/vanjajelic/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 # ZSH_THEME="powerlevel9k"
 
+KEYTIMEOUT=1
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
