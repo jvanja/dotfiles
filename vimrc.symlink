@@ -151,8 +151,6 @@ nnoremap gB :ls<CR>:vert belowright sb<Space>
 nnoremap <leader>b :buffer *
 nnoremap <leader>B :sbuffer *
 nmap <leader><leader> <C-^>
-nmap <leader>m :bnext<CR>
-nmap <leader>. :bprevious<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NERDTREE
