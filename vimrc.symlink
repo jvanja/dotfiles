@@ -184,11 +184,12 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 " set t_Co=256 " using  let $NVIM_TUI_ENABLE_TRUE_COLOR=1 on NeoVim
 set background=dark
-colorscheme OceanicNext
+"colorscheme OceanicNext
+colorscheme Tomorrow-Night
+
 " highlight  the current  line number
 hi CursorLineNr cterm=bold ctermfg=NONE gui=bold guifg=white 
 
-let g:airline_theme='oceanicnext'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " AIRLINE
