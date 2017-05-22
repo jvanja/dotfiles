@@ -57,13 +57,16 @@ set wrap linebreak nolist " wrap text pls
 set shiftwidth=2
 " show existing tab with 2 spaces width
 set tabstop=2
-" when indenting with '>', use 4 spaces width
-set shiftwidth=2
-" On pressing tab, insert 4 spaces
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2  
+" On pressing tab, insert 2 spaces
 set expandtab
 
 " autocompletion for command menu on TAB
 set wildmenu wildmode=full
+
+" block select pass shortest line
+set virtualedit=block
 
 " turn on search highlight
 set hlsearch
@@ -185,7 +188,8 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
 " set t_Co=256 " using  let $NVIM_TUI_ENABLE_TRUE_COLOR=1 on NeoVim
 set background=dark
 "colorscheme OceanicNext
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+" colorscheme dracula
 
 " highlight  the current  line number
 hi CursorLineNr cterm=bold ctermfg=NONE gui=bold guifg=white 
