@@ -10,8 +10,13 @@ source ~/.vim_plugins
 " for vim-devicons to show
 set encoding=utf8
 
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+set termguicolors
+set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+  \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+  \,sm:block-blinkwait175-blinkoff150-blinkon175
 
 set undodir=~/.vim/undodir
 
@@ -189,7 +194,7 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
 set background=dark
 "colorscheme OceanicNext
 " colorscheme Tomorrow-Night
-" colorscheme dracula
+colorscheme dracula
 
 " highlight  the current  line number
 hi CursorLineNr cterm=bold ctermfg=NONE gui=bold guifg=white 
