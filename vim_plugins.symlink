@@ -14,7 +14,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'jvanja/vim-bootstrap4-snippets'
 Plug 'mattn/emmet-vim'
-Plug 'mhartington/oceanic-next'
 Plug 'mxw/vim-jsx'
 " Plug 'neomake/neomake'
 Plug 'othree/javascript-libraries-syntax.vim'
