@@ -18,11 +18,13 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
   \,sm:block-blinkwait175-blinkoff150-blinkon175
 
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undodir//
+set undofile
+set history=100
+set undolevels=100
 
 set timeoutlen=1000 ttimeoutlen=0
 
-" set guifont=<FONT_NAME>:h<FONT_SIZE>
 " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h11
 
@@ -353,6 +355,9 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  ALE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_javascript_eslint_use_global = 1
+" let g:ale_javascript_eslint_executable = 'eslint_d'
+
 let g:airline_section_error = '%{ale#statusline#Status()}'
 " Disable ALE warnings about trailing whitespace.
 " let g:ale_warn_about_trailing_whitespace = 0
@@ -363,6 +368,8 @@ let g:ale_linters = {
 \   'python': ['flake8'],
 \   'php': ['phpcs'],
 \}
+
+" let g:ale_fixers.javascript = ['eslint']
 
 nnoremap <leader>f :Autoformat<CR>
 
