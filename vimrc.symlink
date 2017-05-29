@@ -166,7 +166,7 @@ nnoremap gb :ls<CR>:buffer<Space>
 nnoremap gB :ls<CR>:vert belowright sb<Space>
 nnoremap <leader>b :buffer *
 nnoremap <leader>B :sbuffer *
-nmap <leader><leader> <C-^>
+" nmap <leader><leader> <C-^>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NERDTREE
@@ -362,6 +362,7 @@ let g:airline_section_error = '%{ale#statusline#Status()}'
 " Disable ALE warnings about trailing whitespace.
 " let g:ale_warn_about_trailing_whitespace = 0
 
+" let g:ale_fixers.javascript = ['eslint']
 let g:ale_linters = {
 \   'html': [],
 \   'javascript': ['eslint'],
@@ -369,7 +370,24 @@ let g:ale_linters = {
 \   'php': ['phpcs'],
 \}
 
-" let g:ale_fixers.javascript = ['eslint']
-
 nnoremap <leader>f :Autoformat<CR>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"  EASYMOTION
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
