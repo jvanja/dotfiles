@@ -9,7 +9,6 @@
         "jsx": true
     },
     "plugins": [
-        "react"
     ],
     "rules": {
         "strict": 0,
