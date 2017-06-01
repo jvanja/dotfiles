@@ -58,13 +58,13 @@ set -g pane-border-fg colour58
 set -g pane-active-border-fg colour22
 
 # repeast last shell command in pane 1
-bind > select-pane -t 1 \; send-keys 'Up' 'C-m' \; select-pane -t 0
+bind > send-key -t 1 'Up' 'C-m'
 # kill process and repeast last shell command in pane 1
-bind . select-pane -t 1 \; send-keys 'C-c' 'Up' 'C-m' \; select-pane -t 0
+bind . send-keys -t 1 'C-c' 'Up' 'C-m'
 # git add . and checkout with generic comment. 
-bind a select-pane -t 1 \; send-keys 'gac' 'C-m' 'I' 'no comment' 'Escape' ',x' \; select-pane -t 0
+bind a send-keys -t 1 'gac' 'C-m' 'I' 'no comment' 'Escape' ',x'
 # git push
-bind / select-pane -t 1 \; send-keys 'gp' 'C-m' \; select-pane -t 0
+bind / send-keys -t 1 'gp' 'C-m'
 
 
 # List of plugins
