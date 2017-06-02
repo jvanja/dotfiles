@@ -107,8 +107,8 @@ inoremap <leader>x <C-c>:wq<cr>
 "in the news execute shell command under cursor
 noremap Q !!$SHELL<cr>
 
-" copy in visual mode with ctrc c to system clipboard
-" vnoremap <C-c> :w !pbcopy<CR><CR> 
+"copy in visual mode with ctrc c to system clipboard
+vnoremap <leader>y "*y
 " noremap <C-v> :r !pbpaste<CR><CR>
 
 " paste mode toggle
@@ -289,6 +289,8 @@ nnoremap N Nzzzv
 " set search highlight color
 " hi Search cterm=NONE ctermfg=white ctermbg=blue
 highlight search ctermfg=white ctermbg=3423513
+"turn off highlight with ,n
+nnoremap <leader>n :nohl<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
