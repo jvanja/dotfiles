@@ -18,10 +18,10 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
   \,sm:block-blinkwait175-blinkoff150-blinkon175
 
-set undodir=~/.vim/undodir//
-set undofile
-set history=100
-set undolevels=100
+" set undodir=~/.vim/undodir//
+" set undofile
+" set history=100
+" set undolevels=100
 
 set timeoutlen=1000 ttimeoutlen=0
 
@@ -372,8 +372,19 @@ let g:ale_linters = {
 \   'php': ['phpcs'],
 \}
 
-nnoremap <leader>f :Autoformat<CR>
-nnoremap gp :silent %!prettier --stdin --trailing-comma all --single-quote<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"  Neoformat
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:neoformat_javascript_prettier = {
+            \ 'exe': 'prettier',
+            \ 'args': ['--single-quote'],
+            \ 'stdin': 1,
+            \ }
+
+let g:neoformat_enabled_javascript = ['prettier']
+
+nnoremap <leader>f :Neoformat<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  EASYMOTION
