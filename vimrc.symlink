@@ -384,6 +384,13 @@ let g:neoformat_javascript_prettier = {
 
 let g:neoformat_enabled_javascript = ['prettier']
 
+" let g:neoformat_css_prettier = {
+"             \ 'exe': 'prettier',
+"             \ 'stdin': 1,
+"             \ }
+"
+" let g:neoformat_enabled_css = ['prettier']
+"
 nnoremap <leader>f :Neoformat<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
