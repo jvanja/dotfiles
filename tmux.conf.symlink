@@ -13,19 +13,7 @@ set -s escape-time 0
 # set-option -g default-command "reattach-to-user-namespace -l bash"
 #
 # # # Use vim keybindings in copy mode
-# setw -g mode-keys vi
-#
-# # # Setup 'v' to begin selection as in Vim
-# bind-key -t vi-copy v begin-selection
-# bind-key -t vi-copy y copy-pipe "reattach-to-user-namespace pbcopy"
-#
-# # # Update default binding of `Enter` to also use copy-pipe
-# unbind -t vi-copy Enter
-# bind-key -t vi-copy Enter copy-pipe "reattach-to-user-namespace pbcopy"
-#
-# # # Bind ']' to use pbpaste
-# bind ] run "reattach-to-user-namespace pbpaste | tmux load-buffer - && tmux paste-buffer"
-#
+setw -g mode-keys vi
 
 # unbind default prefix and set it to Ctrl+a
 unbind C-b
@@ -62,7 +50,8 @@ bind > send-key -t 1 'Up' 'C-m'
 # kill process and repeast last shell command in pane 1
 bind . send-keys -t 1 'C-c' 'Up' 'C-m'
 # git add . and checkout with generic comment. 
-bind a send-keys -t 1 'gac' 'C-m' 'I' 'no comment' 'Escape' ',x'
+# bind a send-keys -t 1 'gac' 'C-m' 'I' 'no comment' 'Escape' ',x'
+bind a send-keys -t 1 'git commit -a -m "no comment"' 'C-m' 'gp' 'C-m'
 # git push
 bind / send-keys -t 1 'gp' 'C-m'
 
