@@ -10,9 +10,6 @@ source ~/.vim_plugins
 " for vim-devicons to show
 set encoding=utf8
 
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-
 set termguicolors
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
@@ -51,7 +48,7 @@ set number
 set tw=79
 
 " setting relative numbers 
-set relativenumber
+set relativenumber!
 
 " toggle relativenumber 
 nnoremap <C-n> :set relativenumber!<cr>
