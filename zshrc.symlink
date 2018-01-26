@@ -52,7 +52,7 @@ KEYTIMEOUT=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestion zsh-history-substring-search tmux brew)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search tmux brew)
 
 # Enable autosuggestions automatically
 zle-line-init() {
