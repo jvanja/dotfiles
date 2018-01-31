@@ -299,7 +299,9 @@ nnoremap <leader>n :nohl<CR>
 let $FZF_DEFAULT_COMMAND = 'ag -U -g ""'
 
 " open file with leader o using fzf
-nnoremap <leader>o :Files<CR>
+" nnoremap <leader>o :Files<CR>
+nmap <leader>o :call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))<CR>
+
 imap <C-x><C-f> <plug>(fzf-complete-file-ag)
 imap <C-x><C-l> <plug>(fzf-complete-line)
 nnoremap <silent> K :call SearchWordWithAg()<CR>
