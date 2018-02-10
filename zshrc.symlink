@@ -94,4 +94,6 @@ source ~/.bash_profile
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.fzf_functions
 
+bindkey '\C-g\C-g' gh
