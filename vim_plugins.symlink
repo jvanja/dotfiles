@@ -13,6 +13,7 @@ Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-peekaboo'
 Plug 'jvanja/vim-bootstrap4-snippets'
 Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
