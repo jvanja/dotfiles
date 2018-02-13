@@ -127,17 +127,6 @@ vnoremap ∆ :m '>+1<CR>gv=gv
 noremap <leader>i gg=G``
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
-" AUTOCLOSING BLOCKS
-""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-inoremap (<CR> (<CR>)<Esc>O
-inoremap {<CR> {<CR>}<Esc>O
-inoremap {; {<CR>};<Esc>O
-inoremap {, {<CR>},<Esc>O
-inoremap [<CR> [<CR>]<Esc>O
-inoremap [; [<CR>];<Esc>O
-inoremap [, [<CR>],<Esc>O
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NAVIGATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " move rows up and down and not lines.. for wrapped text
