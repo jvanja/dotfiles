@@ -6,8 +6,8 @@ export PATH=/SDK/android-sdk-macosx/platform-tools:$PATH
 . ~/Applications/z/z.sh
 
 # Add RVM to PATH
-export PATH="$PATH:$HOME/.rvm/bin"
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# export PATH="$PATH:$HOME/.rvm/bin"
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # NVM
 # [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
@@ -25,10 +25,4 @@ unset file
 
 # enable vi mode for shell
 set -o vi
-
-# CLEANUP
-# PHP_VERSION=`ls /Applications/MAMP/bin/php/ | sort -n | tail -1`
-# export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
-#
-# export PATH=/Applications/MAMP/Library/bin/mysql:$PATH
 
