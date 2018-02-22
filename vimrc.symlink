@@ -289,7 +289,8 @@ let $FZF_DEFAULT_COMMAND = 'ag -U -g ""'
 
 " open file with leader o using fzf
 " nnoremap <leader>o :Files<CR>
-nmap <leader>o :call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))<CR>
+" nmap <leader>o :call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))<CR>
+nnoremap <leader>o :call SearchProject()<CR>
 
 imap <C-x><C-f> <plug>(fzf-complete-file-ag)
 imap <C-x><C-l> <plug>(fzf-complete-line)
@@ -307,8 +308,8 @@ function! SearchProject()
         \ getftype(gitpath.'commondir') ==# 'file')
 		call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))
 	else
-    " call fzf#vim#files(path)
-    call fzf#vim#files(path, fzf#vim#with_preview())
+    call fzf#vim#files(path)
+    " call fzf#vim#files(path, fzf#vim#with_preview())
 	endif
 endfunction
 
