@@ -2,7 +2,7 @@ module.exports = {
   config: {
 		workingDirectory: '/Applications/MAMP/htdocs',
     
-    updateChannel: 'canary',
+    //updateChannel: 'canary',
 
     // default font size in pixels for all tabs
     fontSize: 12,
