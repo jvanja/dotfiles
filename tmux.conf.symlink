@@ -41,7 +41,7 @@ set -g window-style 'fg=colour247,bg=colour237'
 set -g window-active-style 'fg=colour250,bg=colour236'
 
 # use mouse to move between panes
-set -g mouse on
+set -g mouse off
 set -g pane-border-fg colour58
 set -g pane-active-border-fg colour22
 
