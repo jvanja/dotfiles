@@ -10,9 +10,6 @@ export PATH=/SDK/android-sdk-macosx/platform-tools:$PATH
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 # NVM
-# [[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh
-# source ~/.nvm/nvm.sh
-export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 # add yarn to path

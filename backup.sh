@@ -39,4 +39,6 @@ rm ${FILE}.gz  2> /dev/null
 echo "${FILE}.gz was created:"
 ls -l ${FILE}.gz
 
-/usr/bin/rsync -avvvz -e "/usr/bin/ssh -i /Users/vanjajelic/.ssh/id_rsa" --exclude=".DS_Store" --exclude=".*/" --exclude "node_modules/" /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
+# --exclude=".DS_Store" --exclude=".*/" --exclude "node_modules/" --exclude "gekko/*.bd" 
+
+/usr/bin/rsync -avvvz -e "/usr/bin/ssh -i /Users/vanjajelic/.ssh/id_rsa" --exclude={.DS_Store,.*/,node_modules/,gekko/*.bd} /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
