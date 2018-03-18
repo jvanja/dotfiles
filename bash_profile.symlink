@@ -7,9 +7,6 @@ export EDITOR=vim
 # export PATH="$PATH:$HOME/.rvm/bin"
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# NVM
-source $(brew --prefix nvm)/nvm.sh
-
 for file in ~/.{aliases,functions,secret}; do
   [ -r "$file" ] && source "$file"
 done
