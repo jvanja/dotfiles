@@ -10,9 +10,6 @@ export EDITOR=vim
 # NVM
 source $(brew --prefix nvm)/nvm.sh
 
-# add yarn to path
-export PATH="$PATH:$HOME/.yarn/bin"
-
 for file in ~/.{aliases,functions,secret}; do
   [ -r "$file" ] && source "$file"
 done
