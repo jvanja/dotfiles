@@ -38,6 +38,8 @@ syntax on
 
 " for SquareSpace temaplates
 au BufReadPost *.item set syntax=html
+au BufRead,BufNewFile *.ejs set filetype=html
+
 
 " Vue.js syntax
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
@@ -255,6 +257,7 @@ let g:user_emmet_leader_key=','	" Emmet triggered with ,,
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " search and replace in file with ctrl f
 map <C-f> :%s///g<left><left><left>
+map <C-F> :Far  **/*.*<left><left><left><left><left><left><left>
 
 " The Silver Searcher
 if executable('ag')
