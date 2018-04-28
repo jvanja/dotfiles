@@ -41,4 +41,4 @@ ls -l ${FILE}.gz
 
 # --exclude=".DS_Store" --exclude=".*/" --exclude "node_modules/" --exclude "gekko/*.bd" 
 
-/usr/bin/rsync -avvvz -e "/usr/bin/ssh -i /Users/vanjajelic/.ssh/id_rsa" --exclude={.DS_Store,.*/,node_modules/,gekko/*.bd} /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
+/usr/bin/rsync -avzP --progress -e "/usr/bin/ssh -i /Users/vanjajelic/.ssh/id_rsa" --exclude={.DS_Store,.*/,node_modules/,gekko/*.bd} /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
