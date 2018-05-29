@@ -4,6 +4,10 @@ autocmd! bufwritepost .vimrc source %
 " temp file for crontab
 autocmd filetype crontab setlocal nobackup nowritebackup
 
+" 'matchit.vim' is built-in so let's enable it!
+" Hit '%' on 'if' to jump to 'else'.
+runtime macros/matchit.vim
+
 " plugins
 source ~/.vim_plugins
 
