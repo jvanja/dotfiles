@@ -8,6 +8,9 @@ autocmd filetype crontab setlocal nobackup nowritebackup
 " Hit '%' on 'if' to jump to 'else'.
 runtime macros/matchit.vim
 
+" Minimal automatic indenting for any filetype.
+set autoindent
+
 " plugins
 source ~/.vim_plugins
 
@@ -74,6 +77,9 @@ set expandtab
 
 " autocompletion for command menu on TAB
 set wildmenu wildmode=full
+
+" Proper backspace behavior.
+set backspace=indent,eol,start
 
 " block select pass shortest line
 set virtualedit=block
