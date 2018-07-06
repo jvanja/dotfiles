@@ -34,5 +34,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --tern-completer' }
 Plug 'tpope/vim-endwise'
+Plug 'nathanaelkane/vim-indent-guides'
+
 
 call plug#end()

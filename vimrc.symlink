@@ -379,7 +379,7 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 let g:ale_javascript_eslint_use_global = 1
 " let g:ale_javascript_eslint_executable = 'eslint_d'
 
-let g:airline_section_error = '%{ale#statusline#Status()}'
+" let g:airline_section_error = '%{ale#statusline#Status()}'
 " Disable ALE warnings about trailing whitespace.
 " let g:ale_warn_about_trailing_whitespace = 0
 
@@ -414,6 +414,17 @@ let g:neoformat_enabled_javascript = ['prettier']
 "
 " let g:neoformat_enabled_css = ['prettier']
 "
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+"  Indent Guides
+"""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#555555   ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#444444 ctermbg=4
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  EASYMOTION
