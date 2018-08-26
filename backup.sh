@@ -44,4 +44,4 @@ eval "$(ssh-agent -s)"
 
 # --exclude=".DS_Store" --exclude=".*/" --exclude "node_modules/" --exclude "gekko/*.bd" 
 
-/usr/bin/rsync -avzP --log-file=$HOME/.rsyncd.log --progress -e "/usr/bin/ssh -i /Users/vanjajelic/.ssh/id_rsa" --exclude={.DS_Store,.*/,node_modules/,gekko/*.bd} /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
+/usr/bin/rsync -avzP --log-file=$HOME/Desktop/rsync.log --progress -e "/usr/bin/ssh -i /Users/vanjajelic/.ssh/id_rsa" --exclude={.DS_Store,.*/,node_modules/,gekko/*.bd} /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
