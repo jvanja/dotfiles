@@ -19,10 +19,13 @@ DATABASE=--all-databases
 USER=admin
 PASS=admin
 
+#start the ssh agent
+eval "$(ssh-agent -s)"
+
 # (2) in case you run this more than once a day, remove the previous version of the file
-unalias rm     2> /dev/null
-rm ${FILE}     2> /dev/null
-rm ${FILE}.gz  2> /dev/null
+# unalias rm     2> /dev/null
+# rm ${FILE}     2> /dev/null
+# rm ${FILE}.gz  2> /dev/null
 
 # (3) do the mysql database backup (dump)
 
@@ -36,9 +39,9 @@ rm ${FILE}.gz  2> /dev/null
 # gzip $FILE
 
 # (5) show the user the result
-echo "${FILE}.gz was created:"
-ls -l ${FILE}.gz
+# echo "${FILE}.gz was created:"
+# ls -l ${FILE}.gz
 
 # --exclude=".DS_Store" --exclude=".*/" --exclude "node_modules/" --exclude "gekko/*.bd" 
 
-/usr/bin/rsync -avzP --progress -e "/usr/bin/ssh -i /Users/vanjajelic/.ssh/id_rsa" --exclude={.DS_Store,.*/,node_modules/,gekko/*.bd} /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
+/usr/bin/rsync -avzP --log-file=$HOME/.rsyncd.log --progress -e "/usr/bin/ssh -i /Users/vanjajelic/.ssh/id_rsa" --exclude={.DS_Store,.*/,node_modules/,gekko/*.bd} /Applications/MAMP/htdocs vanjel@vanjajelic.com:~/backups
