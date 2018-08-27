@@ -399,6 +399,8 @@ let g:ale_fixers = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  Neoformat
 """""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:neoformat_try_formatprg = 1
+
 let g:neoformat_javascript_prettier = {
             \ 'exe': 'prettier',
             \ 'args': ['--single-quote'],
