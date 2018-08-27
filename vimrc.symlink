@@ -399,15 +399,15 @@ let g:ale_fixers = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  Neoformat
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:neoformat_try_formatprg = 1
+let g:neoformat_run_all_formatters = 1
 
-let g:neoformat_javascript_prettier = {
-            \ 'exe': 'prettier',
-            \ 'args': ['--single-quote'],
-            \ 'stdin': 1,
-            \ }
+" let g:neoformat_javascript_prettier = {
+"             \ 'exe': 'prettier',
+"             \ 'args': ['--single-quote'],
+"             \ 'stdin': 1,
+"             \ }
 
-let g:neoformat_enabled_javascript = ['prettier']
+" let g:neoformat_enabled_javascript = ['prettier']
 
 " let g:neoformat_css_prettier = {
 "             \ 'exe': 'prettier',
@@ -415,7 +415,6 @@ let g:neoformat_enabled_javascript = ['prettier']
 "             \ }
 "
 " let g:neoformat_enabled_css = ['prettier']
-"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  Indent Guides
