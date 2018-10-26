@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/bundle')
 
-Plug 'easymotion/vim-easymotion'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
