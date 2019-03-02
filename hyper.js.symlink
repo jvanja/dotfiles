@@ -137,7 +137,8 @@ module.exports = {
     'hyper-dracula',
     'hyperterm-title',
     'hyper-font-smoothing',
-    'hyperterm-working-directory'
+    'hyperterm-working-directory',
+    'hyper-search'
   ],
 
   // in development, you can create a directory under
