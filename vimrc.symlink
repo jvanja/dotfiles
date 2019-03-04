@@ -1,3 +1,8 @@
+" for use in snippets
+let g:snips_author = "vanja"
+let g:snips_email = "jelicvanja@gmail.com"
+let g:snips_github = "https://github.com/jvanja"
+
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
