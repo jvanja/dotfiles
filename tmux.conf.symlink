@@ -43,8 +43,8 @@ set -g window-active-style 'fg=colour250,bg=colour236'
 
 # use mouse to move between panes
 set -g mouse on
-set -g pane-border-fg colour58
-set -g pane-active-border-fg colour22
+set -g pane-border-style colour58
+set -g pane-active-border-style colour22
 
 # repeast last shell command in pane 1
 bind > send-key -t 1 'Up' 'C-m'
