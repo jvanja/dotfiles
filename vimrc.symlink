@@ -162,6 +162,12 @@ nnoremap <CR> G
 autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR> 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
+" QUICKFIX
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
+nnoremap <Down> :cn<CR>
+nnoremap <Up> :cp<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""" 
 " BUFFERS
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 nnoremap gb :ls<CR>:buffer<Space>
