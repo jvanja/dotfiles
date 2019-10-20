@@ -41,7 +41,8 @@ function rd(){
   rm -rf $1;
 }
 
-
+### MONGODB
+alias mongod="mongod --config /usr/local/etc/mongod.conf"
 ### PHP
 
 alias tailphp="tail /Applications/MAMP/logs/php_error.log"
