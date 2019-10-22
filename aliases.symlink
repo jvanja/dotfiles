@@ -45,7 +45,16 @@ function rd(){
 alias mongod="mongod --config /usr/local/etc/mongod.conf"
 ### PHP
 
-alias tailphp="tail /Applications/MAMP/logs/php_error.log"
+tailphp() {
+  tail -f /Applications/MAMP/logs/php_error.log | awk '
+    /Notice/ {print "\033[32m" $0 "\033[39m" ;next;} 
+    /Warning/ {print "\033[33m" $0 "\033[39m" ;next;} 
+    /Fatal error/ {print "\033[31m" $0 "\033[39m" ; next; }
+    1 {print}
+  '
+}
+
+
 # drush sql-dump
 function ddmp(){
 	drush sql-dump --result-file=$(date +"%m-%d-%Y").sql
