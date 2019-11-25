@@ -406,6 +406,8 @@ let g:ale_fixers = {
 \   'javascript': ['eslint'],
 \}
 
+let g:ale_pattern_options = {'\.php$': {'ale_enabled': 0}}
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  Neoformat
