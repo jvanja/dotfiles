@@ -47,7 +47,7 @@ set -g mouse on
 # repeast last shell command in pane 1
 bind > send-key -t 1 'Up' 'C-m'
 # kill process and repeast last shell command in pane 1
-bind . send-keys -t 1 'C-c' 'Up' 'C-m'
+bind . send-keys -t top-right 'C-c' 'Up' 'C-m'
 # git add . and checkout with generic comment. 
 # bind a send-keys -t 1 'gac' 'C-m' 'I' 'no comment' 'Escape' ',x'
 bind a send-keys -t 1 'git commit -a -m "no comment"' 'C-m' 'gp' 'C-m'
