@@ -3,6 +3,11 @@ let g:snips_author = "vanja"
 let g:snips_email = "jelicvanja@gmail.com"
 let g:snips_github = "https://github.com/jvanja"
 
+" let vim know to use BREW version of pythons
+let g:python_host_prog = '/usr/local/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
+
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
