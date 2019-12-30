@@ -408,6 +408,9 @@ let g:ale_fixers = {
 
 let g:ale_pattern_options = {'\.php$': {'ale_enabled': 0}}
 
+" Navigate between eslint errors
+nmap <silent> <leader>k <Plug>(ale_previous_wrap)
+nmap <silent> <leader>j <Plug>(ale_next_wrap)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  Neoformat
