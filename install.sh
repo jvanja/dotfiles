@@ -9,3 +9,6 @@ for file in $linkables ; do
 	echo "copying $CUR_PATH/$file to $target"
 	cp $CUR_PATH/$file $target
 done
+
+echo "creating coc-settings.json"
+cp $CUR_PATH/vimcoc.settings ~/.vim/

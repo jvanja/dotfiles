@@ -1,8 +1,10 @@
 call plug#begin('~/.vim/bundle')
 
 Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'dense-analysis/ale'
+" Plug 'mattn/emmet-vim'
+" Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'brooth/far.vim'
@@ -15,7 +17,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'jvanja/vim-bootstrap4-snippets'
-Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
 Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'othree/yajs.vim'
@@ -25,7 +26,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
-Plug 'SirVer/ultisnips'
 Plug 'tomtom/tcomment_vim'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-fugitive'
