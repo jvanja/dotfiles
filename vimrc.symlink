@@ -277,8 +277,8 @@ nnoremap <leader>gl :Gpull<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " EMMET
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
-" emmet conflicts with ultisnips
-let g:user_emmet_leader_key=','	" Emmet triggered with ,,
+" " emmet conflicts with ultisnips
+" let g:user_emmet_leader_key=','	" Emmet triggered with ,,
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " SEARCHING
@@ -360,10 +360,10 @@ nnoremap <silent> <leader>g :Agu<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " ULTISNIPS
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<C-k>"
-let g:UltiSnipsJumpForwardTrigger="<C-b>"
-let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+" " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+" let g:UltiSnipsExpandTrigger="<C-k>"
+" let g:UltiSnipsJumpForwardTrigger="<C-b>"
+" let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  COC Setup
@@ -373,27 +373,27 @@ source ~/.vim/vimcoc.settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  ALE
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_javascript_eslint_use_global = 1
-let g:ale_fix_on_save = 1
-
-
-let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\   'vue': ['eslint']
-\}
-
-let g:ale_linters = {
-\   'html': [],
-\   'javascript': ['eslint'],
-\   'python': ['flake8'],
-\   'php': ['phpcs'],
-\}
-
-let g:ale_pattern_options = {'\.php$': {'ale_enabled': 0}}
-
-" Navigate between eslint errors
-nmap <silent> <leader>k <Plug>(ale_previous_wrap)
-nmap <silent> <leader>j <Plug>(ale_next_wrap)
+" let g:ale_javascript_eslint_use_global = 1
+" let g:ale_fix_on_save = 1
+"
+"
+" let g:ale_fixers = {
+" \   'javascript': ['eslint'],
+" \   'vue': ['eslint']
+" \}
+"
+" let g:ale_linters = {
+" \   'html': [],
+" \   'javascript': ['eslint'],
+" \   'python': ['flake8'],
+" \   'php': ['phpcs'],
+" \}
+"
+" let g:ale_pattern_options = {'\.php$': {'ale_enabled': 0}}
+"
+" " Navigate between eslint errors
+" nmap <silent> <leader>k <Plug>(ale_previous_wrap)
+" nmap <silent> <leader>j <Plug>(ale_next_wrap)
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  Indent Guides
