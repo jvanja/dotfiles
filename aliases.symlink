@@ -1,6 +1,8 @@
 alias cl="clear"
 alias c="clear"
 
+alias fixcam="sudo killall VDCAssistant"
+
 function vi(){
 	reattach-to-user-namespace -l nvim "$1"
 }
