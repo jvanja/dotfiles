@@ -284,7 +284,8 @@ nnoremap <leader>gl :Gpull<CR>
 " SEARCHING
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " search and replace in file with ctrl f
-map <C-f> :%s///g<left><left><left>
+nmap <C-f> :%s///g<left><left><left>
+vmap <C-f> :s///g<left><left><left>
 map <leader>f :Far  **/*.*<left><left><left><left><left><left><left>
 
 " Keep search matches in the middle of the window.
