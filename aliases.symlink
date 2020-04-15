@@ -78,6 +78,7 @@ alias gac="git add -A . && git commit"
 alias glo="glol"
 alias gpd="git push dev dev"
 alias gpp="git push prod master"
+alias gr="git remote -v"
 
 
 function gitupf(){
