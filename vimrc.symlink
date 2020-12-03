@@ -21,6 +21,9 @@ runtime macros/matchit.vim
 " Minimal automatic indenting for any filetype.
 set autoindent
 
+" vim polyglot is super slow when opening VUE files if this is not set
+let g:polyglot_disabled = ['vue']
+
 " plugins
 source ~/.vim_plugins
 
