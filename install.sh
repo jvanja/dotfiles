@@ -12,3 +12,6 @@ done
 
 echo "creating coc-settings.json"
 cp $CUR_PATH/vimcoc.settings ~/.vim/
+
+echo "syncing 'after' plugins"
+rsync -a $CUR_PATH/after/ ~/.vim/after
