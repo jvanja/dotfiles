@@ -22,7 +22,7 @@ runtime macros/matchit.vim
 set autoindent
 
 " vim polyglot is super slow when opening VUE files if this is not set
-let g:polyglot_disabled = ['vue']
+" let g:polyglot_disabled = ['vue']
 
 " plugins
 source ~/.vim_plugins
@@ -191,7 +191,7 @@ nnoremap <leader>B :sbuffer *
 " NERDTREE
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 "map /nt to :NERDTree
-nnoremap /nt :NERDTreeToggle<CR>
+noremap /nt :NERDTreeToggle<CR>
 
 " show hidden files in nerd tree
 let NERDTreeShowHidden=1
@@ -213,8 +213,6 @@ let NERDTreeIgnore=['\~$', '\.pyc', '\.swp$', '\.git', '\.hg', '\.svn',
 " wget -O wombat256mod.vim http://www.vim.org/scripts/download_script.php?src_id=13400
 " set t_Co=256 " using  let $NVIM_TUI_ENABLE_TRUE_COLOR=1 on NeoVim
 set background=dark
-"colorscheme OceanicNext
-" colorscheme Tomorrow-Night
 colorscheme dracula
 
 " highlight  the current  line number
@@ -353,9 +351,9 @@ nnoremap <silent> <leader>g :Agu<CR>
 " ULTISNIPS
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-" let g:UltiSnipsExpandTrigger="<C-k>"
-" let g:UltiSnipsJumpForwardTrigger="<C-b>"
-" let g:UltiSnipsJumpBackwardTrigger="<C-z>"
+let g:UltiSnipsExpandTrigger="<C-k>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 "  COC Setup

@@ -94,7 +94,7 @@ end
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'javascript' }
+  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' }
 }
 
 nvim_lsp.diagnosticls.setup {
@@ -155,7 +155,7 @@ nvim_lsp.diagnosticls.setup {
 }
 
 -- icon
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
     underline = true,
     -- This sets the spacing and the prefix, obviously.
