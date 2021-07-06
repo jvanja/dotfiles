@@ -1,7 +1,7 @@
 if !exists('g:loaded_completion') | finish | endif
 
 " Use completion-nvim in every buffer
-autocmd BufEnter * lua require'completion'.on_attach()
+" autocmd BufEnter * lua require'completion'.on_attach()
 
 set completeopt=menuone,noinsert,noselect
 
