@@ -304,49 +304,44 @@ nnoremap <leader>n :nohl<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " FZF
 """""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ignore files in .gitignore
-" let $FZF_DEFAULT_COMMAND = 'ag --ignore node_modules -l -g ""'
-" let $FZF_DEFAULT_COMMAND = 'ag --ignore-dir node_modules -g ""'
-let $FZF_DEFAULT_COMMAND = 'ag -U -g ""'
-
-" open file with leader o using fzf
-" nnoremap <leader>o :Files<CR>
-" nmap <leader>o :call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))<CR>
-nnoremap <leader>o :call SearchProject()<CR>
-
-imap <C-x><C-f> <plug>(fzf-complete-file-ag)
-imap <C-x><C-l> <plug>(fzf-complete-line)
-nnoremap <silent> K :call SearchWordWithAg()<CR>
-
-function! s:sub(str,pat,rep) abort
-  return substitute(a:str,'\v\C'.a:pat,a:rep,'')
-endfunction
-
-function! SearchProject()
-  let path = s:sub(expand('<sfile>:p:h'), '[\/]$', '') . '/'
-  let gitpath = '.git/'
-  if getfsize(gitpath.'HEAD') > 10 && (
-        \ isdirectory(gitpath.'objects') && isdirectory(gitpath.'refs') ||
-        \ getftype(gitpath.'commondir') ==# 'file')
-		call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))
-	else
-    call fzf#vim#files(path)
-    " call fzf#vim#files(path, fzf#vim#with_preview())
-	endif
-endfunction
-
-function! SearchWordWithAg()
-  if len(expand('<cword>')) < 2 | return | endif
-  execute 'Ag' expand('<cword>')
-endfunction
-
-nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
-
-" search with :Agu including ignored files in gitignore..
-" command! -bang -nargs=* Agu call fzf#vim#ag(<q-args>, '--skip-vcs-ignores', {'down': '~40%'})
-command! -bang -nargs=* Agu call fzf#vim#ag(<q-args>, {'down': '~40%', 'options': '-n 2..'})
-" map ,g to :Agu
-nnoremap <silent> <leader>g :Agu<CR>
+""" Ignore files in .gitignore
+""let $FZF_DEFAULT_COMMAND = 'ag -U -g ""'
+""
+""" open file with leader o using fzf
+""nnoremap <leader>o :call SearchProject()<CR>
+""
+""imap <C-x><C-f> <plug>(fzf-complete-file-ag)
+""imap <C-x><C-l> <plug>(fzf-complete-line)
+""nnoremap <silent> K :call SearchWordWithAg()<CR>
+""
+""function! s:sub(str,pat,rep) abort
+""  return substitute(a:str,'\v\C'.a:pat,a:rep,'')
+""endfunction
+""
+""function! SearchProject()
+""  let path = s:sub(expand('<sfile>:p:h'), '[\/]$', '') . '/'
+""  let gitpath = '.git/'
+""  if getfsize(gitpath.'HEAD') > 10 && (
+""        \ isdirectory(gitpath.'objects') && isdirectory(gitpath.'refs') ||
+""        \ getftype(gitpath.'commondir') ==# 'file')
+""		call fzf#run(fzf#wrap({'source': 'git ls-files --exclude-standard --others --cached'}))
+""	else
+""    call fzf#vim#files(path)
+""    " call fzf#vim#files(path, fzf#vim#with_preview())
+""	endif
+""endfunction
+""
+""function! SearchWordWithAg()
+""  if len(expand('<cword>')) < 2 | return | endif
+""  execute 'Ag' expand('<cword>')
+""endfunction
+""
+""nnoremap <silent> <leader>/ :execute 'Ag ' . input('Ag/')<CR>
+""
+""" search with :Agu including ignored files in gitignore..
+""command! -bang -nargs=* Agu call fzf#vim#ag(<q-args>, {'down': '~40%', 'options': '-n 2..'})
+""" map ,g to :Agu
+""nnoremap <silent> <leader>g :Agu<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""
 " ULTISNIPS
