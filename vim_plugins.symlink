@@ -36,6 +36,7 @@ if has("nvim")
   Plug 'nvim-lua/completion-nvim'
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'nvim-treesitter/nvim-treesitter-textobjects',
+  Plug 'JoosepAlviste/nvim-ts-context-commentstring',
 endif
 
 call plug#end()
