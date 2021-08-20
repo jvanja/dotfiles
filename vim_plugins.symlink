@@ -12,7 +12,6 @@ Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-peekaboo'
 Plug 'jvanja/vim-bootstrap4-snippets'
@@ -37,6 +36,7 @@ if has("nvim")
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
   Plug 'nvim-treesitter/nvim-treesitter-textobjects',
   Plug 'JoosepAlviste/nvim-ts-context-commentstring',
+  Plug 'windwp/nvim-ts-autotag',
 endif
 
 call plug#end()
