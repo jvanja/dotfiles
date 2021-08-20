@@ -35,6 +35,7 @@ if has("nvim")
   Plug 'folke/lsp-colors.nvim'
   Plug 'nvim-lua/completion-nvim'
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  Plug 'nvim-treesitter/nvim-treesitter-textobjects',
 endif
 
 call plug#end()
