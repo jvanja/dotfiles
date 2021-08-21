@@ -1,4 +1,3 @@
-lua << EOF
 local present, telescope = pcall(require, "telescope")
 if not present then
    return
@@ -15,8 +14,8 @@ telescope.setup {
          "--column",
          "--smart-case",
       },
-      prompt_prefix = "   ",
-      selection_caret = "  ",
+      prompt_prefix = "❯ ",
+      selection_caret = "❯ ",
       entry_prefix = "  ",
       initial_mode = "insert",
       selection_strategy = "reset",
@@ -63,11 +62,14 @@ telescope.setup {
 }
 
 require('telescope').load_extension('fzf')
-EOF
+-- nnoremap <leader>o <cmd>lua require('telescope.builtin').find_files()<cr>
 
+-- local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+local opts = {noremap = true, silent = true}
 
-" Using Lua functions
-nnoremap <leader>o <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
+-- buf_set_keymap("n", "<leader>o", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>o", "<Cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
+
