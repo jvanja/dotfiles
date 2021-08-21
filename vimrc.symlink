@@ -44,8 +44,7 @@ set timeoutlen=1000 ttimeoutlen=0
 
 " set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Plus\ Nerd\ File\ Types:h11
 " set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Complete:h11
-" set guifont=Hack\ Nerd\ Font\ Regular:h11
-set guifont=Monaco:h10
+set guifont=Hack\ Nerd\ Font\ Regular:h11
 
 " set leader key to ,
 let mapleader = ","
