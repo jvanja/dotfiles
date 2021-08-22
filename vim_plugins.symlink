@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/bundle')
 
+Plug 'tweekmonster/startuptime.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
@@ -16,7 +17,7 @@ Plug 'SirVer/ultisnips'
 Plug 'junegunn/vim-peekaboo'
 Plug 'jvanja/vim-bootstrap4-snippets'
 " Plug 'sheerun/vim-polyglot'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' } " load the plugin only when ND is fired
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'

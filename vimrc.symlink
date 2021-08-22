@@ -27,9 +27,6 @@ set autoindent
 " plugins
 source ~/.vim_plugins
 
-" for vim-devicons to show
-set encoding=utf8
-
 set termguicolors
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
@@ -85,8 +82,6 @@ set wrap linebreak nolist " wrap text pls
 set shiftwidth=2
 " show existing tab with 2 spaces width
 set tabstop=2
-" when indenting with '>', use 2 spaces width
-set shiftwidth=2  
 " On pressing tab, insert 2 spaces
 set expandtab
 
@@ -176,16 +171,6 @@ autocmd BufReadPost quickfix nnoremap <buffer> <CR> <CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 nnoremap <Down> :cn<CR>
 nnoremap <Up> :cp<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-" BUFFERS
-""""""""""""""""""""""""""""""""""""""""""""""""""""" 
-nnoremap gb :ls<CR>:buffer<Space>
-" nnoremap gB :ls<CR>:sbuffer<Space>
-nnoremap gB :ls<CR>:vert belowright sb<Space>
-nnoremap <leader>b :buffer *
-nnoremap <leader>B :sbuffer *
-" nmap <leader><leader> <C-^>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""" 
 " NERDTREE
