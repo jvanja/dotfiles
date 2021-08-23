@@ -153,6 +153,95 @@ nvim_lsp.diagnosticls.setup {
   }
 }
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities.textDocument.completion.completionItem.resolveSupport = {
+  properties = {
+    'documentation',
+    'detail',
+    'additionalTextEdits',
+  }
+}
+
+nvim_lsp.cssls.setup{
+  capabilities = capabilities,
+  on_attach = on_attach
+}
+
+nvim_lsp.php.setup({
+  settings = {
+    intelephense = {
+      stubs = { 
+        "bcmath",
+        "bz2",
+        "calendar",
+        "Core",
+        "curl",
+        "date",
+        "dba",
+        "dom",
+        "enchant",
+        "fileinfo",
+        "filter",
+        "ftp",
+        "gd",
+        "gettext",
+        "hash",
+        "iconv",
+        "imap",
+        "intl",
+        "json",
+        "ldap",
+        "libxml",
+        "mbstring",
+        "mcrypt",
+        "mysql",
+        "mysqli",
+        "password",
+        "pcntl",
+        "pcre",
+        "PDO",
+        "pdo_mysql",
+        "Phar",
+        "readline",
+        "recode",
+        "Reflection",
+        "regex",
+        "session",
+        "SimpleXML",
+        "soap",
+        "sockets",
+        "sodium",
+        "SPL",
+        "standard",
+        "superglobals",
+        "sysvsem",
+        "sysvshm",
+        "tokenizer",
+        "xml",
+        "xdebug",
+        "xmlreader",
+        "xmlwriter",
+        "yaml",
+        "zip",
+        "zlib",
+        "wordpress",
+        "woocommerce",
+        "acf-pro",
+        "wordpress-globals",
+        "wp-cli",
+        "genesis",
+        "polylang"
+      },
+      files = {
+        maxSize = 5000000;
+      }
+    }
+  },
+  capabilities = capabilities,
+  on_attach = on_attach
+});
+
 -- icon
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
