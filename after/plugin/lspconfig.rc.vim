@@ -20,7 +20,7 @@ end
 -- LspInstall
 
 
--- Use an on_attach function to only map the following keys 
+-- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -35,7 +35,7 @@ local on_attach = function(client, bufnr)
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  -- buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
@@ -168,76 +168,10 @@ nvim_lsp.cssls.setup{
   on_attach = on_attach
 }
 
+local php_options = require('intelephense_conf')
+
 nvim_lsp.php.setup({
-  settings = {
-    intelephense = {
-      stubs = { 
-        "bcmath",
-        "bz2",
-        "calendar",
-        "Core",
-        "curl",
-        "date",
-        "dba",
-        "dom",
-        "enchant",
-        "fileinfo",
-        "filter",
-        "ftp",
-        "gd",
-        "gettext",
-        "hash",
-        "iconv",
-        "imap",
-        "intl",
-        "json",
-        "ldap",
-        "libxml",
-        "mbstring",
-        "mcrypt",
-        "mysql",
-        "mysqli",
-        "password",
-        "pcntl",
-        "pcre",
-        "PDO",
-        "pdo_mysql",
-        "Phar",
-        "readline",
-        "recode",
-        "Reflection",
-        "regex",
-        "session",
-        "SimpleXML",
-        "soap",
-        "sockets",
-        "sodium",
-        "SPL",
-        "standard",
-        "superglobals",
-        "sysvsem",
-        "sysvshm",
-        "tokenizer",
-        "xml",
-        "xdebug",
-        "xmlreader",
-        "xmlwriter",
-        "yaml",
-        "zip",
-        "zlib",
-        "wordpress",
-        "woocommerce",
-        "acf-pro",
-        "wordpress-globals",
-        "wp-cli",
-        "genesis",
-        "polylang"
-      },
-      files = {
-        maxSize = 5000000;
-      }
-    }
-  },
+	settings = php_options,
   capabilities = capabilities,
   on_attach = on_attach
 });

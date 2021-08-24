@@ -10,8 +10,9 @@ for file in $linkables ; do
 	cp $CUR_PATH/$file $target
 done
 
-echo "creating coc-settings.json"
-cp $CUR_PATH/vimcoc.settings ~/.vim/
+# echo "creating coc-settings.json"
+# cp $CUR_PATH/vimcoc.settings ~/.vim/
 
 echo "syncing 'after' plugins"
 rsync -a $CUR_PATH/after/ ~/.vim/after
+rsync -a $CUR_PATH/lua/ ~/.vim/lua
