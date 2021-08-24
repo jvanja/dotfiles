@@ -44,7 +44,7 @@ set autoindent
 " let g:polyglot_disabled = ['vue']
 
 " plugins
-source ~/.vim_plugins
+source ~/.config/nvim/vim_plugins.vim
 
 set termguicolors
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
