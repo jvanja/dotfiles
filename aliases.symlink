@@ -3,13 +3,12 @@ alias c="clear"
 
 alias fixcam="sudo killall VDCAssistant"
 
-function vi(){
-	reattach-to-user-namespace -l nvim "$1"
-}
+#function v(){
+#  # reattach-to-user-namespace -l nvim "$1"
+#	nvim "$1"
+#}
 
-function v(){
-  reattach-to-user-namespace -l nvim "$1"
-}
+alias v="nvim"
 
 ### TMUX
 
