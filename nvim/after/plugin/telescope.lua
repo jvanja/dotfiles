@@ -72,4 +72,5 @@ vim.api.nvim_set_keymap("n", "<leader>o", "<Cmd>lua require('telescope.builtin')
 vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>?", "<cmd>lua require('telescope.builtin').keymaps()<CR>", opts)
 

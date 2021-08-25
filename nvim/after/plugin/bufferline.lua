@@ -4,9 +4,6 @@ if not present then
    return
 end
 
--- vim.opt.termguicolors = true
--- require("bufferline").setup{}
-
 bufferline.setup {
    options = {
       offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
