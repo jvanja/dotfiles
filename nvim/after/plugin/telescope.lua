@@ -62,9 +62,7 @@ telescope.setup {
 }
 
 require('telescope').load_extension('fzf')
--- nnoremap <leader>o <cmd>lua require('telescope.builtin').find_files()<cr>
 
--- local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 local opts = {noremap = true, silent = true}
 
 -- buf_set_keymap("n", "<leader>o", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)

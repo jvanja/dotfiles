@@ -3,10 +3,6 @@ if !exists('g:lspconfig')
 endif
 
 lua << EOF
---vim.lsp.set_log_level("debug")
-EOF
-
-lua << EOF
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
 
