@@ -39,11 +39,8 @@ Plug('JoosepAlviste/nvim-ts-context-commentstring') -- needs vim-commentary plug
 Plug('windwp/nvim-ts-autotag')
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
-Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = 
-  function()
-    vim.call('make')
-  end
-})
+-- Plug('nvim-telescope/telescope.nvim')
+Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = function() vim.call('make') end })
 
 vim.fn['plug#end']()
 
