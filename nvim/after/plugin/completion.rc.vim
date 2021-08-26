@@ -3,7 +3,11 @@ if !exists('g:loaded_completion') | finish | endif
 " Use completion-nvim in every buffer
 " autocmd BufEnter * lua require'completion'.on_attach()
 
+" Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
+
+" Avoid showing message extra message when using completion
+set shortmess+=c
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
