@@ -1,9 +1,8 @@
-if !exists('g:loaded_nvim_treesitter')
-  echom "Not loaded treesitter"
-  finish
-endif
+local present, ts_config = pcall(require, "nvim-treesitter.configs")
+if not present then
+   return
+end
 
-lua <<EOF
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
@@ -65,4 +64,3 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
   }
 }
-EOF
