@@ -15,7 +15,6 @@ opt.tw = 79
 opt.relativenumber = true
 
 -- permanent undo
-opt.undodir='~/.config/nvim/undodir'
 opt.undofile = true
 
 opt.wrap = true
