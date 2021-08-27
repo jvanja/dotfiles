@@ -1,6 +1,9 @@
-local saga = require 'lspsaga'
+local present, lspsaga = pcall(require, "lspsaga")
+if not present then
+   return
+end
 
-saga.init_lsp_saga {
+lspsaga.init_lsp_saga {
   error_sign = '',
   warn_sign = '',
   hint_sign = '',
