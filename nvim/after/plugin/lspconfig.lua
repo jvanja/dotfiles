@@ -36,7 +36,8 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>j', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<leader>k', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  -- buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting_seq_sync()<CR>', opts)
 
   -- formatting
   if client.resolved_capabilities.document_formatting then
@@ -128,10 +129,10 @@ lspconfig['lua'].setup {
   },
 }
 
-lspconfig.tsserver.setup {
+lspconfig.typescript.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' }
+  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'javascript', 'json', 'vue' }
 }
 
 lspconfig.diagnosticls.setup {
