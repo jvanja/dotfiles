@@ -51,7 +51,7 @@ vnoremap L $
 " go to line number with 12<enter> instead of 12G 
 nnoremap <CR> G 
 
-noremap /nt :NERDTreeToggle<CR>
+" noremap /nt :NERDTreeToggle<CR>
 "
 "" QUICKFIX
 ""

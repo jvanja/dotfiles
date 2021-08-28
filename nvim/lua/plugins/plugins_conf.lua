@@ -2,7 +2,7 @@
 -- NERDTREE
 --
 -- show hidden files in nerd tree
-local NERDTreeShowHidden = 1
+-- local NERDTreeShowHidden = 1
 
 --""""""""""""""""""""""""""""""""""""""""""""""""""""
 -- ULTISNIPS
