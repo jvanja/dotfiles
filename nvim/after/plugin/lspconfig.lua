@@ -178,10 +178,9 @@ local function setup_servers()
             }
           },
           formatFiletypes = {
-            css = 'prettier',
             javascript = 'eslint_d',
             javascriptreact = 'eslint_d',
-            json = 'prettier',
+            css = 'prettier',
             scss = 'prettier',
             less = 'prettier',
             typescript = 'eslint_d',

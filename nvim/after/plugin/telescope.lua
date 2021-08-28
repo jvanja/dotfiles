@@ -23,7 +23,7 @@ telescope.setup {
       layout_strategy = "horizontal",
       layout_config = {
          horizontal = {
-            prompt_position = "top",
+            prompt_position = "bottom",
             preview_width = 0.55,
             results_width = 0.8,
          },
@@ -50,6 +50,11 @@ telescope.setup {
       -- Developer configurations: Not meant for general override
       buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
    },
+	 pickers = {
+		 file_browser = {
+			 path_display = { "shorten" }
+		 }
+	 },
    extensions = {
       fzf = {
          fuzzy = true, -- false will only do exact matching
