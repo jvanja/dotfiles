@@ -91,123 +91,116 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 
 -- lspInstall + lspconfig stuff
 
-local function setup_servers()
-
+local setup_servers = function()
   lspinstall.setup()
   local servers = lspinstall.installed_servers()
 
   for _, lang in pairs(servers) do
-    if lang ~= "lua" then
-       lspconfig[lang].setup {
-          on_attach = on_attach,
-          capabilities = capabilities,
-          -- root_dir = vim.loop.cwd,
-       }
-    elseif lang == "lua" then
-       lspconfig[lang].setup {
-          on_attach = on_attach,
-          capabilities = capabilities,
-          settings = {
-             Lua = {
-                diagnostics = {
-                   globals = { "vim" },
-                },
-                workspace = {
-                   library = {
-                      [vim.fn.expand "$VIMRUNTIME/lua"] = true,
-                      [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
-                   },
-                   maxPreload = 100000,
-                   preloadFileSize = 10000,
-                },
-                telemetry = {
-                   enable = false,
-                },
-             },
-          },
-       }
-    elseif lang == "tsserver" then
-      lspconfig[lang].setup {
-        on_attach = on_attach,
-        capabilities = capabilities,
-        filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' }
-      }
-
-    elseif lang == "diagnosticls" then
-      lspconfig[lang].setup {
-        on_attach = on_attach,
-        filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'vue' },
-        init_options = {
-          linters = {
-            eslint = {
-              command = 'eslint_d',
-              rootPatterns = { '.git' },
-              debounce = 100,
-              args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
-              sourceName = 'eslint_d',
-              parseJson = {
-                errorsRoot = '[0].messages',
-                line = 'line',
-                column = 'column',
-                endLine = 'endLine',
-                endColumn = 'endColumn',
-                message = '[eslint] ${message} [${ruleId}]',
-                security = 'severity'
-              },
-              securities = {
-                [2] = 'error',
-                [1] = 'warning'
-              }
-            },
-          },
-          filetypes = {
-            javascript = 'eslint',
-            javascriptreact = 'eslint',
-            typescript = 'eslint',
-            typescriptreact = 'eslint',
-          },
-          formatters = {
-            eslint_d = {
-              command = 'eslint_d',
-              args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
-              rootPatterns = { '.git' },
-            },
-            prettier = {
-              command = 'prettier',
-              args = { '--stdin-filepath', '%filename' }
-            }
-          },
-          formatFiletypes = {
-            javascript = 'eslint_d',
-            javascriptreact = 'eslint_d',
-            css = 'prettier',
-            scss = 'prettier',
-            less = 'prettier',
-            typescript = 'eslint_d',
-            typescriptreact = 'eslint_d',
-            json = 'prettier',
-            vue = 'eslint_d',
-          }
-        }
-      }
-
-    elseif lang == "cssls" then
-      lspconfig[lang].setup {
-        capabilities = capabilities,
-        on_attach = on_attach
-      }
-
-    elseif lang == "php" then
-      lspconfig[lang].setup {
-        settings = require('intelephense_conf'),
-        capabilities = capabilities,
-        on_attach = on_attach
-      }
-    end
+   lspconfig[lang].setup {
+      on_attach = on_attach,
+      capabilities = capabilities,
+    }
   end
 end
 
 setup_servers()
+
+lspconfig['lua'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+     Lua = {
+        diagnostics = {
+           globals = { "vim" },
+        },
+        workspace = {
+           library = {
+              [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+              [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
+           },
+           maxPreload = 100000,
+           preloadFileSize = 10000,
+        },
+        telemetry = {
+           enable = false,
+        },
+     },
+  },
+}
+
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx' }
+}
+
+lspconfig.diagnosticls.setup {
+  on_attach = on_attach,
+  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'vue', 'lua' },
+  init_options = {
+    linters = {
+      eslint = {
+        command = 'eslint_d',
+        rootPatterns = { '.git' },
+        debounce = 100,
+        args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
+        sourceName = 'eslint_d',
+        parseJson = {
+          errorsRoot = '[0].messages',
+          line = 'line',
+          column = 'column',
+          endLine = 'endLine',
+          endColumn = 'endColumn',
+          message = '[eslint] ${message} [${ruleId}]',
+          security = 'severity'
+        },
+        securities = {
+          [2] = 'error',
+          [1] = 'warning'
+        }
+      },
+    },
+    filetypes = {
+      javascript = 'eslint',
+      javascriptreact = 'eslint',
+      typescript = 'eslint',
+      typescriptreact = 'eslint',
+    },
+    formatters = {
+      eslint_d = {
+        command = 'eslint_d',
+        args = { '--stdin', '--stdin-filename', '%filename', '--fix-to-stdout' },
+        rootPatterns = { '.git' },
+      },
+      prettier = {
+        command = 'prettier',
+        args = { '--stdin-filepath', '%filename' }
+      }
+    },
+    formatFiletypes = {
+      javascript = 'eslint_d',
+      javascriptreact = 'eslint_d',
+      css = 'prettier',
+      scss = 'prettier',
+      less = 'prettier',
+      typescript = 'eslint_d',
+      typescriptreact = 'eslint_d',
+      json = 'prettier',
+      vue = 'eslint_d',
+    }
+  }
+}
+
+lspconfig.cssls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
+}
+
+lspconfig.php.setup {
+  settings = require('intelephense_conf'),
+  capabilities = capabilities,
+  on_attach = on_attach
+}
 
 -- icon
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
