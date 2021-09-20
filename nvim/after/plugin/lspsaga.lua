@@ -21,5 +21,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] =
 )
 
 local opts = {noremap = true, silent = true}
-vim.api.nvim_set_keymap("n", "K", "<Cmd>lua require('lspsaga.hover').render_hover_doc()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>ld", "<Cmd>:Lspsaga show_line_diagnostics<CR>", opts)

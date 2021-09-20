@@ -24,6 +24,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   -- buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  buf_set_keymap('n', 'K', "<Cmd>lua require('lspsaga.hover').render_hover_doc()<CR>", opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
@@ -132,7 +133,23 @@ lspconfig['lua'].setup {
 lspconfig.typescript.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'javascript', 'json', 'vue' }
+  filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'javascript', 'json' }
+}
+
+lspconfig.vue.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
+}
+
+lspconfig.cssls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach
+}
+
+lspconfig.php.setup {
+  settings = require('intelephense_conf'),
+  capabilities = capabilities,
+  on_attach = on_attach
 }
 
 lspconfig.diagnosticls.setup {
@@ -190,17 +207,6 @@ lspconfig.diagnosticls.setup {
       vue = 'eslint_d',
     }
   }
-}
-
-lspconfig.cssls.setup {
-  capabilities = capabilities,
-  on_attach = on_attach
-}
-
-lspconfig.php.setup {
-  settings = require('intelephense_conf'),
-  capabilities = capabilities,
-  on_attach = on_attach
 }
 
 -- icon
