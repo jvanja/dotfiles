@@ -108,7 +108,7 @@ end
 
 setup_servers()
 
-lspconfig['lua'].setup {
+lspconfig.lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
