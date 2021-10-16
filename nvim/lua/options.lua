@@ -15,7 +15,7 @@ opt.tw = 79
 opt.relativenumber = true
 
 -- permanent undo
-opt.undofile = true
+-- opt.undofile = true
 
 opt.wrap = true
 opt.linebreak = true
