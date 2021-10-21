@@ -3,6 +3,8 @@ nnoremap <C-n> :set relativenumber!<cr>
 
 " save file with leader s
 noremap <leader>s :w<cr>
+inoremap ,s :w<cr>
+
 " save and quit 
 noremap <leader>x :wq<cr>
 " quit file with leader q
