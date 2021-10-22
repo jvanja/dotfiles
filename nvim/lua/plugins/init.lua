@@ -15,7 +15,7 @@ Plug('editorconfig/editorconfig-vim')
 Plug('flazz/vim-colorschemes')
 Plug('godlygeek/tabular')
 Plug('SirVer/ultisnips')
-Plug ('quangnguyen30192/cmp-nvim-ultisnips') -- necessary for nvm-cmp
+Plug('quangnguyen30192/cmp-nvim-ultisnips') -- necessary for nvm-cmp
 Plug('honza/vim-snippets')
 Plug('jvanja/vim-bootstrap4-snippets')
 Plug('junegunn/vim-peekaboo')
@@ -34,9 +34,10 @@ Plug('neovim/nvim-lspconfig')
 Plug('kabouzeid/nvim-lspinstall')
 Plug('folke/lsp-colors.nvim')
 -- Plug('nvim-lua/completion-nvim')
+Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-path'
 
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = vim.fn[':TSUpdate'] })
 Plug('nvim-treesitter/nvim-treesitter-textobjects')
