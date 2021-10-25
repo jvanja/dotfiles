@@ -14,11 +14,15 @@ cmp.setup({
     end,
   },
   mapping = {
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-d>'] = cmp.mapping.scroll_docs(-6),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-y>'] = cmp.mapping.confirm({ 
+      select = true 
+    }),
+
+    -- read :h ins_completion to find out why TAB is baad ??
     ['<Tab>'] = function(fallback)
       if cmp.visible() then
         cmp.select_next_item()
@@ -28,18 +32,14 @@ cmp.setup({
     end
   },
   sources = {
-    { name = 'nvim_lsp' },
-
-    -- For vsnip user.
-    -- { name = 'vsnip' },
-
-    -- For luasnip user.
-    -- { name = 'luasnip' },
-
-    -- For ultisnips user.
+    -- Order here is respected in the completion
     { name = 'ultisnips' },
 
-    { name = 'buffer' },
+    { name = 'nvim_lsp' },
+
+    { name = 'path' },
+
+    { name = 'buffer', keyword_length = 5 },
   }
 })
 
