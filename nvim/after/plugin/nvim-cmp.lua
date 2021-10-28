@@ -1,6 +1,7 @@
 local cmp = require'cmp'
 
 cmp.setup({
+
   snippet = {
     expand = function(args)
       -- For `vsnip` user.
@@ -47,6 +48,11 @@ cmp.setup({
     { name = 'path' },
 
     { name = 'buffer', keyword_length = 5 },
-  }
+  },
+
+  experimental = {
+    native_menu = false,
+    ghost_text = true,
+  },
 })
 
