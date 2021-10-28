@@ -14,13 +14,20 @@ cmp.setup({
     end,
   },
   mapping = {
-    ['<C-d>'] = cmp.mapping.scroll_docs(-6),
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
-    ['<C-y>'] = cmp.mapping.confirm({ 
-      select = true 
+    ['<C-y>'] = cmp.mapping.confirm({
+      select = true
     }),
+    ['<leader-s>'] = function(fallback)
+      if vim.fn.pumvisible() == 1 then
+        vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(':w<cr>', true, true, true), 'n', true)
+      else
+        fallback()
+      end
+    end,
 
     -- read :h ins_completion to find out why TAB is baad ??
     ['<Tab>'] = function(fallback)
