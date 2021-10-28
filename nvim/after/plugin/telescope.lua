@@ -70,8 +70,18 @@ require('telescope').load_extension('fzf')
 
 local opts = {noremap = true, silent = true}
 
+_G.search_dotfiles = function()
+  require("telescope.builtin").find_files({
+    prompt_title = "< VimRC >",
+    cwd = "/Applications/MAMP/htdocs/dotfiles/nvim",
+    hidden = false,
+  })
+end
+-- nnoremap <leader>vrc :lua require('theprimeagen.telescope').search_dotfiles()<CR>
+
 -- buf_set_keymap("n", "<leader>o", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>o", "<Cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>fd", "<Cmd>lua search_dotfiles()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>ff", "<Cmd>lua require('telescope.builtin').file_browser()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
