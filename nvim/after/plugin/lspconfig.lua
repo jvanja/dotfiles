@@ -1,5 +1,6 @@
 local present1, lspconfig = pcall(require, 'lspconfig')
-local present2, lspinstall = pcall(require, "lspinstall")
+-- local present2, lspinstall = pcall(require, 'lspinstall')
+local present2, lsp_installer = pcall(require, 'nvim-lsp-installer')
 
 if not (present1 or present2) then
    return
@@ -67,20 +68,33 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 -- lspInstall + lspconfig stuff
 
 local setup_servers = function()
-  lspinstall.setup()
-  local servers = lspinstall.installed_servers()
+  -- lspinstall.setup()
+  -- local servers = lspinstall.installed_servers()
 
-  for _, lang in pairs(servers) do
-   lspconfig[lang].setup {
-      on_attach = on_attach,
-      capabilities = capabilities,
-    }
-  end
+  -- for _, lang in pairs(servers) do
+  --  lspconfig[lang].setup {
+  --     on_attach = on_attach,
+  --     capabilities = capabilities,
+  --   }
+  -- end
+
+  lsp_installer.on_server_ready(function(server)
+    local opts = {}
+
+    -- (optional) Customize the options passed to the server
+    -- if server.name == "tsserver" then
+    --     opts.root_dir = function() ... end
+    -- end
+
+    -- This setup() function is exactly the same as lspconfig's setup function.
+    -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/ADVANCED_README.md
+    server:setup(opts)
+  end)
 end
 
 setup_servers()
 
-lspconfig.lua.setup {
+lspconfig.sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   settings = {
@@ -103,13 +117,13 @@ lspconfig.lua.setup {
   },
 }
 
-lspconfig.typescript.setup {
+lspconfig.tsserver.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'javascript', 'json' }
 }
 
-lspconfig.vue.setup {
+lspconfig.vuels.setup {
   capabilities = capabilities,
   on_attach = on_attach
 }
@@ -119,10 +133,22 @@ lspconfig.cssls.setup {
   on_attach = on_attach
 }
 
-lspconfig.php.setup {
+lspconfig.intelephense.setup {
   settings = require('intelephense_conf'),
   capabilities = capabilities,
   on_attach = on_attach
+}
+
+lspconfig.emmet_ls.setup {
+  cmd = {'emmet-ls', '--stdio'};
+  filetypes = {'html', 'css'};
+  root_dir = function(fname)
+    return vim.loop.cwd()
+  end;
+  settings = {};
+  capabilities = capabilities,
+  on_attach = on_attach
+
 }
 
 lspconfig.diagnosticls.setup {
@@ -195,7 +221,7 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
 )
 
 -- Automatically reload after `:LspInstall <server>` so we don't have to restart neovim
-lspinstall.post_install_hook = function()
-   setup_servers() -- reload installed servers
-   vim.cmd "bufdo e"
-end
+-- lspinstall.post_install_hook = function()
+--    setup_servers() -- reload installed servers
+--    vim.cmd "bufdo e"
+-- end

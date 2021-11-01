@@ -19,9 +19,6 @@ Plug('quangnguyen30192/cmp-nvim-ultisnips') -- necessary for nvm-cmp
 Plug('honza/vim-snippets')
 Plug('jvanja/vim-bootstrap4-snippets')
 Plug('junegunn/vim-peekaboo')
--- Plug('scrooloose/nerdtree', { on = 'NERDTreeToggle' }) -- load the plugin only when ND is fired
--- Plug('Xuyuanp/nerdtree-git-plugin')
--- Plug('tiagofumo/vim-nerdtree-syntax-highlight')
 Plug('tpope/vim-commentary')
 Plug('tpope/vim-fugitive')
 Plug('tpope/vim-repeat')
@@ -31,9 +28,9 @@ Plug('nathanaelkane/vim-indent-guides')
 -- nvim >=0.5
 Plug('glepnir/lspsaga.nvim')
 Plug('neovim/nvim-lspconfig')
-Plug('kabouzeid/nvim-lspinstall')
+-- Plug('kabouzeid/nvim-lspinstall')
+Plug 'williamboman/nvim-lsp-installer'
 Plug('folke/lsp-colors.nvim')
--- Plug('nvim-lua/completion-nvim')
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
