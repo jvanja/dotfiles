@@ -141,7 +141,7 @@ lspconfig.intelephense.setup {
 
 lspconfig.emmet_ls.setup {
   cmd = {'emmet-ls', '--stdio'};
-  filetypes = {'html', 'css'};
+  filetypes = {'html', 'css', 'vue', 'php'};
   root_dir = function(fname)
     return vim.loop.cwd()
   end;
