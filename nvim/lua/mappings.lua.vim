@@ -16,6 +16,8 @@ inoremap <leader>s <C-c>:w<cr>
 " save and quit file with leader x when in insert mode
 inoremap <leader>x <C-c>:wq<cr>
 
+noremap <leader>, <C-^><cr>
+
 "in the news execute shell command under cursor
 noremap Q !!$SHELL<cr>
 
