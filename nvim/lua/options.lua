@@ -25,7 +25,6 @@ opt.shiftwidth = 2
 
 opt.smartindent = true
 
-print('hi')
 local g = vim.g
 
 g.indent_guides_enable_on_vim_startup = 1
