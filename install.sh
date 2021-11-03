@@ -10,8 +10,5 @@ for file in $linkables ; do
 	cp $CUR_PATH/$file $target
 done
 
-# echo "creating coc-settings.json"
-# cp $CUR_PATH/vimcoc.settings ~/.vim/
-
 echo "syncing nvim config"
 rsync -a $CUR_PATH/nvim/ ~/.config/nvim
