@@ -5,6 +5,7 @@ if not (present1 or present2) then
    return
 end
 
+
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
@@ -42,7 +43,11 @@ local on_attach = function(client, bufnr)
   --   vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
   --   vim.api.nvim_command [[augroup END]]
   -- end
+end
 
+local disableFormat = function(client)
+    client.resolved_capabilities.document_formatting = false
+    on_attach(client)
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -79,6 +84,7 @@ local setup_servers = function()
       end,
       ["tsserver"] = function()
         return vim.tbl_deep_extend("force", default_opts, {
+          on_attach = disableFormat,
           filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'javascript', 'json' }
       })
       end,
