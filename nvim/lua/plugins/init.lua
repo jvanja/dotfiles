@@ -28,12 +28,12 @@ Plug('nathanaelkane/vim-indent-guides')
 -- nvim >=0.5
 Plug('glepnir/lspsaga.nvim')
 Plug('neovim/nvim-lspconfig')
-Plug 'williamboman/nvim-lsp-installer'
+Plug('williamboman/nvim-lsp-installer')
 Plug('folke/lsp-colors.nvim')
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
+Plug('hrsh7th/nvim-cmp')
+Plug('hrsh7th/cmp-nvim-lsp')
+Plug('hrsh7th/cmp-buffer')
+Plug('hrsh7th/cmp-path')
 
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = vim.fn[':TSUpdate'] })
 Plug('nvim-treesitter/nvim-treesitter-textobjects')
