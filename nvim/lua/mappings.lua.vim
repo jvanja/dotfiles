@@ -113,3 +113,6 @@ nnoremap N Nzzzv
 nnoremap <leader>n :nohl<CR>
 
 
+" this makes the DOT work in the visual mode
+xmap <silent>. :normal .<CR>
+
