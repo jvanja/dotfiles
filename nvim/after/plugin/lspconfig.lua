@@ -95,7 +95,7 @@ local setup_servers = function()
       end,
         ["emmet_ls"] = function()
         return vim.tbl_deep_extend("force", default_opts, {
-          cmd = {'emmet-ls', '--stdio'};
+          -- cmd = {'emmet-ls', '--stdio'};
           filetypes = {'html', 'css', 'scss'};
           root_dir = function(fname)
             return vim.loop.cwd()
