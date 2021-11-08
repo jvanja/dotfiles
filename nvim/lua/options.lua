@@ -56,6 +56,10 @@ opt.incsearch = true
 -- enable scroll
 opt.mouse = 'a'
 
+-- make cursor not scroll to the edges of the screen
+opt.scrolloff = 8
+opt.sidescrolloff = 8
+
 --show status bar always
 opt.laststatus = 2
 
