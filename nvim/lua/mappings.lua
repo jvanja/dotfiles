@@ -36,13 +36,13 @@ M.set_keymaps('v', '<leader>y', '"*y')
 M.set_keymaps('n', '<leader>p', ':set paste!<CR>')
 
 -- move lines with ALT j and ALT k
-M.set_keymaps('n', '˚', ':m .-2<CR>==')
-M.set_keymaps('n', '∆', ':m .+1<CR>==')
-M.set_keymaps('i', '˚', '<Esc>:m .-2<CR>==gi')
-M.set_keymaps('i', '∆', '<Esc>:m .+1<CR>==gi')
+M.set_keymaps('n', '<A-j>', ':m .+1<CR>==')
+M.set_keymaps('n', '<A-k>', ':m .-2<CR>==')
+M.set_keymaps('i', '<A-j>', '<Esc>:m .+1<CR>==gi')
+M.set_keymaps('i', '<A-k>', '<Esc>:m .-2<CR>==gi')
+M.set_keymaps('v', '<A-j>', ":m '>+1<CR>gv=gv")
+M.set_keymaps('v', '<A-k>', ":m '<-2<CR>gv=gv")
 
-M.set_keymaps('v', '˚', ":m '<-2<CR>gv=gv")
-M.set_keymaps('v', '∆', ":m '>+1<CR>gv=gv")
 
 -- NAVIGATION
 --
