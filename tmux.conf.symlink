@@ -47,7 +47,7 @@ set -g window-style 'fg=colour247,bg=colour235'
 set -g window-active-style 'fg=colour250,bg=colour234'
 
 # use mouse to move between panes
-# set -g mouse on
+set -g mouse on
 
 # repeast last shell command in pane 1
 bind > send-key -t 1 'Up' 'C-m'
