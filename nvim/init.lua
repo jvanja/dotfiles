@@ -22,5 +22,6 @@ require('theme')
 require('autocmds')
 
 -- MAPPINGS
-vim.cmd('source ~/.config/nvim/lua/mappings.lua.vim')
+require('mappings')
+-- vim.cmd('source ~/.config/nvim/lua/mappings.lua.vim')
 
