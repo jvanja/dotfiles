@@ -2,6 +2,7 @@ local present1, lspconfig = pcall(require, 'lspconfig')
 local present2, lsp_installer = pcall(require, 'nvim-lsp-installer')
 
 if not (present1 or present2) then
+
    return
 end
 
@@ -12,6 +13,7 @@ local on_attach = function(client, bufnr)
 
   --Enable completion triggered by <c-x><c-o>
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
+
 
   -- Mappings.
   local opts = { noremap=true, silent=true }
@@ -180,4 +182,15 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     }
   }
 )
+
+-- TODO:  <10-11-21, vanja> --
+-- change this to lua once the api is out.
+vim.api.nvim_command([[
+fun LspLocationList()
+  lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
+endfun
+augroup POPULATE_LL_LSP
+  autocmd BufWritePost,BufEnter,InsertLeave * :call LspLocationList()
+augroup END 
+]])
 

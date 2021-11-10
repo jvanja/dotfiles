@@ -62,6 +62,12 @@ M.set_keymaps('v', 'L', '$')
 M.set_keymaps('n', '<Down>', ':cn<CR>')
 M.set_keymaps('n', '<Up>', ':cp<CR>')
 
+-- LOCATION LIST
+--
+M.set_keymaps('n', '<C-j>', ':lprev<CR>')
+M.set_keymaps('n', '<C-k>', ':lnext<CR>')
+M.set_keymaps('n', '<C-q>', ':cclose | lclose<CR>')
+
 -- BUFFERLINE
 --
 M.set_keymaps('n', '<leader>1', ':BufferLineGoToBuffer 1<CR>')
