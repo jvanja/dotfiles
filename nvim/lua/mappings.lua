@@ -27,8 +27,6 @@ M.set_keymaps('i', '<leader>s', '<C-c>:w<cr>')
 -- save and quit file with leader x when in insert mode
 M.set_keymaps('i', '<leader>x', '<C-c>:wq<cr>')
 
-M.set_keymaps('n', '<leader>,', '<C-^><cr>')
-
 --copy in visual mode with ctrc c to system clipboard
 M.set_keymaps('v', '<leader>y', '"*y')
 
@@ -62,11 +60,13 @@ M.set_keymaps('v', 'L', '$')
 M.set_keymaps('n', '<Down>', ':cn<CR>')
 M.set_keymaps('n', '<Up>', ':cp<CR>')
 
+
 -- LOCATION LIST
 --
 M.set_keymaps('n', '<C-j>', ':lprev<CR>')
 M.set_keymaps('n', '<C-k>', ':lnext<CR>')
 M.set_keymaps('n', '<C-q>', ':cclose | lclose<CR>')
+
 
 -- BUFFERLINE
 --
@@ -82,8 +82,11 @@ M.set_keymaps('n', '<leader>9', ':BufferLineGoToBuffer 9<CR>')
 
 -- -- These commands will navigate through buffers in order regardless of which mode you are using
 -- -- e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
-M.set_keymaps('n', '<silent><TAB>', ':BufferLineCycleNext<CR>')
-M.set_keymaps('n', '<silent><S-Tab>', ':BufferLineCyclePrev<CR>')
+M.set_keymaps('n', '<TAB>', ':BufferLineCycleNext<CR>')
+M.set_keymaps('n', '<S-Tab>', ':BufferLineCyclePrev<CR>')
+
+-- toggle between the last two buffers with ,,
+M.set_keymaps('n', '<leader>,', '<C-^><cr>')
 
 -- FUGITIVE
 --
