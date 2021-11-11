@@ -63,8 +63,8 @@ M.set_keymaps('n', '<Up>', ':cp<CR>')
 
 -- LOCATION LIST
 --
-M.set_keymaps('n', '<C-j>', ':lprev<CR>')
-M.set_keymaps('n', '<C-k>', ':lnext<CR>')
+M.set_keymaps('n', '<C-j>', ':lnext<CR>')
+M.set_keymaps('n', '<C-k>', ':lprev<CR>')
 M.set_keymaps('n', '<C-q>', ':cclose | lclose<CR>')
 
 
@@ -84,9 +84,9 @@ M.set_keymaps('n', '<leader>9', ':BufferLineGoToBuffer 9<CR>')
 -- -- e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
 M.set_keymaps('n', '<TAB>', ':BufferLineCycleNext<CR>')
 M.set_keymaps('n', '<S-Tab>', ':BufferLineCyclePrev<CR>')
-
 -- toggle between the last two buffers with ,,
 M.set_keymaps('n', '<leader>,', '<C-^><cr>')
+
 
 -- FUGITIVE
 --
@@ -102,6 +102,7 @@ M.set_keymaps('n', '<leader>gb', ':Git branch<Space>')
 M.set_keymaps('n', '<leader>go', ':Git checkout<Space>')
 M.set_keymaps('n', '<leader>gp', ':Gpush<CR>')
 M.set_keymaps('n', '<leader>gl', ':Gpull<CR>')
+
 
 -- SEARCHING
 --

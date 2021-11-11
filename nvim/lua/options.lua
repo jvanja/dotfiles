@@ -85,6 +85,10 @@ local disabled_built_ins = {
    "zipPlugin",
 }
 
+-- 'matchit.vim' is built-in so let's enable it!
+-- Hit '%' on 'if' to jump to 'else'.
+-- runtime macros/matchit.vim
+
 for _, plugin in pairs(disabled_built_ins) do
    g["loaded_" .. plugin] = 1
 end

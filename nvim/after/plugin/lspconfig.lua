@@ -2,8 +2,7 @@ local present1, lspconfig = pcall(require, 'lspconfig')
 local present2, lsp_installer = pcall(require, 'nvim-lsp-installer')
 
 if not (present1 or present2) then
-
-   return
+ return
 end
 
 
@@ -165,7 +164,6 @@ local setup_servers = function()
     }
 
     server:setup(server_opts[server.name] and server_opts[server.name]() or default_opts)
-
   end)
 end
 
@@ -182,15 +180,4 @@ vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     }
   }
 )
-
--- TODO:  <10-11-21, vanja> --
--- change this to lua once the api is out.
-vim.api.nvim_command([[
-fun LspLocationList()
-  lua vim.lsp.diagnostic.set_loclist({open_loclist = false})
-endfun
-augroup POPULATE_LL_LSP
-  autocmd BufWritePost,BufEnter,InsertLeave * :call LspLocationList()
-augroup END 
-]])
 

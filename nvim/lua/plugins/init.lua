@@ -1,4 +1,3 @@
-
 local Plug = vim.fn['plug#']
 
 vim.fn['plug#begin']('~/.config/nvim/bundle')
@@ -24,6 +23,7 @@ Plug('tpope/vim-fugitive')
 Plug('tpope/vim-repeat')
 Plug('tpope/vim-surround')
 Plug('nathanaelkane/vim-indent-guides')
+
 
 -- nvim >=0.5
 Plug('glepnir/lspsaga.nvim')
