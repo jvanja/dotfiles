@@ -26,9 +26,11 @@ Plug('nathanaelkane/vim-indent-guides')
 
 
 -- nvim >=0.5
+Plug('nvim-lua/plenary.nvim')
 Plug('glepnir/lspsaga.nvim')
 Plug('neovim/nvim-lspconfig')
 Plug('williamboman/nvim-lsp-installer')
+Plug('jose-elias-alvarez/null-ls.nvim')
 Plug('folke/lsp-colors.nvim')
 Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
@@ -39,7 +41,6 @@ Plug('nvim-treesitter/nvim-treesitter', { ['do'] = vim.fn[':TSUpdate'] })
 Plug('nvim-treesitter/nvim-treesitter-textobjects')
 Plug('JoosepAlviste/nvim-ts-context-commentstring') -- needs vim-commentary plugin to work
 Plug('windwp/nvim-ts-autotag')
-Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim')
 Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = function() vim.call('make') end })
 
