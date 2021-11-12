@@ -27,7 +27,6 @@ Plug('nathanaelkane/vim-indent-guides')
 
 -- nvim >=0.5
 Plug('nvim-lua/plenary.nvim')
-Plug('glepnir/lspsaga.nvim')
 Plug('neovim/nvim-lspconfig')
 Plug('williamboman/nvim-lsp-installer')
 Plug('jose-elias-alvarez/null-ls.nvim')
