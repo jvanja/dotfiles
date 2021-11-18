@@ -77,8 +77,9 @@ local setup_servers = function()
       end,
       ['tsserver'] = function()
         return vim.tbl_deep_extend('force', default_opts, {
-          on_attach = disableFormat,
-          filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'javascript', 'json' }
+          -- on_attach = disableFormat,
+          on_attach = on_attach,
+          filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'json' }
       })
       end,
       ['intelephense'] = function()
