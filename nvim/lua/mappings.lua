@@ -97,11 +97,11 @@ M.set_keymaps('n', '<leader>gd', ':Gdiff<CR>')
 M.set_keymaps('n', '<leader>ge', ':Gedit<CR>')
 M.set_keymaps('n', '<leader>gw', ':Gwrite<CR><CR>')
 M.set_keymaps('n', '<leader>gac', ':Git add -A . && git commit<CR><CR>')
-M.set_keymaps('n', '<leader>glo', ':silent! Glog<CR>:bot copen<CR>')
+M.set_keymaps('n', '<leader>glo', ':silent! Gclog<CR>:bot copen<CR>')
 M.set_keymaps('n', '<leader>gb', ':Git branch<Space>')
 M.set_keymaps('n', '<leader>go', ':Git checkout<Space>')
-M.set_keymaps('n', '<leader>gp', ':Gpush<CR>')
-M.set_keymaps('n', '<leader>gl', ':Gpull<CR>')
+M.set_keymaps('n', '<leader>gp', ':Git push<CR>')
+M.set_keymaps('n', '<leader>gl', ':Git pull<CR>')
 
 
 -- SEARCHING
