@@ -1,8 +1,7 @@
 local present1, lspconfig = pcall(require, 'lspconfig')
 local present2, lsp_installer = pcall(require, 'nvim-lsp-installer')
-local present3, null_ls = pcall(require, 'null-ls')
 
-if not (present1 or present2 or present3) then
+if not (present1 or present2) then
  return
 end
 
@@ -105,19 +104,6 @@ end
 
 setup_servers()
 
-null_ls.config({
-  sources = {
-    null_ls.builtins.formatting.eslint_d.with({
-      filetypes = { 'html', 'json', 'javascript', 'vue' },
-    }),
-    null_ls.builtins.diagnostics.eslint_d.with({
-      diagnostics_format = '[#{c}] #{m} (#{s})'
-    }),
-  },
-})
-lspconfig['null-ls'].setup({
-    on_attach = on_attach,
-})
 
 -- icon
 -- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
