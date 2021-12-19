@@ -14,7 +14,6 @@ M.set_keymaps('n', '<leader>n', ':set relativenumber!<cr>')
 
 -- save file with leader s
 M.set_keymaps('n', '<leader>s', ':w<cr>')
-M.set_keymaps('i', ',s', ':w<cr>')
 
 -- save and quit
 M.set_keymaps('n', '<leader>x', ':wq<cr>')

@@ -78,9 +78,9 @@ _G.search_dotfiles = function()
   })
 end
 
-vim.api.nvim_set_keymap("n", "<leader>o", "<Cmd>lua require('telescope.builtin').find_files()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>en", "<Cmd>lua search_dotfiles()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>ff", "<Cmd>lua require('telescope.builtin').file_browser()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>o", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>en", "<cmd>lua search_dotfiles()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').file_browser()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
