@@ -23,7 +23,7 @@ Plug('tpope/vim-fugitive')
 Plug('tpope/vim-repeat')
 Plug('tpope/vim-surround')
 Plug('nathanaelkane/vim-indent-guides')
-
+Plug('folke/which-key.nvim')
 
 -- nvim >=0.5
 Plug('nvim-lua/plenary.nvim')
