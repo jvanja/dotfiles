@@ -17,7 +17,7 @@ Plug('SirVer/ultisnips')
 Plug('quangnguyen30192/cmp-nvim-ultisnips') -- necessary for nvm-cmp
 Plug('honza/vim-snippets')
 Plug('jvanja/vim-bootstrap4-snippets')
-Plug('junegunn/vim-peekaboo')
+-- Plug('junegunn/vim-peekaboo')
 Plug('tpope/vim-commentary')
 Plug('tpope/vim-fugitive')
 Plug('tpope/vim-repeat')
