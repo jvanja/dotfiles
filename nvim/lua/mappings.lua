@@ -29,6 +29,8 @@ M.set_keymaps('i', '<leader>x', '<C-c>:wq<cr>')
 --copy in visual mode with ctrc c to system clipboard
 M.set_keymaps('v', '<leader>y', '"*y')
 
+M.set_keymaps('n', 'Y', 'yy')
+
 -- paste mode toggle
 M.set_keymaps('n', '<leader>p', ':set paste!<CR>')
 

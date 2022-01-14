@@ -47,12 +47,13 @@ alias mongod="mongod --config /usr/local/etc/mongod.conf"
 ### PHP
 
 tailphp() {
-  tail -f /Applications/MAMP/logs/php_error.log | awk '
-    /[Nn]otice/ {print "\033[32m" $0 "\033[39m" ;next;} 
-    /[Ww]arning/ {print "\033[33m" $0 "\033[39m" ;next;} 
-    /[Ee]rror/ {print "\033[31m" $0 "\033[39m" ; next; }
-    1 {print}
-  '
+  tail -f /Applications/MAMP/logs/php_error.log | grep '^\['
+  # | awk '
+  #   /[Nn]otice/ {print "\033[32m" $0 "\033[39m" ;next;} 
+  #   /[Ww]arning/ {print "\033[33m" $0 "\033[39m" ;next;} 
+  #   /[Ee]rror/ {print "\033[31m" $0 "\033[39m" ; next; }
+  #   1 {print}
+  # '
 }
 
 # drush sql-dump
