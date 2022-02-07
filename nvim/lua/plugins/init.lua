@@ -41,6 +41,7 @@ Plug('nvim-treesitter/nvim-treesitter-textobjects')
 Plug('JoosepAlviste/nvim-ts-context-commentstring') -- needs vim-commentary plugin to work
 Plug('windwp/nvim-ts-autotag')
 Plug('nvim-telescope/telescope.nvim')
+Plug('nvim-telescope/telescope-file-browser.nvim')
 Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = function() vim.call('make') end })
 
 vim.fn['plug#end']()

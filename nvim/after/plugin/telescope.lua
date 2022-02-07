@@ -62,11 +62,24 @@ telescope.setup {
          override_file_sorter = true, -- override the file sorter
          case_mode = "smart_case", -- or "ignore_case" or "respect_case"
          -- the default case_mode is "smart_case"
+      },
+      file_browser = {
+        theme = "ivy",
+        mappings = {
+          ["i"] = {
+            -- your custom insert mode mappings
+          },
+          ["n"] = {
+            -- your custom normal mode mappings
+          },
+        }
       }
    },
 }
 
 require('telescope').load_extension('fzf')
+require('telescope').load_extension('file_browser')
+
 
 local opts = {noremap = true, silent = true}
 
@@ -80,7 +93,7 @@ end
 
 vim.api.nvim_set_keymap("n", "<leader>o", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>en", "<cmd>lua search_dotfiles()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<leader>ff", "<cmd>lua require('telescope.builtin').file_browser()<CR>", opts)
+vim.api.nvim_set_keymap("n", "<leader>ff", ":Telescope file_browser<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
 vim.api.nvim_set_keymap("n", "<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<CR>", opts)
