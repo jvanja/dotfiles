@@ -50,11 +50,6 @@ telescope.setup {
       -- Developer configurations: Not meant for general override
       buffer_previewer_maker = require("telescope.previewers").buffer_previewer_maker,
    },
-	 pickers = {
-		 file_browser = {
-			 path_display = { "shorten" }
-		 }
-	 },
    extensions = {
       fzf = {
          fuzzy = true, -- false will only do exact matching
@@ -65,6 +60,7 @@ telescope.setup {
       },
       file_browser = {
         theme = "ivy",
+			  path_display = { "shorten" },
         mappings = {
           ["i"] = {
             -- your custom insert mode mappings
