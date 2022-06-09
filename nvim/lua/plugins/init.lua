@@ -38,6 +38,7 @@ Plug('github/copilot.vim')
 
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = vim.fn[':TSUpdate'] })
 Plug('nvim-treesitter/nvim-treesitter-textobjects')
+Plug('nvim-treesitter/nvim-treesitter-context')
 Plug('JoosepAlviste/nvim-ts-context-commentstring') -- needs vim-commentary plugin to work
 Plug('windwp/nvim-ts-autotag')
 Plug('nvim-telescope/telescope.nvim')
