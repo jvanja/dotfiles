@@ -86,7 +86,7 @@ local setup_servers = function()
           settings = require('intelephense_conf')
         })
       end,
-        ['emmet_ls'] = function()
+      ['emmet_ls'] = function()
         return vim.tbl_deep_extend('force', default_opts, {
           -- cmd = {'emmet-ls', '--stdio'};
           filetypes = {'html', 'css', 'scss'};

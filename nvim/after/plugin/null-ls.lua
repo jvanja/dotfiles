@@ -9,8 +9,10 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
   sources = {
     formatting.eslint_d.with({
+      filetypes = { 'vue', 'javascript', 'json' }
     }),
     diagnostics.eslint_d.with({
+      filetypes = { 'vue', 'javascript', 'json' },
       diagnostics_format = '[#{c}] #{m} (#{s})'
     }),
   },
