@@ -1,7 +1,6 @@
 local present1, lspconfig = pcall(require, 'lspconfig')
-local present2, lsp_installer = pcall(require, 'nvim-lsp-installer')
 
-if not (present1 or present2) then
+if not (present1) then
  return
 end
 
@@ -11,7 +10,6 @@ local on_attach = function(client, bufnr)
 
   --Enable completion triggered by <c-x><c-o>
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
 
   -- Mappings.
   local opts = { noremap=true, silent=true }
@@ -33,87 +31,61 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>k', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', '<leader>ld', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ focusable = false })<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-end
-
-local disableFormat = function(client)
-    client.resolved_capabilities.document_formatting = false
-    on_attach(client)
+  -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local setup_servers = function()
 
-  lsp_installer.on_server_ready(function(server)
-    local default_opts = {
-      on_attach = on_attach,
-      capabilities = capabilities
-    }
-    local server_opts = {
-      ['sumneko_lua'] = function()
-        return vim.tbl_deep_extend('force', default_opts, {
-          settings = {
-            Lua = {
-              diagnostics = {
-                enable = true,
-                globals = { 'vim' },
-              },
-              workspace = {
-                library = {
-                  [vim.fn.expand '$VIMRUNTIME/lua'] = true,
-                  [vim.fn.expand '$VIMRUNTIME/lua/vim/lsp'] = true,
-                },
-                maxPreload = 100000,
-                preloadFileSize = 10000,
-              },
-              telemetry = {
-                enable = false,
-              },
-            },
+  lspconfig.sumneko_lua.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = {
+      Lua = {
+        diagnostics = {
+          enable = true,
+          globals = { 'vim' },
+        },
+        workspace = {
+          library = {
+            [vim.fn.expand '$VIMRUNTIME/lua'] = true,
+            [vim.fn.expand '$VIMRUNTIME/lua/vim/lsp'] = true,
           },
-        })
-      end,
-      ['tsserver'] = function()
-        return vim.tbl_deep_extend('force', default_opts, {
-          -- on_attach = disableFormat,
-          on_attach = on_attach,
-          filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'json' }
-      })
-      end,
-      ['intelephense'] = function()
-        return vim.tbl_deep_extend('force', default_opts, {
-          settings = require('intelephense_conf')
-        })
-      end,
-      ['emmet_ls'] = function()
-        return vim.tbl_deep_extend('force', default_opts, {
-          -- cmd = {'emmet-ls', '--stdio'};
-          filetypes = {'html', 'css', 'scss'};
-          root_dir = function()
-            return vim.loop.cwd()
-          end;
-          settings = {};
-        })
-      end,
+          maxPreload = 100000,
+          preloadFileSize = 10000,
+        },
+        telemetry = {
+          enable = false,
+        },
+      },
     }
+  }
 
-    server:setup(server_opts[server.name] and server_opts[server.name]() or default_opts)
-  end)
+  lspconfig.tsserver.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { 'typescript', 'typescriptreact', 'typescript.tsx', 'json' }
+  }
+
+  lspconfig.intelephense.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    settings = require('intelephense_conf')
+  }
+
+  lspconfig.emmet_ls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    -- cmd = {'emmet-ls', '--stdio'},
+    filetypes = {'php', 'html', 'css', 'scss'},
+    root_dir = function()
+      return vim.loop.cwd()
+    end,
+    settings = {}
+  }
+
 end
 
 setup_servers()
-
-
--- icon
--- vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
---   vim.lsp.diagnostic.on_publish_diagnostics, {
---     underline = true,
---     -- This sets the spacing and the prefix, obviously.
---     virtual_text = {
---       spacing = 4,
---       prefix = ''
---     }
---   }
--- )
-
