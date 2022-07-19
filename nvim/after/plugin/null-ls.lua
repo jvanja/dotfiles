@@ -7,10 +7,13 @@ end
 
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
+local code_actions = null_ls.builtins.code_actions
 
 -- function M.setup(opts)
   null_ls.setup({
     sources = {
+      code_actions.eslint,
+
       -- formatting.prettierd,
       formatting.eslint.with({
         filetypes = { 'javascript' }
