@@ -19,8 +19,7 @@ require('plugins')
 require('theme')
 
 -- AUTO COMMANDS
-vim.cmd('source ~/.config/nvim/lua/autocmds.lua.vim')
--- require('autocmds')
+require('autocmds')
 
 -- MAPPINGS
 require('mappings')

@@ -15,9 +15,9 @@ local code_actions = null_ls.builtins.code_actions
       code_actions.eslint,
 
       -- formatting.prettierd,
-      formatting.eslint.with({
-        filetypes = { 'javascript' }
-      }),
+      -- formatting.eslint.with({
+      --   filetypes = { 'javascript' }
+      -- }),
       formatting.eslint_d,
       diagnostics.eslint.with({
         filetypes = { 'vue', 'javascript' },
