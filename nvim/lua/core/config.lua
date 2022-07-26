@@ -1,4 +1,5 @@
 local M = {}
+local util = require "vim.lsp.util"
 
 M.on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -15,7 +16,7 @@ M.on_attach = function(client, bufnr)
   buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
   buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  buf_set_keymap('i', '<space>h', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
@@ -29,10 +30,24 @@ M.on_attach = function(client, bufnr)
   -- buf_set_keymap('n', '<leader>ld', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ focusable = false })<CR>', opts)
   -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 
-  -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+  -- on 0.8, you should use this:
+  --  vim.lsp.buf.format({
+        -- filter = function(client)
+        --     -- apply whatever logic you want (in this example, we'll only use null-ls)
+        --     return client.name == "null-ls"
+        -- end,
+        -- bufnr = bufnr,
+    -- })
+  -- buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 M.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+M.formatting_callback = function(client, bufnr)
+  vim.keymap.set("n", "<space>f", function()
+    local params = util.make_formatting_params({})
+    client.request("textDocument/formatting", params, nil, bufnr)
+  end, {buffer = bufnr})
+end
 
 return M
