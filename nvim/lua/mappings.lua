@@ -110,7 +110,7 @@ M.set_keymaps('n', '<leader>gl', ':Git pull<CR>')
 -- search and replace in file with ctrl f
 M.set_keymaps('n', '<C-f>', {':%s///g<left><left><left>', {noremap = true, silent = false}})
 M.set_keymaps('v', '<C-f>', {':s///g<left><left><left>', {noremap = true, silent = false}})
-M.set_keymaps('n', '<leader>r', {':Far  **/*.*<left><left><left><left><left><left><left>', {noremap = true, silent = false}})
+M.set_keymaps('n', '<leader>R', {':Far  **/*.*<left><left><left><left><left><left><left>', {noremap = true, silent = false}})
 
 -- Keep search matches in the middle of the window.
 M.set_keymaps('n', 'n', 'nzzzv')
@@ -119,8 +119,7 @@ M.set_keymaps('n', 'N', 'Nzzzv')
 --turn off highlight with ,n
 M.set_keymaps('n', '<leader>n', ':nohl<CR>')
 
--- this makes the DOT work in the visual mode (this was originally only for xmap
--- for select mode)
-M.set_keymaps('v', '<silent>.', ':normal .<CR>')
+-- this makes the DOT work in the visual block mode
+M.set_keymaps('x', '.', ':normal .<CR>')
 
 return M
