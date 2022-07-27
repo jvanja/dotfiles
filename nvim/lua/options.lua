@@ -40,19 +40,20 @@ opt.wildmenu = true
 opt.wildmode = "full"
 
 -- Proper backspace behavior.
-opt.backspace = 'indent,eol,start'
+opt.backspace = "indent,eol,start"
 
 -- block select pass shortest line
-opt.virtualedit = 'block'
+opt.virtualedit = "block"
 
 -- turn on search highlight
-opt.hlsearch = true
+opt.hlsearch   = true
 opt.ignorecase = true
-opt.smartcase = true
-opt.incsearch = true
+opt.smartcase  = true
+opt.incsearch  = true
+opt.inccommand  = ""
 
 -- enable scroll
-opt.mouse = 'a'
+opt.mouse = "a"
 
 -- make cursor not scroll to the edges of the screen
 opt.scrolloff = 8
@@ -83,9 +84,9 @@ local disabled_built_ins = {
    "zipPlugin",
 }
 
--- 'matchit.vim' is built-in so let's enable it!
--- Hit '%' on 'if' to jump to 'else'.
-vim.cmd('runtime macros/matchit.vim')
+-- "matchit.vim" is built-in so let"s enable it!
+-- Hit "%" on "if" to jump to "else".
+vim.cmd("runtime macros/matchit.vim")
 
 for _, plugin in pairs(disabled_built_ins) do
    g["loaded_" .. plugin] = 1
