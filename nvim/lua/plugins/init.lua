@@ -3,14 +3,13 @@ local Plug = vim.fn['plug#']
 vim.fn['plug#begin']('~/.config/nvim/bundle')
 
 Plug('tweekmonster/startuptime.vim')
-Plug('monsonjeremy/onedark.nvim')
+Plug('navarasu/onedark.nvim')
 Plug('airblade/vim-gitgutter')
 Plug('kyazdani42/nvim-web-devicons')
 Plug('nvim-lualine/lualine.nvim')
 Plug('akinsho/bufferline.nvim')
 Plug('brooth/far.vim')
 Plug('cohama/lexima.vim')
-Plug('flazz/vim-colorschemes')
 Plug('godlygeek/tabular')
 Plug('SirVer/ultisnips')
 Plug('quangnguyen30192/cmp-nvim-ultisnips') -- necessary for nvm-cmp
