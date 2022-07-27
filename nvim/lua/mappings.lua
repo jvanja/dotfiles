@@ -122,4 +122,7 @@ M.set_keymaps('n', '<leader>n', ':nohl<CR>')
 -- this makes the DOT work in the visual block mode
 M.set_keymaps('x', '.', ':normal .<CR>')
 
+-- zoom in on the current split window. Useful for help
+M.set_keymaps('n', '<leader>z', '<C-w>_')
+
 return M
