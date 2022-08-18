@@ -33,7 +33,6 @@ Plug('hrsh7th/nvim-cmp')
 Plug('hrsh7th/cmp-nvim-lsp')
 Plug('hrsh7th/cmp-buffer')
 Plug('hrsh7th/cmp-path')
-Plug('github/copilot.vim')
 
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = vim.fn[':TSUpdate'] })
 Plug('nvim-treesitter/nvim-treesitter-textobjects')
@@ -43,6 +42,7 @@ Plug('windwp/nvim-ts-autotag')
 Plug('nvim-telescope/telescope.nvim')
 Plug('nvim-telescope/telescope-file-browser.nvim')
 Plug('nvim-telescope/telescope-fzf-native.nvim', { ['do'] = function() vim.call('make') end })
+Plug('ThePrimeagen/refactoring.nvim')
 
 vim.fn['plug#end']()
 
