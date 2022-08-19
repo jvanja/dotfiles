@@ -3,7 +3,7 @@ if not present then
    return
 end
 
-require'nvim-treesitter.configs'.setup {
+ts_config.setup {
   highlight = {
     enable = true,
     disable = {},
@@ -26,7 +26,7 @@ require'nvim-treesitter.configs'.setup {
   textobjects = {
     select = {
     enable = true,
-    -- Automatically jump forward to textobj, similar to targets.vim 
+    -- Automatically jump forward to textobj, similar to targets.vim
     lookahead = true,
     keymaps = {
       -- You can use the capture groups defined in textobjects.scm
@@ -38,22 +38,22 @@ require'nvim-treesitter.configs'.setup {
     },
   move = {
     enable = true,
-    set_jumps = true, 
+    set_jumps = true,
     goto_next_start = {
-      [']m'] = '@function.outer',
-      [']]'] = '@class.outer'
+      ["]m"] = "@function.outer",
+      ["]]"] = "@class.outer"
       },
     goto_next_end = {
-      [']M'] = '@function.outer',
-      [']['] = '@class.outer'
+      ["]M"] = "@function.outer",
+      ["]["] = "@class.outer"
       },
     goto_previous_start = {
-      ['[m'] = '@function.outer',
-      ['[['] = '@class.outer'
+      ["[m"] = "@function.outer",
+      ["[["] = "@class.outer"
       },
     goto_previous_end = {
-      ['[M'] = '@function.outer',
-      ['[]'] = '@class.outer'
+      ["[M"] = "@function.outer",
+      ["[]"] = "@class.outer"
       }
     }
   },
