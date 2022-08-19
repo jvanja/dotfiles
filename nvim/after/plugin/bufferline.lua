@@ -19,7 +19,8 @@ bufferline.setup {
       enforce_regular_tabs = false,
       view = "multiwindow",
       show_buffer_close_icons = true,
-      separator_style = "thin",
+      show_buffer_icons = false,
+      separator_style = "thick",
       always_show_bufferline = true,
       diagnostics = false, -- "or nvim-lsp"
       custom_filter = function(buf_number)
@@ -39,17 +40,21 @@ bufferline.setup {
          else
             return true
          end
-      end,
+    end,
+    numbers = function(opts)
+      return string.format('%s', opts.raise(opts.ordinal))
+    end,
    },
    highlights = {
       background = {
-         guifg = colors.grey_fg,
+         -- guifg = colors.grey_fg,
+         guifg = colors.white2,
          guibg = colors.black2,
       },
 
       -- buffers
       buffer_selected = {
-         guifg = colors.white,
+         guifg = colors.red,
          guibg = colors.black,
          gui = "bold",
       },
