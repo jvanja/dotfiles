@@ -110,7 +110,8 @@ M.set_keymaps("n", "<leader>gl", ":Git pull<CR>")
 -- search and replace in file with ctrl f
 M.set_keymaps("n", "<C-f>", {":%s///g<left><left><left>", {noremap = true, silent = false}})
 M.set_keymaps("v", "<C-f>", {":s///g<left><left><left>", {noremap = true, silent = false}})
-M.set_keymaps("n", "<leader>R", {":Far  **/*.*<left><left><left><left><left><left><left>", {noremap = true, silent = false}})
+-- Use QuickFix to search and replace
+-- M.set_keymaps("n", "<leader>R", {":Far  **/*.*<left><left><left><left><left><left><left>", {noremap = true, silent = false}})
 
 -- Keep search matches in the middle of the window.
 M.set_keymaps("n", "n", "nzzzv")
