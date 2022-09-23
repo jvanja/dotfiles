@@ -32,7 +32,17 @@ M.set_keymaps("v", "<leader>y", '"*y')
 M.set_keymaps("n", "Y", "yy")
 
 -- paste mode toggle
-M.set_keymaps("n", "<leader>p", ":set paste!<CR>")
+M.set_keymaps("x", "<leader>p", "\"_dP")
+
+-- test the below mappings or just use https://github.com/vim-scripts/ReplaceWithRegister
+M.set_keymaps("n", "<leader>y", "\"+y")
+M.set_keymaps("v", "<leader>y", "\"+y")
+M.set_keymaps("n", "<leader>Y", "\"+Y")
+
+M.set_keymaps("n", "<leader>d", "\"_d")
+M.set_keymaps("v", "<leader>d", "\"_d")
+
+M.set_keymaps("v", "<leader>d", "\"_d")
 
 -- move lines with ALT j and ALT k
 M.set_keymaps("n", "<A-j>", ":m .+1<CR>==")
