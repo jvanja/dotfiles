@@ -12,12 +12,14 @@ local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
   sources = {
-    code_actions.eslint,
+    code_actions.eslint_d,
     -- formatting.eslint.with({
     --   filetypes = { "javascript" }
     -- }),
-    formatting.eslint_d,
-    diagnostics.eslint.with({
+    formatting.eslint_d.with({
+      disabled_filetypes = { "ts" },
+    }),
+    diagnostics.eslint_d.with({
       filetypes = { "vue", "javascript" },
       diagnostics_format = "[#{c}] #{m} (#{s})"
     }),

@@ -38,12 +38,21 @@ M.on_attach = function(client, bufnr)
         -- end,
         -- bufnr = bufnr,
     -- })
-  -- buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+
+  -- if client.name == "tsserver" then
+  --     client.server_capabilities.document_formatting = false -- 0.7 and earlier
+  --     -- client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
+  -- end
 end
 
 M.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
+-- rest of the initialization
+
 M.formatting_callback = function(client, bufnr)
+  -- vim.keymap.set("n", "<space>f", function()
+  --   vim.lsp.buf.formatting_sync()
+  -- end, {buffer = bufnr})
   vim.keymap.set("n", "<space>f", function()
     local params = util.make_formatting_params({})
     client.request("textDocument/formatting", params, nil, bufnr)
