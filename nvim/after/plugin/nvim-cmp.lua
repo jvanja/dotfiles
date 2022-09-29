@@ -18,6 +18,10 @@ cmp.setup({
       vim.fn["UltiSnips#Anon"](args.body)
     end,
   },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
   mapping = {
     ["<C-d>"]      = cmp.mapping.scroll_docs(-4),
     ["<C-f>"]      = cmp.mapping.scroll_docs(4),
@@ -31,7 +35,6 @@ cmp.setup({
         fallback()
       end
     end,
-
     -- read :h ins_completion to find out why TAB is baad ??
     ["<Tab>"] = function(fallback)
       if cmp.visible() then

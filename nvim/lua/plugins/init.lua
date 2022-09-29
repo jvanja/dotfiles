@@ -23,6 +23,7 @@ Plug("nathanaelkane/vim-indent-guides")
 Plug("kevinhwang91/nvim-bqf")
 
 -- nvim >=0.5
+Plug("windwp/nvim-autopairs")
 Plug("nvim-lua/plenary.nvim")
 Plug("neovim/nvim-lspconfig")
 Plug("williamboman/nvim-lsp-installer")
