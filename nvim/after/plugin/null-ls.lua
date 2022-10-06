@@ -27,6 +27,5 @@ null_ls.setup({
   on_attach = function(client, bufnr)
     formatting_callback(client, bufnr)
     on_attach(client, bufnr)
-    -- when 0.8 add this: https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Avoiding-LSP-formatting-conflicts
   end,
 })

@@ -30,33 +30,25 @@ M.on_attach = function(client, bufnr)
   -- buf_set_keymap('n', '<leader>k', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   -- buf_set_keymap('n', '<leader>ld', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ focusable = false })<CR>', opts)
   -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-
-  -- on 0.8, you should use this:
-  --  vim.lsp.buf.format({
-        -- filter = function(client)
-        --     -- apply whatever logic you want (in this example, we'll only use null-ls)
-        --     return client.name == "null-ls"
-        -- end,
-        -- bufnr = bufnr,
-    -- })
-
-  -- if client.name == "tsserver" then
-  --     client.server_capabilities.document_formatting = false -- 0.7 and earlier
-  --     -- client.server_capabilities.documentFormattingProvider = false -- 0.8 and later
-  -- end
 end
 
 M.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- rest of the initialization
 
+
 M.formatting_callback = function(client, bufnr)
-  -- vim.keymap.set("n", "<space>f", function()
-  --   vim.lsp.buf.formatting_sync()
-  -- end, {buffer = bufnr})
   vim.keymap.set("n", "<space>f", function()
-    local params = util.make_formatting_params({})
-    client.request("textDocument/formatting", params, nil, bufnr)
+    -- local params = util.make_formatting_params({})
+    -- client.request("textDocument/formatting", params, nil, bufnr)
+
+    -- when 0.8 add this: https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Avoiding-LSP-formatting-conflicts
+    vim.lsp.buf.format({
+      filter = function(client)
+        return client.name == "null-ls"
+      end,
+      bufnr = bufnr,
+    })
   end, {buffer = bufnr})
 end
 

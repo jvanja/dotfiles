@@ -10,7 +10,6 @@ local capabilities = require("core.config").capabilities
 local setup_servers = function()
 
   lspconfig.sumneko_lua.setup {
-    -- on_attach = on_attach,
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
     end,
@@ -37,7 +36,6 @@ local setup_servers = function()
   }
 
   lspconfig.tsserver.setup {
-    -- on_attach = on_attach,
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
     end,
@@ -46,7 +44,6 @@ local setup_servers = function()
   }
 
   lspconfig.intelephense.setup {
-    -- on_attach = on_attach,
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
     end,
@@ -55,12 +52,10 @@ local setup_servers = function()
   }
 
   lspconfig.emmet_ls.setup {
-    -- on_attach = on_attach,
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
     end,
     capabilities = capabilities,
-    -- cmd = {'emmet-ls', '--stdio'},
     filetypes = {'php', 'html', 'css', 'scss'},
     root_dir = function()
       return vim.loop.cwd()
@@ -69,20 +64,18 @@ local setup_servers = function()
   }
 
   lspconfig.cssls.setup {
-    -- on_attach = on_attach,
     on_attach = function(client, bufnr)
       on_attach(client, bufnr)
     end,
     capabilities = capabilities
   }
 
-  lspconfig.vuels.setup {
-    -- on_attach = on_attach,
-    on_attach = function(client, bufnr)
-      on_attach(client, bufnr)
-    end,
-    capabilities = capabilities
-  }
+  -- lspconfig.vuels.setup {
+  --   on_attach = function(client, bufnr)
+  --     on_attach(client, bufnr)
+  --   end,
+  --   capabilities = capabilities
+  -- }
 
 end
 
