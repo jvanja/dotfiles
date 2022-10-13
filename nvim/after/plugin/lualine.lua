@@ -1,4 +1,9 @@
-local lualine = require 'lualine'
+local present, lualine = pcall(require, 'lualine')
+if not present then
+   return
+end
+
+lualine = require 'lualine'
 
 local colors = {
   bg       = '#202328',

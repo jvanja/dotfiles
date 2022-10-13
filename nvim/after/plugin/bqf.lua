@@ -1,3 +1,8 @@
+local present, bqf = pcall(require, 'bqf')
+if not present then
+   return
+end
+
 vim.cmd([[
     hi BqfPreviewBorder guifg=#50a14f ctermfg=71
     hi link BqfPreviewRange Search
@@ -49,7 +54,7 @@ end
 
 vim.o.qftf = '{info -> v:lua._G.qftf(info)}'
 
-require('bqf').setup({
+bqf.setup({
     auto_enable = true,
     auto_resize_height = true, -- highly recommended enable
     preview = {

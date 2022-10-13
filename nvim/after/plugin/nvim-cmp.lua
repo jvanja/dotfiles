@@ -1,4 +1,8 @@
-local cmp     = require "cmp"
+local present, cmp = pcall(require, "cmp")
+if not present then
+   return
+end
+
 local types   = require "cmp.types"
 local str     = require "cmp.utils.str"
 local lspkind = require "lspkind"
