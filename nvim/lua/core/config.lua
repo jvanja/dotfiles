@@ -1,5 +1,4 @@
 local M = {}
-local util = require "vim.lsp.util"
 
 M.on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -32,16 +31,10 @@ M.on_attach = function(client, bufnr)
   -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
 end
 
-M.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-
--- rest of the initialization
-
+M.capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 M.formatting_callback = function(client, bufnr)
   vim.keymap.set("n", "<space>f", function()
-    -- local params = util.make_formatting_params({})
-    -- client.request("textDocument/formatting", params, nil, bufnr)
-
     -- when 0.8 add this: https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Avoiding-LSP-formatting-conflicts
     vim.lsp.buf.format({
       filter = function(client)
