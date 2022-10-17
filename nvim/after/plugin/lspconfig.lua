@@ -70,12 +70,23 @@ local setup_servers = function()
     capabilities = capabilities
   }
 
-  -- lspconfig.vuels.setup {
-  --   on_attach = function(client, bufnr)
-  --     on_attach(client, bufnr)
-  --   end,
-  --   capabilities = capabilities
-  -- }
+--   lspconfig.vuels.setup {
+--     root_dir = lspconfig.util.root_pattern(".git", "package.json", "yarn.lock"),
+--     on_attach = function(client, bufnr)
+--       on_attach(client, bufnr)
+--     end,
+--     capabilities = capabilities,
+--     init_options = {
+--       vetur = {
+--       useWorkspaceDependencies = true,
+--         validation = {
+--           script = true,
+--           style = true,
+--           template = true
+--         }
+--       }
+--     }
+-- }
 
 end
 
