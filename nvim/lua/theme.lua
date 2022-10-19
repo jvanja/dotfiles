@@ -5,11 +5,11 @@ vim.opt.guifont = 'Hack Nerd Font Regular:h1'
 vim.opt.background = 'dark'
 
 -- vim.cmd('colorscheme dracula')
+-- vim.cmd('colorscheme gruvbox')
 require('onedark').setup {
-    style = 'darker'
+  style = 'darker'
 }
 require('onedark').load()
--- vim.cmd('colorscheme gruvbox')
 
 
 -- highlight  the current  line number
