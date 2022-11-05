@@ -20,7 +20,7 @@ Plug("tpope/vim-repeat")
 Plug("tpope/vim-surround")
 Plug("nathanaelkane/vim-indent-guides")
 Plug("kevinhwang91/nvim-bqf")
-
+Plug("ggandor/leap.nvim")
 -- nvim >=0.5
 Plug("windwp/nvim-autopairs")
 Plug("nvim-lua/plenary.nvim")
