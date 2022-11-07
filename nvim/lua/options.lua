@@ -25,11 +25,6 @@ opt.shiftwidth = 2
 
 opt.smartindent = true
 
-g.indent_guides_enable_on_vim_startup = 1
-g.indent_guides_start_level = 2
-g.indent_guides_guide_size = 1
-g.indent_guides_auto_colors = 0
-
 -- show existing tab with 2 spaces width
 opt.tabstop = 2
 -- On pressing tab, insert 2 spaces
