@@ -1,7 +1,11 @@
-local autopairs = pcall(require, "nvim-autopairs")
+local present, autopairs = pcall(require, "nvim-autopairs")
+local Rule = require("nvim-autopairs.rule")
 
-if not (autopairs) then
+if not (present) then
  return
 end
 
-require("nvim-autopairs").setup{}
+autopairs.setup{}
+autopairs.add_rule(
+  Rule("<", ">",{"vue", "typescript"})
+)
