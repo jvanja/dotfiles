@@ -123,6 +123,10 @@ M.set_keymaps("v", "<C-f>", {":s///g<left><left><left>", {noremap = true, silent
 -- Use QuickFix to search and replace
 -- M.set_keymaps("n", "<leader>R", {":Far  **/*.*<left><left><left><left><left><left><left>", {noremap = true, silent = false}})
 
+-- scroll up and down and center
+M.set_keymaps("n", "<C-u>", "<C-u>zz")
+M.set_keymaps("n", "<C-d>", "<C-d>zz")
+
 -- Keep search matches in the middle of the window.
 M.set_keymaps("n", "n", "nzzzv")
 M.set_keymaps("n", "N", "Nzzzv")
