@@ -46,7 +46,14 @@ cmp.setup({
       else
         fallback()
       end
-    end
+    end,
+    ["<S-Tab>"] = function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      else
+        fallback()
+      end
+    end,
   },
   sources = {
     -- Order here is respected in the completion

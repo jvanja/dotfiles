@@ -132,7 +132,8 @@ local setup_servers = function()
       on_attach(client, bufnr)
     end,
     capabilities = capabilities,
-    filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
+    -- filetypes = {'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
+    filetypes = {'typescript', 'javascriptreact', 'typescriptreact', 'vue', 'json'},
     on_new_config = function(new_config, new_root_dir)
       new_config.init_options.typescript.tsdk = get_typescript_server_path(new_root_dir)
     end,
