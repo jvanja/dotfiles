@@ -3,8 +3,6 @@ if not present then
    return
 end
 
-lualine = require 'lualine'
-
 local colors = {
   bg       = '#202328',
   fg       = '#bbc2cf',
@@ -21,12 +19,12 @@ local colors = {
 
 local config = {
   options = {
-    icons_enabled = true,
+    icons_enabled = false,
     theme = 'powerline_dark',
     -- theme = 'onedark',
     component_separators = {left = '', right = ''},
-    section_separators = {left = '', right = ''},
-    disabled_filetypes = {}
+    section_separators = '',
+    -- section_separators = {left = '', right = ''},
   },
   sections = {
     lualine_a = {'mode'},
