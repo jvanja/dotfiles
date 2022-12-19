@@ -21,7 +21,17 @@ ts_config.setup {
     "json",
     "html",
     "scss",
-    "css"
+    "css",
+    "help"
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "<c-space>",
+      node_incremental = "<c-space>",
+      scope_incremental = "<c-s>",
+      node_decremental = "<c-backspace>",
+    },
   },
   textobjects = {
     select = {
@@ -30,6 +40,8 @@ ts_config.setup {
     lookahead = true,
     keymaps = {
       -- You can use the capture groups defined in textobjects.scm
+      ["aa"] = "@parameter.outer",
+      ["ia"] = "@parameter.inner",
       ["af"] = "@function.outer",
       ["if"] = "@function.inner",
       ["ac"] = "@class.outer",
@@ -55,7 +67,16 @@ ts_config.setup {
       ["[M"] = "@function.outer",
       ["[]"] = "@class.outer"
       }
-    }
+    },
+    swap = {
+      enable = true,
+      swap_next = {
+        ['<leader>a'] = '@parameter.inner',
+      },
+      swap_previous = {
+        ['<leader>A'] = '@parameter.inner',
+      },
+    },
   },
    context_commentstring = {
     enable = true
