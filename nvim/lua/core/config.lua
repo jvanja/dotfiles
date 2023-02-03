@@ -38,10 +38,10 @@ M.formatting_callback = function(client, bufnr)
   vim.keymap.set("n", "<space>f", function()
     -- when 0.8 add this: https://github.com/jose-elias-alvarez/null-ls.nvim/wiki/Avoiding-LSP-formatting-conflicts
     vim.lsp.buf.format({
-      timeout_ms = 2000,
-      filter = function(client)
-        return client.name == "null-ls"
-      end,
+      -- timeout_ms = 2000,
+      -- filter = function(client)
+      --   return client.name == "null-ls"
+      -- end,
       bufnr = bufnr,
     })
   end, {buffer = bufnr})
