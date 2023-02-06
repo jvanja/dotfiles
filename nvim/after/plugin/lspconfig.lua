@@ -10,7 +10,7 @@ if not (present2) then return end
 local util = require 'lspconfig.util'
 
 local function get_typescript_server_path(root_dir)
-  local global_ts = '/Users/vanjajelic/.nvm/versions/node/v14.18.2/lib/node_modules/typescript/lib'
+  local global_ts = '/Users/vanjajelic/.nvm/versions/node/v16.18.0/lib/node_modules/typescript/lib'
   local found_ts = ''
   local function check_dir(path)
     found_ts =  util.path.join(path, 'node_modules', 'typescript', 'lib')
@@ -29,13 +29,6 @@ mason.setup()
 mason_config.setup()
 
 -------- lsp options
-vim.diagnostic.config({
-  virtual_text = false,
-  signs = true,
-  underline = true,
-  update_in_insert = true,
-  severity_sort = false,
-})
 
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
 for type, icon in pairs(signs) do
@@ -56,9 +49,21 @@ vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
   }
 )
 
-vim.diagnostic.config{
-  float={border=_border}
-}
+vim.diagnostic.config({
+  virtual_text = {
+    spacing = 4,
+    source = true,
+    prefix = "●"
+  },
+  signs = true,
+  underline = true,
+  update_in_insert = true,
+  severity_sort = false,
+  float = {
+    border = _border
+  }
+})
+
 ---------
 
 local on_attach = require("core.config").on_attach

@@ -94,3 +94,8 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 # ctags to homebrew ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
+
+### Web dev
+
+alias p="pnpm"
+
