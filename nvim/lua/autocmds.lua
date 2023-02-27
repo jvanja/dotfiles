@@ -1,9 +1,0 @@
--- SEE NULL_LS config for this
--- local autoFormatJs = vim.api.nvim_create_augroup('FORMAT_JS_ON_SAVE', { clear = true })
--- vim.api.nvim_create_autocmd(
---   { "BufWritePre", "Colorscheme" },
---   { pattern = {"*.js", "*.vue", "*.ts"},
---     command = "lua vim.lsp.buf.formatting_sync(nil, 2000)",
---     group = autoFormatJs
---   }
--- )
