@@ -36,9 +36,9 @@ map("n", "<leader>x", ":wq<cr>")
 -- delete buffer with leader w
 map("n", "<leader>w", ":bdelete<cr>")
 -- save file with leader s when in insert mode
--- map("i", "<leader>s", "<C-c>:w<cr>")
+map("i", "<leader>s", "<C-c>:w<cr>")
 -- save and quit file with leader x when in insert mode
--- map("i", "<leader>x", "<C-c>:wq<cr>")
+map("i", "<leader>x", "<C-c>:wq<cr>")
 
 --copy in visual mode with ctrc c to system clipboard
 -- map("v", "<leader>y", '"*y')

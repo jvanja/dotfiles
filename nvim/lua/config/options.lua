@@ -7,4 +7,4 @@ vim.g.maplocalleader = ","
 local opt = vim.opt
 
 opt.undofile = false
-opt.clipboard = "unnamed" -- Sync with system clipboard
+opt.clipboard = "" -- preserver the system clipboard
