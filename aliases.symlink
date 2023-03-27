@@ -3,18 +3,12 @@ alias c="clear"
 
 alias fixcam="sudo killall VDCAssistant"
 
-#function v(){
-#  # reattach-to-user-namespace -l nvim "$1"
-#	nvim "$1"
-#}
-
 alias v="nvim"
 
 ### TMUX
 
 alias tat="new-tmux-from-dir-name"
 alias td="tmux detach"
-alias tnew="echo use tat!!"
 alias tls="tmux ls"
 
 function ta(){
@@ -43,7 +37,10 @@ function rd(){
 }
 
 ### MONGODB
+
 alias mongod="mongod --config /usr/local/etc/mongod.conf"
+
+
 ### PHP
 
 tailphp() {
@@ -68,6 +65,7 @@ function wdmp(){
 
 # vagrant virtual mashine
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
+
 
 ### GIT STUFF
 
@@ -94,9 +92,4 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 
 # ctags to homebrew ctags
 alias ctags="`brew --prefix`/bin/ctags"
-
-
-### Web dev
-
-alias p="pnpm"
 
