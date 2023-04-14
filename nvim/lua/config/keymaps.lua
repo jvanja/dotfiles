@@ -107,8 +107,8 @@ end
 -- -- e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
 map("n", "<TAB>", ":BufferLineCycleNext<CR>")
 map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>")
--- toggle between the last two buffers with ,,
-map("n", "<leader>,", "<C-^><cr>")
+
+map("n", "<leader>,", "<C-^><cr>", { desc = "Toggle between the last two buffers with ,," })
 
 -- FUGITIVE
 --
@@ -128,10 +128,18 @@ map("n", "<leader>gp", ":Git push<CR>")
 map("n", "<leader>gl", ":Git pull<CR>")
 
 -- SEARCHING
---
--- search and replace in file with ctrl f
-map("n", "<C-f>", ":%s///g<left><left><left>", { noremap = true, silent = false })
-map("v", "<C-f>", ":s///g<left><left><left>", { noremap = true, silent = false })
+map(
+  "n",
+  "<C-f>",
+  ":%s///g<left><left><left>",
+  { noremap = true, silent = false, desc = "Search and replace in file with ctrl f" }
+)
+map(
+  "v",
+  "<C-f>",
+  ":s///g<left><left><left>",
+  { noremap = true, silent = false, desc = "Search and replace in visual selection with ctrl f" }
+)
 -- Use QuickFix to search and replace
 -- map("n", "<leader>R", {":Far  **/*.*<left><left><left><left><left><left><left>", {noremap = true, silent = false}})
 
@@ -143,11 +151,9 @@ map("n", "<C-d>", "<C-d>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
---turn off highlight with ,n
-map("n", "<leader>n", ":nohl<CR>")
+map("n", "<leader>n", ":nohl<CR>", { desc = "Turn off highlight with" })
 
 -- this makes the DOT work in the visual block mode
 map("x", ".", ":normal .<CR>")
 
--- zoom in on the current split window. Useful for help
-map("n", "<leader>z", "<C-w>_")
+map("n", "<leader>z", "<C-w>_", { desc = "Zoom in on the current split window" })
