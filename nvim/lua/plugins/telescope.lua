@@ -39,11 +39,10 @@ return {
     keys = {
       { "<leader>o", "<cmd>lua require('telescope.builtin').find_files()<CR>", desc = "Find files" },
       { "<leader>ff", ":Telescope file_browser<CR>", desc = "File Browser" },
-      { "<leader>?", "<cmd>lua require('telescope.builtin').keymaps()<CR>", desc = "Keymaps" },
       { '<leader>"', "<cmd>lua require('telescope.builtin').registers()<CR>", desc = "Registers" },
       { "<leader>fd", "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>", desc = "LSP Definitions" },
       { "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", desc = "LSP References" },
-      { "<leader>gbc", "<cmd>lua require('telescope.builtin').git_bcommits()<CR>", desc = "Search in buffer commits" },
+      { "<leader>fc", "<cmd>lua require('telescope.builtin').git_bcommits()<CR>", desc = "Search in buffer commits" },
       { "<leader>gs", false },
     },
 
