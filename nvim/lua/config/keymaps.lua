@@ -14,63 +14,18 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
--- function M.set_keymaps(mode, key, val)
---   local opt = { noremap = true, silent = true }
---   if type(val) == "table" then
---     opt = val[2]
---     val = val[1]
---   end
---   vim.api.nvim_set_keymap(mode, key, val, opt)
--- end
-
--- toggle relativenumber
--- map("n", "<leader>n", ":set relativenumber!<cr>")
-
--- save file with leader s
--- map("n", "<leader>s", ":w<cr>")
-
--- save and quit
-map("n", "<leader>x", ":wq<cr>")
--- quit file with leader q
--- map("n", "<leader>q", ":q<cr>")
--- delete buffer with leader w
-map("n", "<leader>w", ":bdelete<cr>")
--- save file with leader s when in insert mode
-map("i", "<leader>s", "<C-c>:w<cr>")
--- save and quit file with leader x when in insert mode
-map("i", "<leader>x", "<C-c>:wq<cr>")
-
---copy in visual mode with ctrc c to system clipboard
--- map("v", "<leader>y", '"*y')
-
-map("n", "Y", "yy")
-
--- paste mode toggle
-map("x", "<leader>p", '"_dP')
-
--- test the below mappings or just use https://github.com/vim-scripts/ReplaceWithRegister
-map("n", "<leader>y", '"+y')
-map("v", "<leader>y", '"+y')
-map("n", "<leader>Y", '"+Y')
-
-map("n", "<leader>d", '"_d')
-map("v", "<leader>d", '"_d')
-
-map("v", "<leader>d", '"_d')
-
--- move lines with ALT j and ALT k
--- map("n", "<A-j>", ":m .+1<CR>==")
--- map("n", "<A-k>", ":m .-2<CR>==")
--- map("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
--- map("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
--- map("v", "<A-j>", ":m '>+1<CR>gv=gv")
--- map("v", "<A-k>", ":m '<-2<CR>gv=gv")
-
--- NAVIGATION
+-- Exiting vim
 --
--- move rows up and down and not lines.. for wrapped text
--- map("n", "j", "gj")
--- map("n", "k", "gk")
+map("n", "<leader>x", ":wq<cr>", { desc = "Save and quit" })
+map("n", "<leader>w", ":bdelete<cr>", { desc = "Delete the currrent buffer" })
+
+-- SYSTEM CLIPBOARD
+--
+map("n", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
+map("v", "<leader>y", '"+y', { desc = "Copy visual selection to system clipboard" })
+map("n", "<leader>Y", '"+Y', { desc = "Copy the whole line to system clipboard" })
+map("n", "<leader>d", '"_d', { desc = "Delete without replacing the first register" })
+map("v", "<leader>d", '"_d', { desc = "Delete visual selection without replacing the first register" })
 
 -- move to begining and end of line with H and L
 map("n", "H", "^")
