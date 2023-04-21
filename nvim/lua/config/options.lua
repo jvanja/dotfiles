@@ -8,3 +8,4 @@ local opt = vim.opt
 
 opt.undofile = false
 opt.clipboard = "" -- preserver the system clipboard
+opt.wrap = true
