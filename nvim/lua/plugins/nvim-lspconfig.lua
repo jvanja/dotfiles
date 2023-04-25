@@ -19,11 +19,9 @@ return {
         timeout_ms = 3000,
       },
       servers = {
-
         intelephense = {
-          settings = require("intelephense_conf"),
+          -- settings = require("intelephense_conf"),
         },
-
         emmet_ls = {
           filetypes = { "php", "html", "css", "scss" },
           root_dir = function()
