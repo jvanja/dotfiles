@@ -43,6 +43,7 @@ return {
       { "<leader>fd", "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>", desc = "LSP Definitions" },
       { "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", desc = "LSP References" },
       { "<leader>fc", "<cmd>lua require('telescope.builtin').git_bcommits()<CR>", desc = "Search in buffer commits" },
+      { "<leader>?", "<cmd>lua require('telescope.builtin').keymaps()<CR>", desc = "Lists normal mode keymappings" },
       { "<leader>gs", false },
     },
 
