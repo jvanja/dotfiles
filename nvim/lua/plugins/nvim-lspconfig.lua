@@ -12,7 +12,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = {
-      autoformat = false,
+      autoformat = true,
 
       format = {
         formatting_options = nil,
