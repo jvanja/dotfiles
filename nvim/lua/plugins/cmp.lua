@@ -6,6 +6,10 @@ return {
   opts = function(_, opts)
     local cmp = require("cmp")
     opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "codeium" } }))
+    opts.window = {
+      completion = cmp.config.window.bordered(),
+      documentation = cmp.config.window.bordered(),
+    }
     opts.formatting = {
       format = function(_, item)
         local icons = require("lazyvim.config").icons.kinds
