@@ -1,2 +1,3 @@
 secret.symlink
 *.nogit
+.luarc.json
