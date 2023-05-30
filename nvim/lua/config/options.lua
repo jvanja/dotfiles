@@ -10,9 +10,9 @@ opt.undofile = false
 opt.clipboard = "" -- preserver the system clipboard
 opt.wrap = true
 
-local tokyotheme = require("tokyonight")
-tokyotheme.setup({
-  on_highlights = function(highlights, colors)
-    highlights.LineNr = { fg = "#8888AA" }
-  end,
-})
+-- local tokyotheme = require("tokyonight")
+-- tokyotheme.setup({
+--   on_highlights = function(highlights, colors)
+--     highlights.LineNr = { fg = "#8888AA" }
+--   end,
+-- })
