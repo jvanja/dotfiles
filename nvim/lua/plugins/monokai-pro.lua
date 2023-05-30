@@ -4,7 +4,7 @@ return {
     require("monokai-pro").setup({
       override = function()
         return {
-          LineNr = { fg = "#8888AA" },
+          LineNr = { fg = "#666699" },
         }
       end,
     })
