@@ -44,6 +44,7 @@ return {
       { "<leader>fr", "<cmd>lua require('telescope.builtin').lsp_references()<CR>", desc = "LSP References" },
       { "<leader>fc", "<cmd>lua require('telescope.builtin').git_bcommits()<CR>", desc = "Search in buffer commits" },
       { "<leader>?", "<cmd>lua require('telescope.builtin').keymaps()<CR>", desc = "Lists normal mode keymappings" },
+      { "<leader>fw", "<cmd>lua require('telescope.builtin').grep_string()<CR>", desc = "Grep for word under cursor" },
       { "<leader>gs", false },
     },
 
