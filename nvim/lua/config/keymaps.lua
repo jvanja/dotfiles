@@ -35,8 +35,8 @@ map("v", "L", "$")
 
 -- QUICKFIX
 --
-map("n", "<Down>", ":cn<CR>")
-map("n", "<Up>", ":cp<CR>")
+map("n", "<Down>", ":lua vim.diagnostic.goto_next()<CR>")
+map("n", "<Up>", ":lua vim.diagnostic.goto_prev()<CR>")
 
 -- LOCATION LIST
 --
