@@ -20,7 +20,22 @@ return {
       },
       servers = {
         intelephense = {
-          -- settings = require("intelephense_conf"),
+          settings = require("intelephense_conf"),
+          intelephense = {
+            stubs = {
+              "bcmath",
+              "bz2",
+              "calendar",
+              "Core",
+              "curl",
+              "zip",
+              "zlib",
+              "wordpress",
+              "acf-pro",
+              "wordpress-globals",
+              "wp-cli",
+            },
+          },
         },
         emmet_ls = {
           filetypes = { "php", "html", "css", "scss" },
