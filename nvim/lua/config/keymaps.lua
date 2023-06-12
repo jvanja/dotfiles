@@ -16,7 +16,8 @@ end
 
 -- Exiting vim
 --
-map("i", "<leader>x", ":wq<cr>", { desc = "Save and quit" })
+-- save and quit file with leader x when in insert mode
+map("i", "<leader>x", "<C-c>:wq<cr>", { desc = "Save and quit" })
 map("n", "<leader>x", ":wq<cr>", { desc = "Save and quit" })
 map("n", "<leader>w", ":bdelete<cr>", { desc = "Delete the currrent buffer" })
 
