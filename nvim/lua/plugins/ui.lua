@@ -4,6 +4,7 @@ return {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "monokai-pro",
+      -- colorscheme = "catppuccin",
     },
   },
   -- {
@@ -15,7 +16,6 @@ return {
   -- lualine
   {
     "nvim-lualine/lualine.nvim",
-    -- opts = function(_, opts)
     opts = function()
       return {
         options = {
