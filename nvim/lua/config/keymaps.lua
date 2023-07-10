@@ -35,6 +35,14 @@ map("n", "L", "$")
 map("v", "H", "^")
 map("v", "L", "$")
 
+-- Move Lines
+map("n", "∆", "<cmd>m .+1<cr>==", { desc = "Move down" })
+map("n", "˚", "<cmd>m .-2<cr>==", { desc = "Move up" })
+map("i", "∆", "<esc><cmd>m .+1<cr>==gi", { desc = "Move down" })
+map("i", "˚", "<esc><cmd>m .-2<cr>==gi", { desc = "Move up" })
+map("v", "∆", ":m '>+1<cr>gv=gv", { desc = "Move down" })
+map("v", "˚", ":m '<-2<cr>gv=gv", { desc = "Move up" })
+
 -- QUICKFIX
 --
 map("n", "<Down>", ":lua vim.diagnostic.goto_next()<CR>")
@@ -58,12 +66,12 @@ if Util.has("bufferline.nvim") then
   map("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>")
   map("n", "<leader>8", ":BufferLineGoToBuffer 8<CR>")
   map("n", "<leader>9", ":BufferLineGoToBuffer 9<CR>")
-end
 
--- -- These commands will navigate through buffers in order regardless of which mode you are using
--- -- e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
-map("n", "<TAB>", ":BufferLineCycleNext<CR>")
-map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>")
+  -- -- These commands will navigate through buffers in order regardless of which mode you are using
+  -- -- e.g. if you change the order of buffers :bnext and :bprevious will not respect the custom ordering
+  map("n", "<TAB>", ":BufferLineCycleNext<CR>")
+  map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>")
+end
 
 map("n", "<leader>,", "<C-^><cr>", { desc = "Toggle between the last two buffers with ,," })
 
