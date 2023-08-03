@@ -118,6 +118,4 @@ return {
       },
     },
   },
-  { import = "lazyvim.plugins.extras.lang.typescript" },
-  { import = "plugins.null-ls" },
 }
