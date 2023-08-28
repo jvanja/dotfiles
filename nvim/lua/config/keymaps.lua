@@ -81,7 +81,7 @@ map("n", "<leader>gg", "false") -- disable lazygit keyaps
 map("n", "<leader>gG", "false") -- disable lazygit keyaps
 map("n", "<leader>ga", ":Git add %:p<CR><CR>")
 map("n", "<leader>gs", ":Git<CR>")
-map("n", "<leader>gc", ":Git commit -v -q<CR>")
+map("n", "<leader>gC", ":Git commit -v -q<CR>", { desc = "Git commit" })
 map("n", "<leader>gd", ":Gdiff<CR>")
 map("n", "<leader>ge", ":Gedit<CR>")
 map("n", "<leader>gw", ":Gwrite<CR><CR>")
