@@ -18,9 +18,10 @@ clear='\033[0m'
 
 CUR_PATH=$(pwd)
 
-echo -e "---------------------------------------"
+echo ""
+echo -e "${red}---------------------------------------"
 echo -e "Creating dotfiles..."
-echo -e "---------------------------------------"
+echo -e "---------------------------------------${clear}"
 linkables=$( ls -1 -d *.symlink )
 for file in $linkables ; do
 	target="$HOME/.$( basename $file ".symlink" )"

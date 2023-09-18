@@ -10,6 +10,9 @@ return {
         "php",
         "scss",
         "css",
+        "bash",
+        "regex",
+        "markdown",
       })
       opts.autotag = {
         enable = true,
