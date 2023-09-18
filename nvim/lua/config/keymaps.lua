@@ -75,23 +75,6 @@ end
 
 map("n", "<leader>,", "<C-^><cr>", { desc = "Toggle between the last two buffers with ,," })
 
--- FUGITIVE
---
-map("n", "<leader>gg", "false") -- disable lazygit keyaps
-map("n", "<leader>gG", "false") -- disable lazygit keyaps
-map("n", "<leader>ga", ":Git add %:p<CR><CR>")
-map("n", "<leader>gs", ":Git<CR>")
-map("n", "<leader>gC", ":Git commit -v -q<CR>", { desc = "Git commit" })
-map("n", "<leader>gd", ":Gdiff<CR>")
-map("n", "<leader>ge", ":Gedit<CR>")
-map("n", "<leader>gw", ":Gwrite<CR><CR>")
-map("n", "<leader>gac", ":Git add -A . && git commit<CR><CR>")
-map("n", "<leader>glo", ":silent! Gclog<CR>:bot copen<CR>")
-map("n", "<leader>gb", ":Git branch<Space>")
-map("n", "<leader>go", ":Git checkout<Space>")
-map("n", "<leader>gp", ":Git push<CR>")
-map("n", "<leader>gl", ":Git pull<CR>")
-
 -- SEARCHING
 map(
   "n",
