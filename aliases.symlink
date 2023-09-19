@@ -69,6 +69,8 @@ alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
 ### GIT STUFF
 
+alias lg="lazygit"
+
 # Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 alias gor="git push origin master"
