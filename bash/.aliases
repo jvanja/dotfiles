@@ -37,7 +37,9 @@ function rd(){
 }
 
 # f to pipe 'z' history into fuzzy finder
-alias f="cd $(z | fzf | awk '{sub(/^[0-9]+[.]?[0-9]+?/,"")}1')"
+function f () {
+	cd $(z | fzf | awk '{sub(/^[0-9]+[.]?[0-9]+?/, "")} 1' )
+}
 
 
 ### MONGODB

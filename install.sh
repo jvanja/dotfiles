@@ -22,11 +22,13 @@ echo ""
 echo -e "${red}---------------------------------------"
 echo -e "Creating dotfiles..."
 echo -e "---------------------------------------${clear}"
-linkables=$( ls -1 -d *.symlink )
+linkables=$( ls -1 -A bash/ )
 for file in $linkables ; do
-	target="$HOME/.$( basename $file ".symlink" )"
-	echo -e "${cyan}copying${clear} $CUR_PATH/$file to $target"
-	cp $CUR_PATH/$file $target
+	# target="$HOME/.$( basename $file ".symlink" )"
+	# echo -e "${cyan}copying${clear} $CUR_PATH/$file to $target"
+	# cp $CUR_PATH/$file $target
+	echo -e "${cyan}copying${clear} $CUR_PATH/$file to $file"
+	# cp $CUR_PATH/$file $file
 done
 
 echo -e "..................."
