@@ -27,11 +27,11 @@ for file in $linkables ; do
 	# target="$HOME/.$( basename $file ".symlink" )"
 	# echo -e "${cyan}copying${clear} $CUR_PATH/$file to $target"
 	# cp $CUR_PATH/$file $target
-	echo -e "${cyan}copying${clear} $CUR_PATH/$file to $file"
-	# cp $CUR_PATH/$file $file
+	echo -e "${cyan}copying:${clear}"
+	cp -v $CUR_PATH/bash/$file $HOME/$file
 done
 
-echo -e "..................."
-echo -e "${yellow}Syncing nvim config${clear}"
-echo -e "..................."
+echo -e "${yellow}---------------------------------------"
+echo -e "${yellow}Syncing nvim config"
+echo -e "---------------------------------------${clear}"
 rsync -avh $CUR_PATH/nvim/ ~/.config/nvim --delete
