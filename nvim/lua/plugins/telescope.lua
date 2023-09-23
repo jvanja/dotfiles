@@ -27,6 +27,11 @@ return {
           },
         }
       }
+      opts.pickers = {
+        find_files = {
+          find_command = { 'rg', '--files', '--hidden', '-g', '!.git' }
+        }
+      }
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults or {}, {
         selection_strategy = "reset",
         sorting_strategy = "descending",
