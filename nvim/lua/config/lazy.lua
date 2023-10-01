@@ -32,7 +32,7 @@ require("lazy").setup({
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
   -- install = { colorscheme = { "tokyonight", "habamax" } },
-  install = { colorscheme = { "monokai-pro" } },
+  -- install = { colorscheme = { "monokai-pro" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {

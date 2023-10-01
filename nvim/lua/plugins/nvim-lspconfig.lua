@@ -104,7 +104,7 @@ return {
           },
         },
         emmet_ls = {
-          filetypes = { "php", "html", "css", "scss" },
+          filetypes = { "php", "html", "htmldjango", "css", "scss" },
           root_dir = function()
             return vim.loop.cwd()
           end,

@@ -3,8 +3,8 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "monokai-pro",
-      -- colorscheme = "catppuccin",
+      -- colorscheme = "monokai-pro",
+      colorscheme = "catppuccin",
     },
   },
   -- {
@@ -18,9 +18,9 @@ return {
     "nvim-lualine/lualine.nvim",
     opts = function()
       return {
-        options = {
-          theme = "monokai-pro",
-        },
+        -- options = {
+        --   theme = "monokai-pro",
+        -- },
         sections = {
           lualine_z = {
             function()
