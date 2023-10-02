@@ -22,15 +22,19 @@ echo ""
 echo -e "${red}---------------------------------------"
 echo -e "Creating dotfiles..."
 echo -e "---------------------------------------${clear}"
-linkables=$( ls -1 -A bash/ )
+linkables=$( ls -1 -A -p bash/ | grep -v / )
 for file in $linkables ; do
-	# target="$HOME/.$( basename $file ".symlink" )"
-	# echo -e "${cyan}copying${clear} $CUR_PATH/$file to $target"
-	# cp $CUR_PATH/$file $target
 	echo -e "${cyan}copying:${clear}"
 	cp -v $CUR_PATH/bash/$file $HOME/$file
 done
 
+echo ""
+echo -e "${cyan}---------------------------------------"
+echo -e "${cyan}Syncing ~/.config filder"
+echo -e "---------------------------------------${clear}"
+rsync -avh $CUR_PATH/bash/config/ ~/.config
+
+echo ""
 echo -e "${yellow}---------------------------------------"
 echo -e "${yellow}Syncing nvim config"
 echo -e "---------------------------------------${clear}"
