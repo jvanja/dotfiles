@@ -38,7 +38,7 @@ function rd(){
 
 # f to pipe 'z' history into fuzzy finder
 function f () {
-	cd $(z | fzf | awk '{sub(/^[0-9]+[.]?[0-9]+?/, "")} 1' )
+	cd $(z | grep $1 | fzf --bind 'tab:jump' | awk '{sub(/^[0-9]+[.]?[0-9]+?/, "")} 1' )
 }
 
 
