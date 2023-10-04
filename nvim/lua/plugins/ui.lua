@@ -1,13 +1,11 @@
 return {
-  -- theme
   {
     "catppuccin/nvim",
     lazy = false,
     name = "catppuccin",
-    -- you can do it like this with a config function
     config = function()
       require("catppuccin").setup {
-        flavour = "macchiato",         -- latte, frappe, macchiato, mocha
+        -- flavour = "macchiato",         -- latte, frappe, macchiato, mocha
         transparent_background = true, -- disables setting the background color.
         highlight_overrides = {
           all = function(colors)
@@ -26,12 +24,13 @@ return {
       colorscheme = "catppuccin",
     },
   },
-  -- {
-  --   "folke/tokyonight.nvim",
-  --   opts = {
-  --     transparent = false,
-  --   },
-  -- },
+  {
+    "folke/tokyonight.nvim",
+    enabled = false,
+    opts = {
+      transparent = false,
+    },
+  },
   -- lualine
   {
     "nvim-lualine/lualine.nvim",
