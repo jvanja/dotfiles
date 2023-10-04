@@ -16,7 +16,7 @@ env:
 window:
   decorations: buttonless
   dynamic_padding: false
-  opacity: 0.9
+  opacity: 0.95
   startup_mode: "Maximized"
   padding:
     x: 0
