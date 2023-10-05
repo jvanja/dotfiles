@@ -22,6 +22,9 @@ window:
     x: 0
     y: 10
 
+mouse:
+  url_launcher: true
+
 font:
   normal:
     family: "JetBrainsMono Nerd Font"
