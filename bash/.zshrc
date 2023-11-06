@@ -72,6 +72,9 @@ zle -N zle-line-init
 
 # User configuration
 
+# If set, Homebrew will not auto-update before running `brew install`, `brew upgrade` or `brew tap`.
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 export PATH="/Users/vanjajelic/.composer/vendor/bin:$PATH"
 
 # export PATH="/usr/local/opt/php@8.1/bin:$PATH"
