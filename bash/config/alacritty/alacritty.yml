@@ -38,7 +38,7 @@ font:
   bold_italic:
     family: "JetBrainsMono Nerd Font"
     style: Bold Italic
-  size: 13
+  size: 12
 
 # NOTE: helpful hex codes
 # \x1b = escape (useful for vim-related keybindings)
