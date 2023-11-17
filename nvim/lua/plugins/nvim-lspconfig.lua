@@ -102,12 +102,24 @@ return {
             },
           },
         },
-        emmet_ls = {
-          filetypes = { "php", "html", "htmldjango", "css", "scss" },
-          root_dir = function()
-            return vim.loop.cwd()
-          end,
-          settings = {},
+        emmet_language_server = {
+          filetypes = {
+            "css",
+            "scss",
+            "eruby",
+            "html",
+            "htmldjango",
+            "php",
+            "javascript",
+            "javascriptreact",
+            "less",
+            "sass",
+            "scss",
+            "svelte",
+            "pug",
+            "typescriptreact",
+            "vue",
+          },
         },
         lua_ls = {
           format = {
