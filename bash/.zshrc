@@ -76,7 +76,7 @@ zle -N zle-line-init
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 export PATH="/Users/vanjajelic/.composer/vendor/bin:$PATH"
-export PATH="/Applications/MAMP/htdocs/evinyl-cms/vendor/bin/drush:$PATH"
+export PATH="/Applications/MAMP/htdocs/evinyl-cms/vendor/bin:$PATH"
 
 # export PATH="/usr/local/opt/php@8.1/bin:$PATH"
 
