@@ -10,6 +10,7 @@ alias v="nvim"
 alias tat="new-tmux-from-dir-name"
 alias td="tmux detach"
 alias tls="tmux ls"
+alias tksv="tmux kill-server"
 
 function ta(){
 	tmux attach-session -t "$1"

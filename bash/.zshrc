@@ -108,6 +108,9 @@ source ~/.bash_profile
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# init z   https://github.com/rupa/z
+. ~/z.sh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.fzf_functions
 
