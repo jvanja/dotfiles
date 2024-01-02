@@ -17,6 +17,8 @@ export ZSH=/Users/vanjajelic/.oh-my-zsh
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 KEYTIMEOUT=1
 
 # Uncomment the following line to use case-sensitive completion.
@@ -61,7 +63,7 @@ KEYTIMEOUT=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search tmux brew)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search brew)
 
 # Enable autosuggestions automatically
 zle-line-init() {
@@ -108,6 +110,9 @@ source ~/.bash_profile
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# init rupa/z
+. ~/z.sh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.fzf_functions
 
@@ -127,3 +132,11 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# Herd injected PHP binary.
+export PATH="/Users/vanjajelic/Library/Application Support/Herd/bin/":$PATH
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/vanjajelic/Library/Application Support/Herd/config/php/82/"
