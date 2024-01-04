@@ -6,6 +6,10 @@ for file in ~/.{aliases,functions,secret}; do
 done
 unset file
 
+if [ -f ~/.aliases.local ]; then
+  source ~/.aliases.local
+fi
+
 # enable vi mode for shell
 set -o vi
 
