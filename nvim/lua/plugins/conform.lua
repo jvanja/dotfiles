@@ -3,7 +3,11 @@ return {
   opts = {
     format_on_save = nil,
     formatters_by_ft = {
-      ["php"] = { "php-cs-fixer" },
+      lua = { "stylua" },
+      php = { "php-cs-fixer" },
+      javascript = { "prettier" },
+      vue = { "prettier" },
+      htmldjango = { "djlint" },
     },
   },
 }

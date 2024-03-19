@@ -74,6 +74,9 @@ function wdmp(){
 alias vm="ssh vagrant@127.0.0.1 -p 2222"
 
 
+# Herd injected MYSQL binary.
+alias mysql="/Users/Shared/DBngin/mysql/8.0.33/bin/mysql -u root -p -h 127.0.0.1"
+
 ### GIT STUFF
 
 alias gg="lazygit"
