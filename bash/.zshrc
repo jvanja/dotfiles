@@ -63,7 +63,9 @@ KEYTIMEOUT=1
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search brew)
+# plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search brew)
+plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-fzf-history-search brew)
+
 
 # Enable autosuggestions automatically
 zle-line-init() {
@@ -84,6 +86,9 @@ export PATH="/Applications/MAMP/htdocs/evinyl-cms/vendor/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 source ~/.bash_profile
+
+# this fixes the c-R not working
+source ~/.oh-my-zsh/custom/plugins/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh 
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
