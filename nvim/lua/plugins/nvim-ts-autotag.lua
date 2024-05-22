@@ -4,11 +4,21 @@ return {
   dependencies = "nvim-treesitter/nvim-treesitter",
   config = function()
     require("nvim-ts-autotag").setup({
-      enable = true,
-      enable_rename = true,
-      enable_close = true,
-      enable_close_on_clash = true,
-      filetypes = { "vue", "html" },
+      opts = {
+        enable = true,
+        enable_rename = true,
+        enable_close = true,
+        enable_close_on_clash = true,
+        filetypes = { "vue", "html" },
+        aliases = {
+          ["htmldjango"] = "html",
+        }
+      },
+      per_filetype = {
+        ["htmldjango"] = {
+          enable_close = false
+        }
+      }
     })
   end,
 }
