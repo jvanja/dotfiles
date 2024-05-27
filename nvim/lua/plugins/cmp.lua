@@ -5,7 +5,12 @@ return {
   },
   opts = function(_, opts)
     local cmp = require("cmp")
-    opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "codeium" } }))
+    -- opts.sources = cmp.config.sources(vim.list_extend(opts.sources, { { name = "codeium" } }))
+    -- table.insert(opts.sources, 1, {
+    --   name = "supermaven",
+    --   group_index = 1,
+    --   priority = 100,
+    -- })
     opts.window = {
       completion = cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
