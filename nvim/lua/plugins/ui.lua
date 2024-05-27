@@ -4,7 +4,7 @@ return {
     lazy = false,
     name = "catppuccin",
     config = function()
-      require("catppuccin").setup {
+      require("catppuccin").setup({
         -- flavour = "macchiato",         -- latte, frappe, macchiato, mocha
         transparent_background = true, -- disables setting the background color.
         highlight_overrides = {
@@ -12,9 +12,9 @@ return {
             return {
               LineNr = { fg = "#8888AA" },
             }
-          end
-        }
-      }
+          end,
+        },
+      })
     end,
   },
   {
@@ -43,8 +43,8 @@ return {
           lualine_z = {
             function()
               local msg = "No Active Lsp"
-              local buf_ft = vim.api.nvim_buf_get_option(0, "filetype")
-              local clients = vim.lsp.get_active_clients()
+              local buf_ft = vim.api.nvim_get_option_value("filetype", { buf = 0 })
+              local clients = vim.lsp.get_clients()
               if next(clients) == nil then
                 return msg
               end
@@ -60,5 +60,13 @@ return {
         },
       }
     end,
+  },
+  {
+    "folke/noice.nvim",
+    opts = {
+      presets = {
+        lsp_doc_border = true,
+      },
+    },
   },
 }
