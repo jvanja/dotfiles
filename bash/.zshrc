@@ -116,7 +116,9 @@ source ~/.oh-my-zsh/custom/plugins/zsh-fzf-history-search/zsh-fzf-history-search
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # init rupa/z
-. ~/z.sh
+# . ~/z.sh
+eval "$(zoxide init zsh)"
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.fzf_functions
