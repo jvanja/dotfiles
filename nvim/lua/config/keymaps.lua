@@ -14,12 +14,6 @@ local function map(mode, lhs, rhs, opts)
   end
 end
 
--- Exiting vim
---
--- save and quit file with leader x when in insert mode
-map("i", "<leader>x", "<C-c>:wq<cr>", { desc = "Save and quit" })
-map("n", "<leader>x", ":wq<cr>", { desc = "Save and quit" })
-
 -- SYSTEM CLIPBOARD
 --
 map("n", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
@@ -74,7 +68,7 @@ end
 
 map("n", "<leader>,", "<C-^><cr>", { desc = "Toggle between the last two buffers with ,," })
 
--- SEARCHING
+-- SEARCHING AND REPLACING
 map(
   "n",
   "<C-f>",
