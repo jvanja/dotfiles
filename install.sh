@@ -38,4 +38,4 @@ echo ""
 echo -e "${yellow}---------------------------------------"
 echo -e "${yellow}Syncing nvim config"
 echo -e "---------------------------------------${clear}"
-rsync -avh $CUR_PATH/nvim/ ~/.config/nvim --delete
+rsync -avh --exclude 'lazy-lock.json' --exclude 'lazyvim.json' $CUR_PATH/nvim/ ~/.config/nvim --delete
