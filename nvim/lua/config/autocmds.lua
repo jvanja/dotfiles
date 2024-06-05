@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
   group = augroup("css"),
   callback = function()
     if string.find(vim.api.nvim_buf_get_name(0), 'theme%-overrides.css') ~= nil then
-      vim.diagnostic.disable()
+      vim.diagnostic.enable(false)
     else
       vim.diagnostic.enable()
     end
