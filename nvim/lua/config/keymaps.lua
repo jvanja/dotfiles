@@ -19,8 +19,6 @@ end
 map("n", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
 map("v", "<leader>y", '"+y', { desc = "Copy visual selection to system clipboard" })
 map("n", "<leader>Y", '"+Y', { desc = "Copy the whole line to system clipboard" })
-map("n", "<leader>d", '"_d', { desc = "Delete without replacing the first register" })
-map("v", "<leader>d", '"_d', { desc = "Delete visual selection without replacing the first register" })
 
 -- move to begining and end of line with H and L
 map("n", "H", "^")

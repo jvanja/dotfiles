@@ -1,7 +1,7 @@
 return {
   "kkoomen/vim-doge",
-  lazy = true,
   config = function()
-    vim.cmd([[call doge#install()]])
+    -- vim.cmd([[call doge#install()]])
+    vim.keymap.set("n", "<Leader>d", "<Plug>(doge-generate)", { desc = "Generate docs (vim-doge)" })
   end,
 }
