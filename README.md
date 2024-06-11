@@ -1,8 +1,12 @@
 # Dotfiles
 
+## Neovim
+
 ## Bash
+* alacritty
 * z
 * oh-my-zsh
+* brew
 * drush
 
 ## Installation
