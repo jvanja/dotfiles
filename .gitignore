@@ -2,3 +2,4 @@ secret.symlink
 *.secret
 *.nogit
 .luarc.json
+.DS_Store

@@ -105,3 +105,10 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 # ctags to homebrew ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
+### IMAGES
+function compressjpgs() {
+  [ -z "$1" ] && echo "Destination directory not specified" && return
+
+  mogrify -monitor -sampling-factor 4:2:0 -strip -interlace JPEG -colorspace sRGB -path $1 -compress JPEG -quality 80 *.jpg
+}
+
