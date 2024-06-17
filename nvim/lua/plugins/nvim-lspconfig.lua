@@ -43,8 +43,12 @@ return {
           },
         },
         lua_ls = {
-          format = {
-            enable = false,
+          settings = {
+            Lua = {
+              diagnostics = {
+                globals = { "vim" },
+              },
+            },
           },
         },
       },
