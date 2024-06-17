@@ -40,6 +40,16 @@ return {
         --   theme = "monokai-pro",
         -- },
         sections = {
+          lualine_x = {},
+          lualine_y = {
+            function ()
+              local col = vim.fn.virtcol('.')
+              local cur = vim.fn.line('.')
+              local total = vim.fn.line('$')
+              local progress = math.floor(cur / total * 100)
+              return string.format('column: %s : %s', col, progress) .. "%%"
+            end
+          },
           lualine_z = {
             function()
               local msg = "No Active Lsp"
