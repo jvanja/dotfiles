@@ -7,6 +7,8 @@ fi
 
 export LC_ALL=en_US.UTF-8
 
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/vanjajelic/.oh-my-zsh
 
