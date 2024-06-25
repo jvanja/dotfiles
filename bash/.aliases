@@ -7,6 +7,7 @@ alias v="nvim"
 
 ### TMUX
 
+alias tmux="tmux a || tmux" # if tmux is not running, start it withouth creating a session
 alias tat="new-tmux-from-dir-name"
 alias td="tmux detach"
 alias tls="tmux ls"
