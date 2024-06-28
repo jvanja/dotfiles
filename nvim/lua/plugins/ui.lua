@@ -1,3 +1,18 @@
+local function get_condition()
+    return package.loaded["ollama"] and require("ollama").status ~= nil
+end
+
+
+-- Define a function to check the status and return the corresponding icon
+local function get_status_icon()
+  local status = require("ollama").status()
+
+  if status == "IDLE" then
+    return "OLLAMA IDLE"
+  elseif status == "WORKING" then
+    return "OLLAMA BUSY"
+  end
+end
 return {
   {
     "catppuccin/nvim",
@@ -40,15 +55,18 @@ return {
         --   theme = "monokai-pro",
         -- },
         sections = {
-          lualine_x = {},
+          -- lualine_x = {
+          --
+          -- },
+          lualine_x = { get_status_icon, get_condition },
           lualine_y = {
-            function ()
-              local col = vim.fn.virtcol('.')
-              local cur = vim.fn.line('.')
-              local total = vim.fn.line('$')
+            function()
+              local col = vim.fn.virtcol(".")
+              local cur = vim.fn.line(".")
+              local total = vim.fn.line("$")
               local progress = math.floor(cur / total * 100)
-              return string.format('column: %s : %s', col, progress) .. "%%"
-            end
+              return string.format("column: %s : %s", col, progress) .. "%%"
+            end,
           },
           lualine_z = {
             function()
