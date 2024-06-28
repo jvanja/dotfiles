@@ -63,7 +63,7 @@ return {
         desc =
         "File Browser"
       },
-      { '<leader>"', "<cmd>lua require('telescope.builtin').registers()<CR>",  desc = "Registers" },
+      -- { '<leader>"', "<cmd>lua require('telescope.builtin').registers()<CR>",  desc = "Registers" },
       {
         "<leader>fd",
         "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>",

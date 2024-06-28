@@ -84,3 +84,6 @@ map("n", "<leader>n", ":nohl<CR>", { desc = "Turn off highlight with" })
 map("x", ".", ":normal .<CR>")
 
 map("n", "<leader>z", "<C-w>_", { desc = "Zoom in on the current split window" })
+
+map("n", '<leader>"', 'ciw"<c-r>-"<esc>', { desc = "Surround the word under cursor with double quotes" })
+map("n", "<leader>'", "ciw'<c-r>-'<esc>", { desc = "Surround the word under cursor with single quotes" })
