@@ -5,7 +5,6 @@ return {
       ensure_installed = {
         "prettierd",
         "stylua",
-        "eslint_d",
       },
     },
   },
@@ -44,23 +43,6 @@ return {
               table.insert(config.settings.vtsls.tsserver.globalPlugins, vuePluginConfig)
             end
           end,
-          -- settings = {
-          --   vtsls = {
-          --     tsserver = {
-          --       globalPlugins = {
-          --         {
-          --           name = "@vue/typescript-plugin",
-          --           location = vue_language_server_path,
-          --
-          --           -- location = require("mason-registry").get_package("vue-language-server"):get_install_path() .. "/node_modules/@vue/language-server",
-          --           languages = { "vue" },
-          --           configNamespace = "typescript",
-          --           enableForWorkspaceTypeScriptVersions = true,
-          --         },
-          --       },
-          --     },
-          --   },
-          -- },
         },
         emmet_language_server = {
           filetypes = {

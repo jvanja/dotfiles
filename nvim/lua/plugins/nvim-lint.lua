@@ -2,7 +2,9 @@ return {
   "mfussenegger/nvim-lint",
   opts = {
     linters_by_ft = {
-      vue = {'eslint_d',},
+      vue = {'eslint',},
+      javascript = {'eslint',},
+      typescript = {'eslint',},
       htmldjango = {'djlint',}
     }
   }
