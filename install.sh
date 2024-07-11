@@ -20,22 +20,25 @@ CUR_PATH=$(pwd)
 
 echo ""
 echo -e "${red}---------------------------------------"
-echo -e "Creating dotfiles..."
+echo -e "Symlinking dotfiles..."
 echo -e "---------------------------------------${clear}"
-linkables=$( ls -1 -A -p bash/ | grep -v / )
-for file in $linkables ; do
-	echo -e "${cyan}copying:${clear}"
-	cp -v $CUR_PATH/bash/$file $HOME/$file
-done
+stow bash -t ~ --verbose=1
+# linkables=$( ls -1 -A -p bash/ | grep -v / )
+# for file in $linkables ; do
+# 	echo -e "${cyan}copying:${clear}"
+# 	cp -v $CUR_PATH/bash/$file $HOME/$file
+# done
 
 echo ""
 echo -e "${cyan}---------------------------------------"
-echo -e "${cyan}Syncing ~/.config filder"
+echo -e "${cyan}Symlinking ~/.config filder"
 echo -e "---------------------------------------${clear}"
-rsync -avh $CUR_PATH/bash/config/ ~/.config
+cd bash/config; stow . -t ~/.config --verbose=1
+# rsync -avh $CUR_PATH/bash/config/ ~/.config
 
-echo ""
-echo -e "${yellow}---------------------------------------"
-echo -e "${yellow}Syncing nvim config"
-echo -e "---------------------------------------${clear}"
-rsync -avh --exclude 'lazy-lock.json' --exclude 'lazyvim.json' $CUR_PATH/nvim/ ~/.config/nvim --delete
+# echo ""
+# echo -e "${yellow}---------------------------------------"
+# echo -e "${yellow}Syncing nvim config"
+# echo -e "---------------------------------------${clear}"
+# rsync -avh --exclude 'lazy-lock.json' --exclude 'lazyvim.json' $CUR_PATH/nvim/ ~/.config/nvim --delete
+
