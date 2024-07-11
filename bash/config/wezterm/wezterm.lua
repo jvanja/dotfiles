@@ -3,25 +3,22 @@ local k = require("utils/keys")
 local wezterm = require("wezterm")
 local act = wezterm.action
 
--- This will hold the configuration.
 local config = {
 
 	-- font_size = 12,
-
 	line_height = 1.1,
-
 	color_scheme = "Catppuccin Mocha",
 
 	window_background_gradient = {
+    orientation = { Linear = { angle = -45.0 } },
 		colors = {
 			"#020024",
-			"#2c0649",
-			"#002e37",
+			"#1c042f",
 		},
 	},
-  window_background_opacity = 0.9,
+  window_background_opacity = 0.91,
 	window_padding = {
-		left = 40,
+		left = 30,
 		right = 20,
 		top = 30,
 		bottom = 20,
