@@ -1,7 +1,6 @@
 local function get_condition()
-    return package.loaded["ollama"] and require("ollama").status ~= nil
+  return package.loaded["ollama"] and require("ollama").status ~= nil
 end
-
 
 -- Define a function to check the status and return the corresponding icon
 local function get_status_icon()
