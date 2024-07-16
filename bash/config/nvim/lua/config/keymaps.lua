@@ -64,8 +64,6 @@ if Util.has("bufferline.nvim") then
   map("n", "<S-Tab>", ":BufferLineCyclePrev<CR>")
 end
 
-map("n", "<leader>,", "<C-^><cr>", { desc = "Toggle between the last two buffers with ,," })
-
 -- SEARCHING AND REPLACING
 map(
   "n",
