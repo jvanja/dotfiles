@@ -3,7 +3,6 @@ return {
     -- also investigate https://github.com/David-Kunz/gen.nvim
     "supermaven-inc/supermaven-nvim",
     -- enabled = false,
-    commit = 'df3ecf7',
     config = function()
       require("supermaven-nvim").setup({
         -- all the options are set via cmp
