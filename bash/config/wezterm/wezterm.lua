@@ -16,7 +16,7 @@ local config = {
 			"#1c042f",
 		},
 	},
-  window_background_opacity = 0.91,
+  window_background_opacity = 0.97,
 	window_padding = {
 		left = 30,
 		right = 20,
