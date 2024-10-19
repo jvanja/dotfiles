@@ -1,0 +1,6 @@
+{
+  "console.log Snippet": {
+    "prefix": ["cl"],
+    "body": "console.log(${1});$0"
+  }
+}
