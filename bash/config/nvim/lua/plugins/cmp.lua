@@ -1,4 +1,5 @@
 return {
+  {
   "hrsh7th/nvim-cmp",
   dependencies = {
     "hrsh7th/cmp-emoji",
@@ -29,5 +30,15 @@ return {
       end,
     }
   end,
+},
+  {
+    "garymjr/nvim-snippets",
+    opts = {
+      extended_filetypes = {
+        typescript = { "javascript" },
+        typescriptreact = { "javascript" },
+        javascriptreact = { "javascript" },
+      },
+    },
+  }
 }
-
