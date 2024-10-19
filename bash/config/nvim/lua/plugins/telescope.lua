@@ -13,16 +13,10 @@ return {
         version = "^1.0.0",
       },
       {
-        "danielfalk/smart-open.nvim",
-        branch = "0.2.x",
+        "mollerhoj/telescope-recent-files.nvim",
         config = function()
-          require("telescope").load_extension("smart_open")
+          require("telescope").load_extension("recent-files")
         end,
-        dependencies = {
-          "kkharji/sqlite.lua",
-          -- Only required if using match_algorithm fzf
-          { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-        },
       },
     },
     opts = function(_, opts)
@@ -71,7 +65,7 @@ return {
       -- { "<leader>,", "<cmd>lua require('telescope.builtin').find_files()<CR>", desc = "Find files" },
       {
         "<leader>,",
-        "<cmd>lua require('telescope').extensions.smart_open.smart_open({cwd_only = true})<CR>",
+        "<cmd>lua require('telescope').extensions['recent-files'].recent_files({})<CR>",
         desc = "Find files",
       },
       {
