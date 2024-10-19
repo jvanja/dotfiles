@@ -12,6 +12,18 @@ return {
         "nvim-telescope/telescope-live-grep-args.nvim",
         version = "^1.0.0",
       },
+      {
+        "danielfalk/smart-open.nvim",
+        branch = "0.2.x",
+        config = function()
+          require("telescope").load_extension("smart_open")
+        end,
+        dependencies = {
+          "kkharji/sqlite.lua",
+          -- Only required if using match_algorithm fzf
+          { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+        },
+      },
     },
     opts = function(_, opts)
       local lga_actions = require("telescope-live-grep-args.actions")
@@ -25,12 +37,12 @@ return {
               ["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
             },
           },
-        }
+        },
       }
       opts.pickers = {
         find_files = {
-          find_command = { 'rg', '--files', '--hidden', '-g', '!.git' }
-        }
+          find_command = { "rg", "--files", "--hidden", "-g", "!.git" },
+        },
       }
       opts.defaults = vim.tbl_deep_extend("force", opts.defaults or {}, {
         selection_strategy = "reset",
@@ -56,45 +68,52 @@ return {
       })
     end,
     keys = {
-      { "<leader>,", "<cmd>lua require('telescope.builtin').find_files()<CR>", desc = "Find files" },
+      -- { "<leader>,", "<cmd>lua require('telescope.builtin').find_files()<CR>", desc = "Find files" },
+      {
+        "<leader>,",
+        "<cmd>lua require('telescope').extensions.smart_open.smart_open({cwd_only = true})<CR>",
+        desc = "Find files",
+      },
       {
         "<leader>ff",
         ":Telescope file_browser<CR>",
-        desc =
-        "File Browser"
+        desc = "File Browser",
       },
       -- { '<leader>"', "<cmd>lua require('telescope.builtin').registers()<CR>",  desc = "Registers" },
       {
         "<leader>fd",
         "<cmd>lua require('telescope.builtin').lsp_definitions()<CR>",
-        desc =
-        "LSP Definitions"
+        desc = "LSP Definitions",
       },
       {
         "<leader>fr",
         "<cmd>lua require('telescope.builtin').lsp_references()<CR>",
-        desc =
-        "LSP References"
+        desc = "LSP References",
       },
       {
         "<leader>fc",
         "<cmd>lua require('telescope.builtin').git_bcommits()<CR>",
-        desc =
-        "Search in buffer commits"
+        desc = "Search in buffer commits",
       },
-      { "<leader>fs", "<cmd>lua require('telescope.builtin').git_status()<CR>",                       desc = "Git status" },
-      { "<leader>sg", "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", desc = "Git status" },
+      {
+        "<leader>fs",
+        "<cmd>lua require('telescope.builtin').git_status()<CR>",
+        desc = "Git status",
+      },
+      {
+        "<leader>sg",
+        "<cmd>lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+        desc = "Git status",
+      },
       {
         "<leader>?",
         "<cmd>lua require('telescope.builtin').keymaps()<CR>",
-        desc =
-        "Lists normal mode keymappings"
+        desc = "Lists normal mode keymappings",
       },
       {
         "<leader>fw",
         "<cmd>lua require('telescope.builtin').grep_string()<CR>",
-        desc =
-        "Grep for word under cursor"
+        desc = "Grep for word under cursor",
       },
       { "<leader>gs", false },
     },
