@@ -5,6 +5,7 @@ local act = wezterm.action
 
 local config = {
 
+  max_fps = 240,
 	-- font_size = 12,
 	line_height = 1.1,
 	color_scheme = "Catppuccin Mocha",
