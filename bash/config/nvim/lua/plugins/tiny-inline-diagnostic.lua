@@ -2,26 +2,16 @@ return {
   "rachartier/tiny-inline-diagnostic.nvim",
   -- event = "VeryLazy",
   event = { "LspAttach" },
+  priority = 1000, -- needs to be loaded in first
   config = function()
     vim.diagnostic.config({ virtual_text = false })
     require("tiny-inline-diagnostic").setup({
-      signs = {
-        left = "",
-        right = "",
-        diag = "●",
-        arrow = "    ",
-        up_arrow = "    ",
-        vertical = " │",
-        vertical_end = " └",
-      },
-      hi = {
-        background = "None",
-        mixing_color = "None",
-      },
+      preset = "modern", -- Can be: "modern", "classic", "minimal", "ghost", "simple", "nonerdfont", "amongus"
       options = {
+        show_source = true,
         multiple_diag_under_cursor = true,
         overflow = {
-          mode = "none",
+          mode = "wrap",
         },
         break_line = {
           enabled = false,

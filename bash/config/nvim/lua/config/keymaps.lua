@@ -36,8 +36,8 @@ map("v", "˚", ":m '<-2<cr>gv=gv", { desc = "Move up" })
 
 -- QUICKFIX
 --
-map("n", "<Down>", ":lua vim.diagnostic.goto_next()<CR>")
-map("n", "<Up>", ":lua vim.diagnostic.goto_prev()<CR>")
+map("n", "<Down>", ":lua vim.diagnostic.goto_next({float= false})<CR>")
+map("n", "<Up>", ":lua vim.diagnostic.goto_prev({float= false})<CR>")
 
 -- LOCATION LIST
 --
