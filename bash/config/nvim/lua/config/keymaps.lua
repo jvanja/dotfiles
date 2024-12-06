@@ -71,11 +71,9 @@ map(
   ":%s///g<left><left><left>",
   { noremap = true, silent = false, desc = "Search and replace in file with ctrl f" }
 )
-map(
-  "v",
-  "<C-f>",
-  ":s///g<left><left><left>",
-  { noremap = true, silent = false, desc = "Search and replace in file with ctrl f" }
+-- Search and replace word under the cursor
+map("n", "<leader>r", [[:%s/\<<C-r><C-w>\>//g<left><left>]],
+  { noremap = true, silent = false, desc = "Search and replace word under the cursor" }
 )
 
 -- Keep search matches in the middle of the window.
