@@ -17,7 +17,7 @@ return {
       local ret = {
         diagnostics = {},
         codelens = {},
-        document_highlight = {},
+        document_highlight = { enabled = false },
         capabilities = {},
         inlay_hints = {
           enabled = false,
