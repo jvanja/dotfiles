@@ -94,18 +94,3 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/vanjajelic/Library/Application Support/H
 # Herd injected PHP 8.2 configuration.
 export HERD_PHP_82_INI_SCAN_DIR="/Users/vanjajelic/Library/Application Support/Herd/config/php/82/"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/vanjajelic/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/vanjajelic/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/vanjajelic/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/vanjajelic/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
