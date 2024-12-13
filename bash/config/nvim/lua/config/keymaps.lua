@@ -72,7 +72,10 @@ map(
   { noremap = true, silent = false, desc = "Search and replace in file with ctrl f" }
 )
 -- Search and replace word under the cursor
-map("n", "<leader>r", [[:%s/\<<C-r><C-w>\>//g<left><left>]],
+map(
+  "n",
+  "<leader>r",
+  [[:%s/\<<C-r><C-w>\>//g<left><left>]],
   { noremap = true, silent = false, desc = "Search and replace word under the cursor" }
 )
 
@@ -89,3 +92,8 @@ map("n", "<leader>z", "<C-w>_", { desc = "Zoom in on the current split window" }
 
 map("n", '<leader>"', 'ciw"<c-r>-"<esc>', { desc = "Surround the word under cursor with double quotes" })
 map("n", "<leader>'", "ciw'<c-r>-'<esc>", { desc = "Surround the word under cursor with single quotes" })
+
+map("n", "<C-j>", ":Treewalker Down<CR>", { desc = "Move down in the tree", noremap = true })
+map("n", "<C-k>", ":Treewalker Up<CR>", { desc = "Move up in the tree", noremap = true })
+map("n", "<C-h>", ":Treewalker Left<CR>", { desc = "Move left in the tree", noremap = true })
+map("n", "<C-l>", ":Treewalker Right<CR>", { desc = "Move right in the tree", noremap = true })
