@@ -12,6 +12,7 @@ opt.wrap = true
 
 vim.g.autoformat = false
 
+vim.g.lazyvim_picker = "telescope"
 -- local tokyotheme = require("tokyonight")
 -- tokyotheme.setup({
 --   on_highlights = function(highlights, colors)
