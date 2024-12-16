@@ -62,16 +62,11 @@ return {
       })
     end,
     keys = {
-      -- { "<leader>,", "<cmd>lua require('telescope.builtin').find_files()<CR>", desc = "Find files" },
+      { "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR>", desc = "Find files" },
       {
         "<leader>,",
         "<cmd>lua require('telescope').extensions['recent-files'].recent_files({})<CR>",
         desc = "Find files",
-      },
-      {
-        "<leader>ff",
-        ":Telescope file_browser<CR>",
-        desc = "File Browser",
       },
       -- { '<leader>"', "<cmd>lua require('telescope.builtin').registers()<CR>",  desc = "Registers" },
       {
