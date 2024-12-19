@@ -51,6 +51,8 @@ source $ZSH/oh-my-zsh.sh
 # enable vi mode for shell. This has to be done after the oh-my-zsh config but before the fzf-history-search plugin
 set -o vi
 
+source <(fzf --zsh)
+
 # this fixes the c-R not working
 source ~/.oh-my-zsh/custom/plugins/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh 
 
