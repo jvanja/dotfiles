@@ -21,7 +21,8 @@ return {
       -- { "<leader>fs", "<cmd>lua require('fzf-lua').git_status()<CR>", desc = "Git status" },
       {
         "<leader>sg",
-        "<cmd>lua require('fzf-lua').live_grep({ cmd = 'git grep --line-number --column --color=always' })<CR>",
+        -- "<cmd>lua require('fzf-lua').live_grep({ cmd = 'git grep --line-number --column --color=always' })<CR>",
+        "<cmd>FzfLua live_grep_native<CR>",
         desc = "Live grep",
       },
       { "<leader>?", "<cmd>lua require('fzf-lua').keymaps()<CR>", desc = "Lists normal mode keymappings" },
