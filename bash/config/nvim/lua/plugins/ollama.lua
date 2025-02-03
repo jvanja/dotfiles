@@ -26,7 +26,7 @@ return {
   },
 
   opts = {
-    model = "codeqwen",
+    model = "deepseek-r1",
     url = "http://127.0.0.1:11434",
     serve = {
       on_start = false,
