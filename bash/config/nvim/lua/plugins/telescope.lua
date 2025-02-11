@@ -18,6 +18,7 @@ return {
       { "<leader>,", "<cmd>lua require('fzf-lua').files()<CR>", desc = "Find files" },
       { "<leader>fd", "<cmd>lua require('fzf-lua').lsp_definitions()<CR>", desc = "LSP Definitions" },
       { "<leader>fr", "<cmd>lua require('fzf-lua').lsp_references()<CR>", desc = "LSP References" },
+      { "<leader>fs", "<cmd>lua require('fzf-lua').lsp_workspace_symbols()<CR>", desc = "LSP Symbols" },
       { "<leader>fc", "<cmd>lua require('fzf-lua').git_bcommits()<CR>", desc = "Search buffer GIT commits" },
       -- { "<leader>fs", "<cmd>lua require('fzf-lua').git_status()<CR>", desc = "Git status" },
       {

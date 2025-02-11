@@ -5,6 +5,9 @@ alias fixcam="sudo killall VDCAssistant"
 
 alias v="nvim"
 
+alias python="python3"
+alias pip="pip3"
+
 ### TMUX
 
 alias t="tmux a || tmux" # if tmux is not running, start it withouth creating a session
