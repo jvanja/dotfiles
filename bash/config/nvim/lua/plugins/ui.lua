@@ -60,11 +60,9 @@ return {
           lualine_x = { get_status_icon, get_condition },
           lualine_y = {
             function()
-              local col = vim.fn.virtcol(".")
               local cur = vim.fn.line(".")
               local total = vim.fn.line("$")
-              local progress = math.floor(cur / total * 100)
-              return string.format("column: %s : %s", col, progress) .. "%%"
+              return string.format("line: %s of %s", cur, total)
             end,
           },
           lualine_z = {
