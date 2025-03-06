@@ -59,6 +59,7 @@ return {
               "eruby",
               "html",
               "htmldjango",
+              "blade",
               "php",
               "javascript",
               "javascriptreact",

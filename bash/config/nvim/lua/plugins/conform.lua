@@ -8,6 +8,7 @@ return {
       javascript = { "prettier" },
       vue = { "prettier" },
       htmldjango = { "djlint" },
+      blade = { "blade-formatter" },
     },
   },
 }

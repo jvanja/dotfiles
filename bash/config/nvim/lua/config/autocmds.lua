@@ -16,3 +16,10 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
     end
   end,
 })
+
+-- vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+--   pattern = {"*.blade.php"},
+--   callback = function(ev)
+--     vim.bo.filetype = "blade"
+--   end
+-- })
