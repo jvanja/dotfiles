@@ -30,6 +30,11 @@ return {
           intelephense = {
             settings = require("config.intelephense_conf"),
           },
+          phpactor = {
+            init_options = {
+              ["language_server.diagnostics_on_open"] = false,
+            },
+          },
           vtsls = {
             filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
             settings = {
