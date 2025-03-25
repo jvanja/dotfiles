@@ -2,6 +2,7 @@ return {
   {
     "folke/snacks.nvim",
     opts = {
+      indent = { enabled = false },
       animate = {
         duration = 20, -- ms per step
         easing = "linear",
