@@ -5,19 +5,22 @@ local act = wezterm.action
 
 local config = {
 
-  max_fps = 240,
+	initial_rows = 88,
+	initial_cols = 150,
+
+	max_fps = 240,
 	-- font_size = 12,
 	line_height = 1.1,
 	color_scheme = "Catppuccin Mocha",
 
 	window_background_gradient = {
-    orientation = { Linear = { angle = -45.0 } },
+		orientation = { Linear = { angle = -45.0 } },
 		colors = {
 			"#020024",
 			"#1c042f",
 		},
 	},
-  window_background_opacity = 0.97,
+	window_background_opacity = 0.97,
 	window_padding = {
 		left = 30,
 		right = 20,
