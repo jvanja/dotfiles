@@ -1,5 +1,11 @@
 return {
   {
+    "folke/which-key.nvim",
+    keys = {
+      { "<leader>?", false }, -- disable it here so fzf-lua does it instead
+    },
+  },
+  {
     "ibhagwan/fzf-lua",
     opts = {
       previewers = {
