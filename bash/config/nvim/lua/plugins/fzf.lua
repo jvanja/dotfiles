@@ -11,6 +11,7 @@ return {
       previewers = {
         builtin = {
           syntax_limit_b = 1024 * 100, -- Don't preview files over 100KB (minified JS...)
+          snacks_image = { enabled = false, render_inline = true },
         },
       },
       winopts = {
