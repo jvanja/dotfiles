@@ -3,10 +3,24 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        -- Non LSP tools
         "prettierd",
         "stylua",
         "djlint",
+        -- LSP servers
+        "vue-language-server",
+        "intelephense",
+        "phpactor",
+        "emmet-language-server",
+        "lua-language-server",
+        "vtsls",
       },
+    },
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      automatic_installation = true,
     },
   },
   {
@@ -37,10 +51,27 @@ return {
               ["language_server.diagnostics_on_save"] = false,
             },
           },
+          -- this mess down should be deleted once this gets resolved: 
+          -- LazyExtra is configured to use vue-language-server (aka Volar), but starting from version 3.0.0, the config is no longer compatible with the 2.x setup. Plus, Volar has been renamed to vue_ls, so the old LazyExtra setup doesn’t work anymore.
+          -- https://github.com/vuejs/language-tools/wiki/Neovim
+          -- https://github.com/LazyVim/LazyVim/discussions/2697#discussioncomment-13669985
+          -- https://github.com/LazyVim/LazyVim/pull/6238
+          volar = {
+            enabled = false,
+            init_options = {
+              vue = {
+                hybridMode = true,
+              },
+            },
+          },
           vtsls = {
             filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
             settings = {
-              vtsls = { tsserver = { globalPlugins = {} } },
+              vtsls = {
+                tsserver = {
+                  globalPlugins = {},
+                },
+              },
             },
             before_init = function(params, config)
               local result = vim
@@ -59,6 +90,7 @@ return {
               end
             end,
           },
+          -- end of the mess above
           emmet_language_server = {
             filetypes = {
               "css",
