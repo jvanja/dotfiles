@@ -14,6 +14,8 @@ return {
         "emmet-language-server",
         "lua-language-server",
         "vtsls",
+        "css-lsp",
+        "css-variables-language-server"
       },
     },
   },
