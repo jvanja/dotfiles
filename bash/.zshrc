@@ -87,6 +87,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Herd injected PHP binary.
 export PATH="/Users/vanjajelic/Library/Application Support/Herd/bin/":$PATH
+# Add mysql and mysqldump to PATH.
+export PATH="$PATH:/Users/Shared/DBngin/mysql/8.0.33/bin"
 
 
 # Herd injected PHP 8.3 configuration.
