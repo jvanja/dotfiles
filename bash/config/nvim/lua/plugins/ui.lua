@@ -14,28 +14,32 @@ local function get_status_icon()
 end
 return {
   {
-    "catppuccin/nvim",
-    lazy = false,
-    name = "catppuccin",
-    config = function()
-      require("catppuccin").setup({
-        -- flavour = "macchiato",         -- latte, frappe, macchiato, mocha
-        transparent_background = true, -- disables setting the background color.
-        highlight_overrides = {
-          all = function(colors)
-            return {
-              LineNr = { fg = "#8888AA" },
-            }
-          end,
-        },
-      })
-    end,
+  "rebelot/kanagawa.nvim"
   },
+  -- {
+  --   "catppuccin/nvim",
+  --   lazy = false,
+  --   name = "catppuccin",
+  --   config = function()
+  --     require("catppuccin").setup({
+  --       -- flavour = "macchiato",         -- latte, frappe, macchiato, mocha
+  --       transparent_background = true, -- disables setting the background color.
+  --       highlight_overrides = {
+  --         all = function(colors)
+  --           return {
+  --             LineNr = { fg = "#8888AA" },
+  --           }
+  --         end,
+  --       },
+  --     })
+  --   end,
+  -- },
   {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "monokai-pro",
-      colorscheme = "catppuccin",
+      -- colorscheme = "catppuccin",
+      colorscheme = "kanagawa"
     },
   },
   {
@@ -57,7 +61,7 @@ return {
           -- lualine_x = {
           --
           -- },
-          lualine_x = { get_status_icon, get_condition },
+          -- lualine_x = { get_status_icon, get_condition },
           lualine_y = {
             function()
               local cur = vim.fn.line(".")
