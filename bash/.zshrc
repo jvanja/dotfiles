@@ -98,3 +98,4 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/vanjajelic/Library/Application Support/H
 # Herd injected PHP 8.2 configuration.
 export HERD_PHP_82_INI_SCAN_DIR="/Users/vanjajelic/Library/Application Support/Herd/config/php/82/"
 
+eval "$(rbenv init -)"
