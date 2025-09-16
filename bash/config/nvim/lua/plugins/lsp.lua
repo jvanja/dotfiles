@@ -15,7 +15,7 @@ return {
         "lua-language-server",
         "vtsls",
         "css-lsp",
-        "css-variables-language-server"
+        "css-variables-language-server",
       },
     },
   },
@@ -53,7 +53,7 @@ return {
               ["language_server.diagnostics_on_save"] = false,
             },
           },
-          -- this mess down should be deleted once this gets resolved: 
+          -- this mess down should be deleted once this gets resolved:
           -- LazyExtra is configured to use vue-language-server (aka Volar), but starting from version 3.0.0, the config is no longer compatible with the 2.x setup. Plus, Volar has been renamed to vue_ls, so the old LazyExtra setup doesn’t work anymore.
           -- https://github.com/vuejs/language-tools/wiki/Neovim
           -- https://github.com/LazyVim/LazyVim/discussions/2697#discussioncomment-13669985
@@ -121,6 +121,9 @@ return {
                 },
               },
             },
+          },
+          tailwindcss = {
+            filetypes_include = { "php" },
           },
         },
         setup = {},
