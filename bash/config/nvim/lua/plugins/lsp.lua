@@ -1,6 +1,6 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = {
       ensure_installed = {
         -- Non LSP tools
@@ -16,11 +16,13 @@ return {
         "vtsls",
         "css-lsp",
         "css-variables-language-server",
+        -- neccessary for nvim-treesitter
+        "tree-sitter-cli",
       },
     },
   },
   {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
     opts = {
       automatic_installation = true,
     },
@@ -35,6 +37,7 @@ return {
         codelens = {},
         document_highlight = { enabled = false },
         capabilities = {},
+        folds = {},
         inlay_hints = {
           enabled = false,
         },
@@ -58,14 +61,6 @@ return {
           -- https://github.com/vuejs/language-tools/wiki/Neovim
           -- https://github.com/LazyVim/LazyVim/discussions/2697#discussioncomment-13669985
           -- https://github.com/LazyVim/LazyVim/pull/6238
-          volar = {
-            enabled = false,
-            init_options = {
-              vue = {
-                hybridMode = true,
-              },
-            },
-          },
           vtsls = {
             filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
             settings = {
@@ -82,8 +77,7 @@ return {
               if result.stdout ~= "[]" then
                 local vuePluginConfig = {
                   name = "@vue/typescript-plugin",
-                  location = require("mason-registry").get_package("vue-language-server"):get_install_path()
-                    .. "/node_modules/@vue/language-server",
+                  location = vim.fn.expand("$MASON/packages/vue-language-server/node_modules/@vue/language-server"),
                   languages = { "vue" },
                   configNamespace = "typescript",
                   enableForWorkspaceTypeScriptVersions = true,
