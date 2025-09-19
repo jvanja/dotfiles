@@ -56,37 +56,24 @@ return {
               ["language_server.diagnostics_on_save"] = false,
             },
           },
-          -- this mess down should be deleted once this gets resolved:
-          -- LazyExtra is configured to use vue-language-server (aka Volar), but starting from version 3.0.0, the config is no longer compatible with the 2.x setup. Plus, Volar has been renamed to vue_ls, so the old LazyExtra setup doesn’t work anymore.
-          -- https://github.com/vuejs/language-tools/wiki/Neovim
-          -- https://github.com/LazyVim/LazyVim/discussions/2697#discussioncomment-13669985
-          -- https://github.com/LazyVim/LazyVim/pull/6238
           vtsls = {
             filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
             settings = {
               vtsls = {
                 tsserver = {
-                  globalPlugins = {},
+                  globalPlugins = {
+                    {
+                      name = "@vue/typescript-plugin",
+                      location = LazyVim.get_pkg_path("vue-language-server", "/node_modules/@vue/language-server"),
+                      languages = { "vue" },
+                      configNamespace = "typescript",
+                      enableForWorkspaceTypeScriptVersions = true,
+                    },
+                  },
                 },
               },
             },
-            before_init = function(params, config)
-              local result = vim
-                .system({ "npm", "query", "#vue" }, { cwd = params.workspaceFolders[1].name, text = true })
-                :wait()
-              if result.stdout ~= "[]" then
-                local vuePluginConfig = {
-                  name = "@vue/typescript-plugin",
-                  location = vim.fn.expand("$MASON/packages/vue-language-server/node_modules/@vue/language-server"),
-                  languages = { "vue" },
-                  configNamespace = "typescript",
-                  enableForWorkspaceTypeScriptVersions = true,
-                }
-                table.insert(config.settings.vtsls.tsserver.globalPlugins, vuePluginConfig)
-              end
-            end,
           },
-          -- end of the mess above
           emmet_language_server = {
             filetypes = {
               "css",
