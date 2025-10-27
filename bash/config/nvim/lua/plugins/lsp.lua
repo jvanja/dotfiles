@@ -30,13 +30,12 @@ return {
   {
     "neovim/nvim-lspconfig",
     opts = function()
-      local keys = require("lazyvim.plugins.lsp.keymaps").get()
-      keys[#keys + 1] = { ",cl", false }
+      -- local keys = require("lazyvim.plugins.lsp.keymaps").get()
+      -- keys[#keys + 1] = { ",cl", false }
       local ret = {
         diagnostics = {},
         codelens = {},
         document_highlight = { enabled = false },
-        capabilities = {},
         folds = {},
         inlay_hints = {
           enabled = false,
