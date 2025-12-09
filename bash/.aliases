@@ -1,5 +1,6 @@
 alias cl="clear"
 alias c="clear"
+alias mkdir="mkdir -p"
 
 alias fixcam="sudo killall VDCAssistant"
 
