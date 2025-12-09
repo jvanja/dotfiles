@@ -99,3 +99,6 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/vanjajelic/Library/Application Support/H
 export HERD_PHP_82_INI_SCAN_DIR="/Users/vanjajelic/Library/Application Support/Herd/config/php/82/"
 
 eval "$(rbenv init -)"
+
+# Added by Antigravity
+export PATH="/Users/vanjajelic/.antigravity/antigravity/bin:$PATH"
