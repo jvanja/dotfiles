@@ -108,10 +108,20 @@ alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
 # ctags to homebrew ctags
 alias ctags="`brew --prefix`/bin/ctags"
 
-### IMAGES
+### IMAGES AND VIDEOS
 function compressjpgs() {
   [ -z "$1" ] && echo "Destination directory not specified" && return
 
   mogrify -monitor -sampling-factor 4:2:0 -strip -interlace JPEG -colorspace sRGB -path $1 -compress JPEG -quality 80 *.jpg
+}
+
+function compressmp4s() {
+# if parameter is not specified, use current directory and compress all mp4 files
+  if [ -z "$1" ]; then
+    for i in *.mp4; do ffmpeg -i "$i" -vcodec libx264 -crf 23 -preset medium -vf scale=1920:-2 -acodec aac -b:a 128k -movflags +faststart "compressed_${i}"; done
+# else compress the file specified as parameter
+  else 
+    ffmpeg -i "$1" -vcodec libx264 -crf 23 -preset medium -vf scale=1920:-2 -acodec aac -b:a 128k -movflags +faststart "compressed_${1}";
+  fi
 }
 
