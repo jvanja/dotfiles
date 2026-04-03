@@ -2,7 +2,7 @@ return {
   intelephense = {
     format = {
       -- enable = false,
-      braces = "k&r",
+      -- braces = "k&r",
     },
     stubs = {
       "apache",
