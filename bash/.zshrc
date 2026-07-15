@@ -102,3 +102,10 @@ eval "$(rbenv init -)"
 
 # Added by Antigravity
 export PATH="/Users/vanjajelic/.antigravity/antigravity/bin:$PATH"
+
+# Added by Antigravity IDE
+export PATH="/Users/vanjajelic/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/vanjajelic/Library/Application Support/Herd/config/php/84/"
